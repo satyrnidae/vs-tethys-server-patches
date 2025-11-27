@@ -1,0 +1,20 @@
+[
+  {
+    // Add missing CreatureDiet attribute
+    "file": "foxtaming:entities/tamefox.json",
+    "op": "Add",
+    "path": "/attributes/creatureDiet",
+    "value": {
+      "weightedFoodTags": [
+        {
+          "weight": 0.9,
+          "code": "meat"
+        },
+        {
+          "weight": 1.0,
+          "code": "egg"
+        }
+      ]
+    }
+  }
+]

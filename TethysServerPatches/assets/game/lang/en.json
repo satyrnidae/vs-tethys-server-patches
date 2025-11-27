@@ -128,5 +128,10 @@
   "recipeingredient-item-egg-chicken-raw": "chicken egg",
   "recipeingredient-item-egg-chicken-raw-instrumentalcase": "chicken egg",
   "item-metalnailsandstrips-aluminum": "Nails and strips (Aluminum)",
-  "creaturegroup-monitor": "Monitor lizard"
+  "creaturegroup-monitor": "Monitor lizard",
+  "creaturegroup-tamefox-red": "Fox (tame)",
+  "creaturegroup-tamefox-arctic": "Arctic fox (tame)",
+  "creaturegroup-tamefox-red-adult": "Adult red fox (tame)",
+  "creaturegroup-tamefox-arctic-adult": "Adult arctic fox (tame)",
+  "creaturegroup-tamefox-*-baby": "Fox kit (tame)"
 }
