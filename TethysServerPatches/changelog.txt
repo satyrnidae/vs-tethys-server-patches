@@ -1,2 +1,33 @@
+v1.3.0 Changelog
+- Fix Immersive Wood Chopping's missing translation for the unfinished log chopper mechanism
+- Clothier's Heirlooms compatability
+  - Add Aluminum as a metal for the Spinner and Autoloom
+  - Monkey patch compatability for dynamic Spinner and Autoloom recipes
+- Add Aluminum nails and strips
+- Patch flaxtwine and flaxfibers to support new dynamic Spinner and Autoloom recipes
+- Patch Wool's twines and fibers to support new dynamic Spinner and Autoloom recipes
+
+v1.2.0 Changelog
+- Compat for All Classes x Wild Farming berry bush and pineapple seeds
+- Added aluminum spytube
+- Fixed Acorns' griddle cake recipe (was using an entire bucket)
+
+v1.1.0 Changelog
+- Revert Bottoms Up! anneal time changes
+- Add annealer transforms for Bottoms Up! finished glasses
+- Add recipe for First Aid Kit using Butchering bone needles
+- Add pounder and rod for Meteoric Iron and Aluminum from Bauxite for Chandelier Craft
+- Add compat for Bauxite and Pipe Leaf
+- Add Clothier to Homesteader
+- Add hundreds of missing translations for several mods
+
 v1.0.0 Changelog
 - Initial release
+- Tweak All Classes Chef traits
+  - Add Farmer
+  - Replace Exhausted with Inaccurate
+- Tweak All Classes Homesteader
+  - Add Forager
+  - Tweak recipe yields from 5 to 1 to 5 to 3
+  - Add trait-specific recipes for NDL Expanded Growth - Berries
+- Reduce annealing time for Bottoms Up! glass recipes
