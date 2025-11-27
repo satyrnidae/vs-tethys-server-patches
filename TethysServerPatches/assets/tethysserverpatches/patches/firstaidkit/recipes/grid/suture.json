@@ -1,5 +1,6 @@
 [
   {
+    "side": "Server",
     "file": "firstaidkit:recipes/grid/suture.json",
     "op": "Add",
     "path": "/1",

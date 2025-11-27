@@ -1,6 +1,7 @@
 [
   // Nails
   {
+    "side": "Server",
     "file": "game:recipes/smithing/nails.json",
     "op": "AddMerge",
     "path": "/0/ingredient/allowedVariants",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "game:recipes/smithing/nails.json",
     "op": "AddMerge",
     "path": "/1/ingredient/allowedVariants",

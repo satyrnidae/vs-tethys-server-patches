@@ -1,6 +1,7 @@
 [
   {
     // Add aluminum variant for the autoloom
+    "side": "Server",
     "file": "clothierheirloomsmod:blocktypes/autoloom.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",
@@ -16,6 +17,7 @@
   },
   {
     // Textures
+    "side": "Server",
     "file": "clothierheirloomsmod:blocktypes/autoloom.json",
     "op": "Add",
     "path": "/textures/aluminum1",

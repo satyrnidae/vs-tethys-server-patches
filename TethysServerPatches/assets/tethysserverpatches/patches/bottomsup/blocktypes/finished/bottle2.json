@@ -1,6 +1,7 @@
 [
   // Annealer scale for finished bottles and glasses
   {
+    "side": "Server",
     "file": "bottomsup:blocktypes/finished/bottle2.json",
     "op": "Add",
     "path": "/attributes/annealerTransform",
@@ -28,6 +29,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "bottomsup:blocktypes/finished/bottle2.json",
     "op": "AddMerge",
     "path": "/attributes",

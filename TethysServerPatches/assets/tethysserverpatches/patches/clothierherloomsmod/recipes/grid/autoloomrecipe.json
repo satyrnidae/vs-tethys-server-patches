@@ -2,6 +2,7 @@
   // Auto Loom Recipes
   // Jonas mechanical parts variant
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/A/allowedVariants",
@@ -16,6 +17,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/G/allowedVariants",
@@ -31,6 +33,7 @@
   },
   // Jonas mechanical parts variant (Tinkerer trait)
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/1/ingredients/A/allowedVariants",
@@ -45,6 +48,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/1/ingredients/G/allowedVariants",
@@ -60,6 +64,7 @@
   },
   // Metal parts variant
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/2/ingredients/A/allowedVariants",
@@ -74,6 +79,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/2/ingredients/G/allowedVariants",
@@ -89,6 +95,7 @@
   },
   // Metal parts variant (tinkerer)
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/A/allowedVariants",
@@ -103,6 +110,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/G/allowedVariants",

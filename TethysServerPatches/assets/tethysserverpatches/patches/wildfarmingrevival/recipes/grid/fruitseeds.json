@@ -1,6 +1,7 @@
 [
   // Small berry bushes
   {
+    "side": "Server",
     "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
     "op": "Replace",
     "path": "/0/ingredients/H/quantity",
@@ -16,6 +17,7 @@
   },
   // Big berry bushes
   {
+    "side": "Server",
     "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
     "op": "Replace",
     "path": "/1/ingredients/H/quantity",
@@ -31,6 +33,7 @@
   },
   // Pineapple
   {
+    "side": "Server",
     "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
     "op": "Replace",
     "path": "/2/ingredients/H/quantity",

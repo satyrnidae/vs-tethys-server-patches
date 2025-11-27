@@ -1,6 +1,7 @@
 [
   // Add spinning props for flax fibers
   {
+    "side": "Server",
     "file": "game:itemtypes/resource/flaxfibers.json",
     "op": "Add",
     "path": "/attributes/clothierheirloomsmod:spinningProps",

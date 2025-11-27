@@ -2,6 +2,7 @@
   // Spinner Recipes
   // Jonas mechanical parts variant
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/A/allowedVariants",
@@ -17,6 +18,7 @@
   },
   // Jonas mechanical parts variant (Tinkerer trait)
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
     "op": "AddMerge",
     "path": "/1/ingredients/A/allowedVariants",
@@ -32,6 +34,7 @@
   },
   // Metal parts variant
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
     "op": "AddMerge",
     "path": "/2/ingredients/A/allowedVariants",
@@ -47,6 +50,7 @@
   },
   // Metal parts variant (tinkerer)
   {
+    "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
     "op": "AddMerge",
     "path": "/0/ingredients/A/allowedVariants",

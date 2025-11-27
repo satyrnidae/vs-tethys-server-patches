@@ -3,6 +3,7 @@
   // Water Bucket and Honey Bucket Recipe
   {
     // Remove water bucket from double bucket recipe pattern
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/0/ingredientPattern",
@@ -15,6 +16,7 @@
   },
   {
     // Remove the water bucket
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Remove",
     "path": "/0/ingredients/W",
@@ -26,6 +28,7 @@
   },
   {
     // Move the H recipeAttributes from the ingredient to the recipe
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Move",
     "fromPath": "/0/ingredients/H/recipeAttributes",
@@ -38,6 +41,7 @@
   },
   {
     // Change liters of honey to 0.2
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/0/attributes/liquidContainerProps/requiresLitres",
@@ -50,6 +54,7 @@
   },
   {
     // Width
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/0/width",
@@ -62,6 +67,7 @@
   },
   {
     // Height
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/0/height",
@@ -75,6 +81,7 @@
   // Water Bucket and Honeycomb Recipe
   {
     // Remove water bucket from honeycomb recipe pattern
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/1/ingredientPattern",
@@ -87,6 +94,7 @@
   },
   {
     // Remove the water bucket
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Remove",
     "path": "/1/ingredients/W",
@@ -98,12 +106,14 @@
   },
   {
     // Remove the recipe attributes
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Remove",
     "path": "/1/attributes"
   },
   {
     // Width
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/1/width",
@@ -116,6 +126,7 @@
   },
   {
     // Height
+    "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Replace",
     "path": "/1/height",

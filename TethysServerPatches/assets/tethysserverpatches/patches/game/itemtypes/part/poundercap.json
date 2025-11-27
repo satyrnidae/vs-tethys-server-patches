@@ -1,6 +1,7 @@
 [
   // Pounder cap
   {
+    "side": "Server",
     "file": "game:itemtypes/part/poundercap.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "game:itemtypes/part/poundercap.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",

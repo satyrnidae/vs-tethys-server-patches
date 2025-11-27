@@ -1,5 +1,6 @@
 [
   {
+    "side": "Server",
     "file": "bottomsup:blocktypes/finished/bottle4.json",
     "op": "AddMerge",
     "path": "/attributes/annealerTransform",
@@ -27,6 +28,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "bottomsup:blocktypes/finished/bottle4.json",
     "op": "AddMerge",
     "path": "/attributes",

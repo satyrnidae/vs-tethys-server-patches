@@ -1,6 +1,7 @@
 [
   {
     // Add aluminum variant for the spinner
+    "side": "Server",
     "file": "clothierheirloomsmod:blocktypes/spinner.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",
@@ -16,6 +17,7 @@
   },
   {
     // Textures
+    "side": "Server",
     "file": "clothierheirloomsmod:blocktypes/spinner.json",
     "op": "Add",
     "path": "/textures/aluminum1",

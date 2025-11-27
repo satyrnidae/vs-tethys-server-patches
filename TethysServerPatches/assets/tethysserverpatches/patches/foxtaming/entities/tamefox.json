@@ -1,6 +1,7 @@
 [
   {
     // Add missing CreatureDiet attribute
+    "side": "Server",
     "file": "foxtaming:entities/tamefox.json",
     "op": "Add",
     "path": "/attributes/creatureDiet",
@@ -15,6 +16,11 @@
           "code": "egg"
         }
       ]
-    }
+    },
+    "dependsOn": [
+      {
+        "modid": "foxtaming"
+      }
+    ]
   }
 ]

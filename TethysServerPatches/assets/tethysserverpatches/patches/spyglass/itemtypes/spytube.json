@@ -1,6 +1,7 @@
 [
   // spytube.json
   {
+    "side": "Server",
     "file": "spyglass:itemtypes/spytube.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",

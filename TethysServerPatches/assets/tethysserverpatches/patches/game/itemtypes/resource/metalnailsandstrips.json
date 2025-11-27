@@ -1,5 +1,6 @@
 ﻿[
   {
+    "side": "Server",
     "file": "game:itemtypes/resource/metalnailsandstrips",
     "op": "AddMerge",
     "path": "/allowedVariants",

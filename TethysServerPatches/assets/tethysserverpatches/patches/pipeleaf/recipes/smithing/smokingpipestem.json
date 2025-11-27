@@ -1,21 +1,29 @@
 [
   {
+    "side": "Server",
     "file": "pipeleaf:recipes/smithing/smokingpipestem.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",
     "value": [ "aluminum" ],
     "dependsOn": [
       {
+        "modid": "pipeleaf"
+      },
+      {
         "modid": "bauxitealuminum"
       }
     ]
   },
   {
+    "side": "Server",
     "file": "pipeleaf:recipes/smithing/smokingpipestem.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",
     "value": [ "meteoricsteel" ],
     "dependsOn": [
+      {
+        "modid": "pipeleaf"
+      },
       {
         "modid": "meteoricsteel"
       }

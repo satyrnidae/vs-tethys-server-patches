@@ -1,6 +1,7 @@
 ﻿[
   // Add props for spinning
   {
+    "side": "Server",
     "file": "wool:itemtypes/resource/fibers.json",
     "op": "AddMerge",
     "path": "/attributesByType",

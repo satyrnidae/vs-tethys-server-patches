@@ -1,6 +1,7 @@
 [
   // Spyglass.json
   {
+    "side": "Server",
     "file": "spyglass:itemtypes/spyglass.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",
@@ -15,6 +16,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "spyglass:itemtypes/spyglass.json",
     "op": "Add",
     "path": "/tooltierbytype/spyglass-aluminum",
@@ -29,6 +31,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "spyglass:itemtypes/spyglass.json",
     "op": "Add",
     "path": "/durabilitybytype/spyglass-aluminum",

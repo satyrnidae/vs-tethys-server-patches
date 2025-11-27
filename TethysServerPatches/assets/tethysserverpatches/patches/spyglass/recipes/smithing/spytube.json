@@ -1,6 +1,7 @@
 [
   // smithing/spytube.json
   {
+    "side": "Server",
     "file": "spyglass:recipes/smithing/spytube.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",

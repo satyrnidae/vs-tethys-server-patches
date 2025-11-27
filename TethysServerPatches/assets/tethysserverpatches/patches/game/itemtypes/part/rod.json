@@ -1,6 +1,7 @@
 [
   // Rod
   {
+    "side": "Server",
     "file": "game:itemtypes/part/rod.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "game:itemtypes/part/rod.json",
     "op": "AddMerge",
     "path": "/variantgroups/0/states",

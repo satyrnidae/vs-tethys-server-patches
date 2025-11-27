@@ -1,6 +1,7 @@
 [
   // Pounder cap
   {
+    "side": "Server",
     "file": "game:recipes/smithing/poundercap.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "side": "Server",
     "file": "game:recipes/smithing/poundercap.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",
