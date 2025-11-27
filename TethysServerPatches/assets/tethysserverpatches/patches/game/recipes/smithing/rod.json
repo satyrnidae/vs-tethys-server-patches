@@ -1,0 +1,25 @@
+[
+  // Rod
+  {
+    "file": "game:recipes/smithing/rod.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "game:recipes/smithing/rod.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

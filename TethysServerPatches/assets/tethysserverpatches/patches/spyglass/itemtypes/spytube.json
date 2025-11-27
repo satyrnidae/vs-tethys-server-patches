@@ -1,0 +1,17 @@
+[
+  // spytube.json
+  {
+    "file": "spyglass:itemtypes/spytube.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

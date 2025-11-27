@@ -1,0 +1,17 @@
+﻿[
+  // Disable this recipe in favor of Substrate's mushroom growth method
+  {
+    "file": "wildfarmingrevival:recipes/grid/mushroomsubstrate.json",
+    "op": "Add",
+    "path": "/0/enabled",
+    "value": false,
+    "dependsOn": [
+      {
+        "modid": "wildfarmingrevival"
+      },
+      {
+        "modid": "substrate"
+      }
+    ]
+  }
+]

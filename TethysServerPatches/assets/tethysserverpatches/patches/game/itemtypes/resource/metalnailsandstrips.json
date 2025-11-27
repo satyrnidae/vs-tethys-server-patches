@@ -1,0 +1,15 @@
+﻿[
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "AddMerge",
+    "path": "/allowedVariants",
+    "value": [
+      "*-aluminum"
+    ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  // smithing/spytube.json
+  {
+    "file": "spyglass:recipes/smithing/spytube.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

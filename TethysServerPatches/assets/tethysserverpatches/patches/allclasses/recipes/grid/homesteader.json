@@ -1,0 +1,538 @@
+[
+  // Updates Pioneer recipes to be slightly better for seed retrieval than using the Wild Farming recipes (3:5 vs 2:1)
+  {
+    // Carrot seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/0/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Flax seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/1/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Onion seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/2/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Spelt seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/3/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Turnip seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/4/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Parsnip seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/5/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Rice seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/6/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Rye seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/7/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Soybean seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/8/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Cabbage seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/9/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (wild farming) input
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredients/S/type",
+    "value": "item",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (wild farming) input
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredients/S/code",
+    "value": "game:fruit-pineapple",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (wild farming) output
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (no wild farming) input
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredients/S/quantity",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (no wild farming) output
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/output/quantity",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Cassava seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/11/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Amaranth seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/12/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Peanut seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/13/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Sunflower seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/14/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // NDL Black Currant Seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-blackcurrant",
+          "quantity": 5
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "ndlberrygrowth:blackcurrantseeds-blackcurrants",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL Blueberry Seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-blueberry",
+          "quantity": 5
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "ndlberrygrowth:blueberryseeds-blueberries",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL Cranberry Seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-cranberry",
+          "quantity": 5
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "ndlberrygrowth:cranberryseeds-cranberries",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL Red Currant Seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-redcurrant",
+          "quantity": 5
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "ndlberrygrowth:redcurrantseeds-redcurrants",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL White Currant Seeds
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-whitecurrant",
+          "quantity": 5
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "ndlberrygrowth:whitecurrantseeds-whitecurrants",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Wild farming small berry bushes
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-*",
+          "quantity": 5,
+          "name": "type",
+          "allowedVariants": [ "cranberry", "blueberry" ]
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "wildfarmingrevival:wildseeds-smallberrybush-{type}-empty",
+        "quantity": 3
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Wild farming big berry bushes
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/15",
+    "value": {
+      "ingredientPattern": "H,S",
+      "requiresTrait": "pioneer",
+      "ingredients": {
+        "S": {
+          "type": "item",
+          "code": "game:fruit-*",
+          "quantity": 5,
+          "name": "type",
+          "allowedVariants": [ "redcurrant", "blackcurrant", "whitecurrant" ]
+        },
+        "H": {
+          "type": "item",
+          "code": "game:knife-*",
+          "isTool": true
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "wildfarmingrevival:wildseeds-bigberrybush-{type}-empty",
+        "quantity": 3
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  }
+]

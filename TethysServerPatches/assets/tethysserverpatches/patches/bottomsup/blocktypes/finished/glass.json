@@ -1,0 +1,208 @@
+[
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "Add",
+    "path": "/attributesByType/glass-*-pint-*/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 0.9
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/glass-*-pint-*",
+    "value": {
+      "annealerSize": 0.25
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "Add",
+    "path": "/attributesByType/glass-*-highball-*/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 0.9
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/glass-*-highball-*",
+    "value": {
+      "annealerSize": 0.25
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "Add",
+    "path": "/attributesByType/glass-*-rocks-*/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 0.8
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/glass-*-rocks-*",
+    "value": {
+      "annealerSize": 0.25
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "Add",
+    "path": "/attributesByType/glass-*-wine-*/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 0.5
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/glass-*-wine-*",
+    "value": {
+      "annealerSize": 0.25
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "Add",
+    "path": "/attributesByType/glass-*-shot-*/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 0.4
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/glass.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/glass-*-shot-*",
+    "value": {
+      "annealerSize": 0.25
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  }
+]
+

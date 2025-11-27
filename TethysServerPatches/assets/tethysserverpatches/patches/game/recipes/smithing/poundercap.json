@@ -1,0 +1,25 @@
+[
+  // Pounder cap
+  {
+    "file": "game:recipes/smithing/poundercap.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "game:recipes/smithing/poundercap.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

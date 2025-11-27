@@ -1,0 +1,25 @@
+[
+  // Rod
+  {
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

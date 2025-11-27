@@ -1,0 +1,45 @@
+[
+  // Spyglass.json
+  {
+    "file": "spyglass:itemtypes/spyglass.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "spyglass:itemtypes/spyglass.json",
+    "op": "Add",
+    "path": "/tooltierbytype/spyglass-aluminum",
+    "value": 2,
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "spyglass:itemtypes/spyglass.json",
+    "op": "Add",
+    "path": "/durabilitybytype/spyglass-aluminum",
+    "value": 130,
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

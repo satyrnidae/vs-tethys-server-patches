@@ -1,0 +1,25 @@
+[
+  // Nails
+  {
+    "file": "game:recipes/smithing/nails.json",
+    "op": "AddMerge",
+    "path": "/0/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "game:recipes/smithing/nails.json",
+    "op": "AddMerge",
+    "path": "/1/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+﻿[
+  // Add props for spinning
+  {
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType",
+    "value": {
+      "@.*-(generic|angora)-(plain|black|brown|lightbrown|gray|yellow|white)": {
+        "clothierheirloomsmod:spinningProps": {
+          "input": 3,
+          "output": {
+            "type": "item",
+            "code": "twine-wool-{color}",
+            "stacksize": 2
+          }
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  }
+]

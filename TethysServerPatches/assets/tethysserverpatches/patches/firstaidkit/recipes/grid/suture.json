@@ -1,0 +1,37 @@
+[
+  {
+    "file": "firstaidkit:recipes/grid/suture.json",
+    "op": "Add",
+    "path": "/1",
+    "value": {
+      "ingredientPattern": "B,T",
+      "ingredients": {
+        "B": {
+          "type": "item",
+          "code": "butchering:needle-bone"
+        },
+        "T": {
+          "type": "item",
+          "code": "game:flaxtwine",
+          "quantity": 1
+        }
+      },
+      "width": 1,
+      "height": 2,
+      "shapeless": true,
+      "output": {
+        "type": "item",
+        "code": "suture",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "firstaidkit"
+      },
+      {
+        "modid": "butchering"
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  // Spinner Recipes
+  // Jonas mechanical parts variant
+  {
+    "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
+    "op": "AddMerge",
+    "path": "/0/ingredients/A/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Jonas mechanical parts variant (Tinkerer trait)
+  {
+    "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
+    "op": "AddMerge",
+    "path": "/1/ingredients/A/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Metal parts variant
+  {
+    "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
+    "op": "AddMerge",
+    "path": "/2/ingredients/A/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Metal parts variant (tinkerer)
+  {
+    "file": "clothierheirloomsmod:recipes/grid/autospinnerrecipe.json",
+    "op": "AddMerge",
+    "path": "/0/ingredients/A/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

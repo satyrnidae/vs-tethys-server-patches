@@ -1,0 +1,47 @@
+[
+  // Small berry bushes
+  {
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    "op": "Replace",
+    "path": "/0/ingredients/H/quantity",
+    "value": 2,
+    "dependsOn": [
+      {
+        "modid": "wildfarmingrevival"
+      },
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  // Big berry bushes
+  {
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    "op": "Replace",
+    "path": "/1/ingredients/H/quantity",
+    "value": 2,
+    "dependsOn": [
+      {
+        "modid": "wildfarmingrevival"
+      },
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  // Pineapple
+  {
+    "file": "wildfarmingrevival:recipes/grid/fruitseeds.json",
+    "op": "Replace",
+    "path": "/2/ingredients/H/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "wildfarmingrevival"
+      },
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

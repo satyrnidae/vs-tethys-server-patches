@@ -1,0 +1,12 @@
+{
+  "type": "code",
+  "modid": "tethysserverpatches",
+  "name": "TethysServerPatches",
+  "side": "universal",
+  "authors": [ "saturniidae" ],
+  "description": "Patches for a custom server",
+  "version": "1.2.0",
+  "dependencies": {
+    "game": "1.21.0"
+  }
+}

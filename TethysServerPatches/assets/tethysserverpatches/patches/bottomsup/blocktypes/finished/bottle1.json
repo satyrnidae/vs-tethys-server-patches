@@ -1,0 +1,44 @@
+[
+  // Annealer scale for finished bottles and glasses
+  {
+    "file": "bottomsup:blocktypes/finished/bottle1.json",
+    "op": "Add",
+    "path": "/attributes/annealerTransform",
+    "value": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "rotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      },
+      "translation": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  },
+  {
+    "file": "bottomsup:blocktypes/finished/bottle1.json",
+    "op": "AddMerge",
+    "path": "/attributes",
+    "value": {
+      "annealerSize": 0.5
+    },
+    "dependsOn": [
+      {
+        "modid": "bottomsup"
+      }
+    ]
+  }
+]
+

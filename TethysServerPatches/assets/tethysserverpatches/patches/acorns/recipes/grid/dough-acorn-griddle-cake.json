@@ -1,0 +1,129 @@
+[
+  // Remove the water bucket from the following:
+  // Water Bucket and Honey Bucket Recipe
+  {
+    // Remove water bucket from double bucket recipe pattern
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/0/ingredientPattern",
+    "value": "HAF",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Remove the water bucket
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Remove",
+    "path": "/0/ingredients/W",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Move the H recipeAttributes from the ingredient to the recipe
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Move",
+    "fromPath": "/0/ingredients/H/recipeAttributes",
+    "path": "/0/attributes",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Change liters of honey to 0.2
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/0/attributes/liquidContainerProps/requiresLitres",
+    "value": 0.2,
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Width
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/0/width",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Height
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/0/height",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  // Water Bucket and Honeycomb Recipe
+  {
+    // Remove water bucket from honeycomb recipe pattern
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/1/ingredientPattern",
+    "value": "HAF",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Remove the water bucket
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Remove",
+    "path": "/1/ingredients/W",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Remove the recipe attributes
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Remove",
+    "path": "/1/attributes"
+  },
+  {
+    // Width
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/1/width",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  },
+  {
+    // Height
+    "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
+    "op": "Replace",
+    "path": "/1/height",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
+  }
+]

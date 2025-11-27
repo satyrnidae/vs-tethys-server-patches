@@ -1,0 +1,25 @@
+[
+  // Pounder cap
+  {
+    "file": "game:itemtypes/part/poundercap.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "file": "game:itemtypes/part/poundercap.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]
