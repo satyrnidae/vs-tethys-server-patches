@@ -1,3 +1,9 @@
+v1.3.1
+- Add missing tranlsation entries for Haz Monitors
+- Add missing translation entries for Fox Taming
+- Patch missing creatureDiet attribute into Fox Taming's tamed fox entity
+- Update All Classes Homesteader pineapple and berry recipes to remove the need for a knife, preventing a recipe conflict with Wild Farming Revival
+
 v1.3.0 Changelog
 - Fix Immersive Wood Chopping's missing translation for the unfinished log chopper mechanism
 - Clothier's Heirlooms compatability
