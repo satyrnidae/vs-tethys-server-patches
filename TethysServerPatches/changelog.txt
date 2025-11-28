@@ -3,12 +3,17 @@ v1.3.1
 - Add missing translation entries for Fox Taming
 - Patch missing creatureDiet attribute into Fox Taming's tamed fox entity
 - Update All Classes Homesteader pineapple and berry recipes to remove the need for a knife, preventing a recipe conflict with Wild Farming Revival
+- Add some missed recipes for Aluminum and attempt to improve compatibility between it and Smithing Plus
+- Add Aluminum and Meteoric Steel pots, as well as Meteoric Steel Texture Swap compatibility for All Classes pots
+- Add less expensive Chef recipes
+- Buff Chef with Nearsighted over Inaccurate and a new perk Knife Skills which increases melee damage by 25%
+- Add custom join messages for RP Text to Speech
 
 v1.3.0 Changelog
 - Fix Immersive Wood Chopping's missing translation for the unfinished log chopper mechanism
-- Clothier's Heirlooms compatability
+- Clothier's Heirlooms compatibility
   - Add Aluminum as a metal for the Spinner and Autoloom
-  - Monkey patch compatability for dynamic Spinner and Autoloom recipes
+  - Monkey patch compatibility for dynamic Spinner and Autoloom recipes
 - Add Aluminum nails and strips
 - Patch flaxtwine and flaxfibers to support new dynamic Spinner and Autoloom recipes
 - Patch Wool's twines and fibers to support new dynamic Spinner and Autoloom recipes
