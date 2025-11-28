@@ -1,0 +1,25 @@
+[
+  {
+    "enabled": false,
+    "ingredientPattern": "B,T",
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "butchering:needle-bone"
+      },
+      "T": {
+        "type": "item",
+        "code": "game:flaxtwine",
+        "quantity": 1
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "firstaidkit:suture",
+      "quantity": 1
+    }
+  }
+]

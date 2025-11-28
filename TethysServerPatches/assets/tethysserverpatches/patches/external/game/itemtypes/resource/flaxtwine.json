@@ -1,0 +1,22 @@
+[
+  // Add props to support weaving flax twine into linen
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/flaxtwine.json",
+    "op": "Add",
+    "path": "/attributes/clothierheirloomsmod:weavingProps",
+    "value": {
+      "input": 3,
+      "output": {
+        "type": "block",
+        "code": "linen-normal-down",
+        "quantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  }
+]

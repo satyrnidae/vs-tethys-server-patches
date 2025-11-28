@@ -1,0 +1,15 @@
+[
+  // Plate
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/plate.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

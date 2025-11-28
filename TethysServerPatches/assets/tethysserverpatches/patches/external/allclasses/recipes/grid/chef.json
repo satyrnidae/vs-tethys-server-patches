@@ -1,0 +1,300 @@
+[
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/2/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/3/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/4/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/5/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/6/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/7/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/8/ingredients/C",
+    "value": {
+      "type": "block",
+      "code": "game:claypot-*-fired",
+      "allowedVariants": [
+        "blue",
+        "fire",
+        "black",
+        "brown",
+        "cream",
+        "gray",
+        "orange",
+        "red",
+        "tan"
+      ]
+    },
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Copy",
+    "path": "/9",
+    "fromPath": "/7",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/9/ingredients/C/code",
+    "value": "allclasses:metalpotdirty-copper-empty",
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": false
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/9/ingredients/C/code",
+    "value": "game:dirtyclaypot-*-empty",
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Copy",
+    "path": "/10",
+    "fromPath": "/8",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/10/ingredients/C/code",
+    "value": "allclasses:metalpotdirty-copper-empty",
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": false
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/10/ingredients/C/code",
+    "value": "game:dirtyclaypot-*-empty",
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

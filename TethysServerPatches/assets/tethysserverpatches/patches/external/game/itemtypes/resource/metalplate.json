@@ -1,0 +1,50 @@
+[
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalplate.json",
+    "op": "AddMerge",
+    "path": "/materialDensityByType/*-aluminum",
+    "value": 2700,
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalplate.json",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/metalplate-aluminum",
+    "value": {
+      "meltingPoint": 660,
+      "meltingDuration": 30,
+      "smeltedRatio": 1,
+      "smeltedStack": {
+        "type": "item",
+        "code": "game:ingot-aluminum",
+        "quantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    // Workable at no heat
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalplate.json",
+    "op": "AddMerge",
+    "path": "/attributes/workableTemperatureByType",
+    "value": {
+      "metalplate-aluminum": 0
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

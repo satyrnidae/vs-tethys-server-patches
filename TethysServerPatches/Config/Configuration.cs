@@ -33,5 +33,13 @@ public class RPTTSPatchOptions
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
 public class AllClassesPatchOptions
 {
+    public AllClassesClassCustomizations ClassCustomizations = new();
     public bool AltMetalPotRecipes = true;
+    public bool CheaperChefPots = true;   
+}
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class AllClassesClassCustomizations
+{
+    public bool ChefBuffs = true;
+    public bool HomesteaderBuffs = true;
 }

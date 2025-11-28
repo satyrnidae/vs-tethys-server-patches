@@ -1,0 +1,441 @@
+﻿[
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCP,_P_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:claypot-*-fired",
+        "allowedVariants": [
+          "blue",
+          "fire",
+          "black",
+          "brown",
+          "cream",
+          "gray",
+          "orange",
+          "red",
+          "tan"
+        ]
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-copper"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-copper-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCP,_P_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-copper-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-bismuthbronze"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-bismuthbronze-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCP,_P_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-bismuthbronze-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-iron"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-iron-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCR,PP_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-iron-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-meteoriciron"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-meteoriciron"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-meteoriciron-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,RCR,PPP",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-iron-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-steel"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-steel"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-steel-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,RCP,_PP",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-iron-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-gold"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-gold"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-gold-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCR,PP_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-copper-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-tinbronze"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-tinbronze"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "game:dirtyclaypot-tinbronze-empty"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,RCR,SPS",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-copper-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-blackbronze"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-blackbronze"
+      },
+      "S": {
+        "type": "item",
+        "code": "game:ingot-gold"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "game:dirtyclaypot-blackbronze-empty"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCR,PP_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpotdirty-copper-empty"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-tinbronze"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-tinbronze"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "game:dirtyclaypot-tinbronze-empty"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,RCR,SPS",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpotdirty-copper-empty"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-blackbronze"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-blackbronze"
+      },
+      "S": {
+        "type": "item",
+        "code": "game:ingot-gold"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "game:dirtyclaypot-blackbronze-empty"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,PCR,PP_",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-steel-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-aluminum"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-aluminum"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-aluminum-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "HI_,RCP,_PP",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-meteoricsteel-fired"
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "I": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-meteoricsteel"
+      },
+      "P": {
+        "type": "item",
+        "code": "game:ingot-meteoricsteel"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-meteoricsteel-fired"
+    }
+  }
+]

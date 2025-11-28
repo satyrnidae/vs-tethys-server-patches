@@ -1,0 +1,78 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/0/enabled",
+    "value": true,
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": false
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/2/enabled",
+    "value": true,
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": false
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/chef.json",
+    "op": "Replace",
+    "path": "/3/enabled",
+    "value": true,
+    "condition": {
+      "when": "CheaperChefPots",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

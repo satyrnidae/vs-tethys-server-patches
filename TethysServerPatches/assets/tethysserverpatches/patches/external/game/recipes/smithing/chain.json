@@ -1,0 +1,15 @@
+[
+  // Chain
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/chain.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

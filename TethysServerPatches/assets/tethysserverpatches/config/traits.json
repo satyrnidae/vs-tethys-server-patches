@@ -1,0 +1,9 @@
+[
+  {
+    "code": "knifeskills",
+    "type": "positive",
+    "attributes": {
+      "meleeWeaponsDamage": 0.25
+    }
+  }
+]

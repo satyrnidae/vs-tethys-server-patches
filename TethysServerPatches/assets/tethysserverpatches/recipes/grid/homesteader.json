@@ -1,0 +1,153 @@
+[
+  {
+    "enabled": false,
+    "ingredientPattern": "H,S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-blackcurrant",
+        "quantity": 5
+      },
+      "H": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "ndlberrygrowth:blackcurrantseeds-blackcurrants",
+      "quantity": 1
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "H,S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-blueberry",
+        "quantity": 5
+      },
+      "H": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "ndlberrygrowth:blueberryseeds-blueberries",
+      "quantity": 1
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "H,S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-cranberry",
+        "quantity": 5
+      },
+      "H": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "ndlberrygrowth:cranberryseeds-cranberries",
+      "quantity": 1
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "H,S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-whitecurrant",
+        "quantity": 5
+      },
+      "H": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "ndlberrygrowth:whitecurrantseeds-whitecurrants",
+      "quantity": 1
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-*",
+        "quantity": 5,
+        "name": "type",
+        "allowedVariants": [
+          "cranberry",
+          "blueberry"
+        ]
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "wildfarmingrevival:wildseeds-smallberrybush-{type}-empty",
+      "quantity": 3
+    }
+  },
+  {
+    "enabled": false,
+    "ingredientPattern": "S",
+    "requiresTrait": "pioneer",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:fruit-*",
+        "quantity": 5,
+        "name": "type",
+        "allowedVariants": [
+          "redcurrant",
+          "blackcurrant",
+          "whitecurrant"
+        ]
+      }
+    },
+    "width": 1,
+    "height": 1,
+    "shapeless": true,
+    "output": {
+      "type": "item",
+      "code": "wildfarmingrevival:wildseeds-bigberrybush-{type}-empty",
+      "quantity": 3
+    }
+  }
+]

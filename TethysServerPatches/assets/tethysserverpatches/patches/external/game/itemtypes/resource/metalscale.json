@@ -1,0 +1,35 @@
+[
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalscale.json",
+    "op": "AddMerge",
+    "path": "/materialDensityByType/*-aluminum",
+    "value": 2700,
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalscale.json",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/metalscale-aluminum",
+    "value": {
+      "meltingPoint": 660,
+      "meltingDuration": 30,
+      "smeltedRatio": 1,
+      "smeltedStack": {
+        "type": "item",
+        "code": "game:ingot-aluminum",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/workitem.json",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/workitem-aluminum",
+    "value": {
+      "meltingPoint": 660,
+      "meltingDuration": 30,
+      "smeltedRatio": 1,
+      "smeltedStack": {
+        "type": "item",
+        "code": "game:ingot-aluminum",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/workitem.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/workitem-aluminum",
+    "value": {
+      "workableTemperature": 0
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

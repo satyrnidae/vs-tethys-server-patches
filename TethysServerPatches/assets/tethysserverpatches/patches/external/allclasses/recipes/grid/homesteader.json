@@ -1,0 +1,302 @@
+[
+  // Updates Pioneer recipes to be slightly better for seed retrieval than using the Wild Farming recipes (3:5 vs 2:1)
+  {
+    // Carrot seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/0/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Flax seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/1/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Onion seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/2/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Spelt seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/3/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Turnip seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/4/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Parsnip seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/5/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Rice seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/6/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Rye seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/7/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Soybean seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/8/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Cabbage seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/9/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Pineapple: Remove knife from recipe pattern
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredientPattern",
+    "value": "S",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple: Set input type
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredients/S",
+    "value": {
+      "type": "item",
+      "code": "game:fruit-pineapple",
+      "quantity": 5
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple: Remove knife input
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Remove",
+    "path": "/10/ingredients/H",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple: Set recipe height to 1
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/height",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (wild farming) output
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (no wild farming) input
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/ingredients/S/quantity",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Pineapple seeds (no wild farming) output
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/10/output/quantity",
+    "value": 1,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Cassava seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/11/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Amaranth seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/12/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Peanut seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/13/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Sunflower seeds
+    "side": "Server",
+    "file": "allclasses:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/14/output/quantity",
+    "value": 3,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

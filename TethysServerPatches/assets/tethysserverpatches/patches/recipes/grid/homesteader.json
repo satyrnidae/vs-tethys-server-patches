@@ -1,0 +1,114 @@
+[
+  {
+    // NDL Black Currant Seeds
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/0/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL Blueberry Seeds
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL Cranberry Seeds
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/2/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // NDL White Currant Seeds
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/3/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "ndlberrygrowth"
+      },
+      {
+        "modid": "wildfarmingrevival",
+        "invert": true
+      }
+    ]
+  },
+  {
+    // Wild farming small berry bushes
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Add",
+    "path": "/4/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  },
+  {
+    // Wild farming big berry bushes
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/homesteader.json",
+    "op": "Replace",
+    "path": "/5/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "wildfarmingrevival"
+      }
+    ]
+  }
+]

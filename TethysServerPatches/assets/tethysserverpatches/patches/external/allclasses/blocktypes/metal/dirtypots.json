@@ -1,0 +1,368 @@
+[
+  // Meteoric iron texswap compat
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoriciron-*/ceramic/base",
+    "value": "game:block/metal/sheet/meteoricsteel15",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoriciron-*/meteoric/base",
+    "value": "game:block/metal/sheet/meteoricsteel15",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoriciron-*/dark/base",
+    "value": "game:block/metal/sheet/meteoricsteel15",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  // Aluminum
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Add",
+    "path": "/texturesByType/metalpotdirty-aluminum-*",
+    "value": {
+      "transparent": {
+        "base": "game:block/transparent"
+      },
+      "ceramic": {
+        "base": "game:block/metal/tarnished/aluminum"
+      },
+      "dark": {
+        "base": "game:block/metal/tarnished/aluminum",
+        "overlays": [ "game:block/metal/overlay/dark" ]
+      },
+      "lid": {
+        "base": "game:block/metal/plate/aluminum",
+        "overlays": [ "game:block/metal/overlay/crock" ]
+      },
+      "lid-dirty2": {
+        "base": "game:block/clay/lid-dirty"
+      },
+      "liquid": {
+        "base": "game:block/liquid/glue-cold"
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Copy",
+    "path": "/attributesByType/*-aluminum-*",
+    "fromPath": "/attributesByType/*-iron-*",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-aluminum-*/maxContainerSlotStackSize",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-aluminum-*/servingCapacity",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-aluminum-*/maxServingSize",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-aluminum-*/cookingSlotCapacityLitres",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Meteoric Steel
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Add",
+    "path": "/texturesByType/metalpotdirty-meteoricsteel-*",
+    "value": {
+      "transparent": {
+        "base": "game:block/transparent"
+      },
+      "ceramic": {
+        "base": "game:block/metal/sheet/meteoricsteel15"
+      },
+      "meteoric": {
+        "base": "game:block/metal/sheet/meteoricsteel15"
+      },
+      "dark": {
+        "base": "game:block/metal/sheet/meteoricsteel15",
+        "overlays": [ "game:block/metal/overlay/dark" ]
+      },
+      "lid": {
+        "base": "game:block/metal/plate/meteoricsteel",
+        "overlays": [ "game:block/metal/overlay/crock" ]
+      },
+      "lid-dirty2": {
+        "base": "game:block/clay/lid-dirty"
+      },
+      "liquid": {
+        "base": "game:block/liquid/glue-cold"
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoricsteel-*/ceramic/base",
+    "value": "game:block/metal/sheet/meteoriciron13",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoricsteel-*/dark/base",
+    "value": "game:block/metal/sheet/meteoriciron13",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/texturesByType/metalpotdirty-meteoricsteel-*/meteoric/base",
+    "value": "game:block/metal/sheet/meteoriciron13",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      },
+      {
+        "modid": "meteoricsteeltexswap"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Copy",
+    "path": "/attributesByType/*-meteoricsteel-*",
+    "fromPath": "/attributesByType/*-meteoriciron-*",
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-meteoricsteel-*/maxContainerSlotStackSize",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-meteoricsteel-*/servingCapacity",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-meteoricsteel-*/maxServingSize",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "allclasses:blocktypes/metal/dirtypots.json",
+    "op": "Replace",
+    "path": "/attributesByType/*-meteoricsteel-*/cookingSlotCapacityLitres",
+    "value": 24,
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

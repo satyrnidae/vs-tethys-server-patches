@@ -1,0 +1,29 @@
+[
+  {
+    // Workable at no heat
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalbit.json",
+    "op": "AddMerge",
+    "path": "/attributes/workableTemperatureByType",
+    "value": {
+      "metalbit-aluminum": 0
+    },
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      },
+      {
+        "modid": "smithingplus"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/metalbit.json",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/*-aluminum",
+    "value": {
+      "smeltedStack":  { "quantity": 1 }
+    }
+  }
+]

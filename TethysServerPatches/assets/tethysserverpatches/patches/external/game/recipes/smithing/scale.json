@@ -1,0 +1,15 @@
+[
+  // Scale
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/scale.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

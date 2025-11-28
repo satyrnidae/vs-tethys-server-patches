@@ -1,0 +1,160 @@
+[
+  {
+    "enabled": false,
+    "requiresTrait": "culinary",
+    "ingredientPattern": "_H_,_PR,_C_",
+    "ingredients": {
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-aluminum",
+        "quantity": 1
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-aluminum",
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-steel-fired"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-aluminum-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "culinary",
+    "ingredientPattern": "_H_,_PR,_C_",
+    "ingredients": {
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-aluminum",
+        "quantity": 1
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-aluminum",
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "block",
+        "code": "game:claypot-*-fired",
+        "allowedVariants": [
+          "blue",
+          "fire",
+          "black",
+          "brown",
+          "cream",
+          "gray",
+          "orange",
+          "red",
+          "tan"
+        ]
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-aluminum-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "culinary",
+    "ingredientPattern": "_H_,RP_,_C_",
+    "ingredients": {
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-meteoricsteel",
+        "quantity": 1
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-meteoricsteel",
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "block",
+        "code": "allclasses:metalpot-meteoriciron-fired"
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-meteoricsteel-fired"
+    }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "culinary",
+    "ingredientPattern": "_H_,RP_,_C_",
+    "ingredients": {
+      "P": {
+        "type": "item",
+        "code": "game:metalplate-meteoricsteel",
+        "quantity": 1
+      },
+      "R": {
+        "type": "item",
+        "code": "game:rod-meteoricsteel",
+        "quantity": 1
+      },
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "block",
+        "code": "game:claypot-*-fired",
+        "allowedVariants": [
+          "blue",
+          "fire",
+          "black",
+          "brown",
+          "cream",
+          "gray",
+          "orange",
+          "red",
+          "tan"
+        ]
+      }
+    },
+    "shapeless": true,
+    "width": 3,
+    "height": 3,
+    "averageDurability": false,
+    "output": {
+      "type": "block",
+      "code": "allclasses:metalpot-meteoricsteel-fired"
+    }
+  }
+]

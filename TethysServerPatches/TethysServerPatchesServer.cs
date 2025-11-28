@@ -51,7 +51,11 @@ namespace TethysServerPatches
             }
 
             configInstance ??= new Configuration();
-            api.World.Config.SetBool("AltMetalPotRecipesEnabled", configInstance.AllClassesPatches.AltMetalPotRecipes);
+            api.World.Config.SetBool("AltMetalPotRecipes", configInstance.AllClassesPatches.AltMetalPotRecipes);
+            api.World.Config.SetBool("CheaperChefPots", configInstance.AllClassesPatches.CheaperChefPots);
+            api.World.Config.SetBool("ChefBuffs", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs);
+            api.World.Config.SetBool("HomesteaderBuffs", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs);
+
 
             if (loadSuccessful)
             {

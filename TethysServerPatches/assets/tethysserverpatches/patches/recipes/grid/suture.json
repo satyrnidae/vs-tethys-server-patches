@@ -1,0 +1,17 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/suture.json",
+    "op": "Replace",
+    "path": "/0/enabled",
+    "value": true,
+    "dependsOn": [
+      {
+        "modid": "firstaidkit"
+      },
+      {
+        "modid": "butchering"
+      }
+    ]
+  }
+]

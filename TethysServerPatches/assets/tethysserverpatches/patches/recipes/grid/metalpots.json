@@ -1,0 +1,201 @@
+[
+  // Enable metal pots if all classes is installed and the config option is enabled.
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/0/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/2/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/3/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/4/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/5/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/6/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/7/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/8/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/9/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/10/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/metalpots.json",
+    "op": "Replace",
+    "path": "/11/enabled",
+    "value": true,
+    "condition": {
+      "when": "AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      },
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  }
+]

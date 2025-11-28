@@ -74,129 +74,99 @@
     
 
 <ItemGroup>
-  <Content Update="assets\clothierheirloommod\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\acorns\recipes\grid\dough-acorn-griddle-cake.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\coffee\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\allclasses\config\characterclasses.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\firstaidkit\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\allclasses\recipes\grid\homesteader.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\floatingfish\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\bottomsup\blocktypes\finished\bottle1.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\game\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\bottomsup\blocktypes\finished\bottle2.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\immersivewoodchopping\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\bottomsup\blocktypes\finished\bottle3.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\pipeleaf\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\bottomsup\blocktypes\finished\bottle4.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\saltandsands\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\bottomsup\blocktypes\finished\glass.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\signals\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\clothierherloomsmod\blocktypes\autoloom.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\soaplyeandbloom\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\clothierherloomsmod\blocktypes\spinner.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\spyglass\lang\en.json">
+  <Content Update="assets\tethysserverpatches\patches\external\clothierherloomsmod\recipes\grid\autoloomrecipe.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\acorns\recipes\grid\dough-acorn-griddle-cake.json">
+  <Content Update="assets\tethysserverpatches\patches\external\clothierherloomsmod\recipes\grid\autospinnerrecipe.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\allclasses\config\characterclasses.json">
+  <Content Update="assets\tethysserverpatches\patches\recipes\grid\suture.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\allclasses\recipes\grid\homesteader.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\itemtypes\part\poundercap.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\bottomsup\blocktypes\finished\bottle1.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\itemtypes\part\rod.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\bottomsup\blocktypes\finished\bottle2.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\itemtypes\resource\flaxfibers.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\bottomsup\blocktypes\finished\bottle3.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\itemtypes\resource\flaxtwine.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\bottomsup\blocktypes\finished\bottle4.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\itemtypes\resource\metalnailsandstrips.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\bottomsup\blocktypes\finished\glass.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\recipes\smithing\nails.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\clothierherloomsmod\blocktypes\autoloom.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\recipes\smithing\poundercap.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\clothierherloomsmod\blocktypes\spinner.json">
+  <Content Update="assets\tethysserverpatches\patches\external\game\recipes\smithing\rod.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\clothierherloomsmod\recipes\grid\autoloomrecipe.json">
+  <Content Update="assets\tethysserverpatches\patches\external\pipeleaf\recipes\smithing\smokingpipestem.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\clothierherloomsmod\recipes\grid\autospinnerrecipe.json">
+  <Content Update="assets\tethysserverpatches\patches\external\spyglass\itemtypes\spyglass.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\firstaidkit\recipes\grid\suture.json">
+  <Content Update="assets\tethysserverpatches\patches\external\spyglass\itemtypes\spytube.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\itemtypes\part\poundercap.json">
+  <Content Update="assets\tethysserverpatches\patches\external\spyglass\recipes\smithing\spytube.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\itemtypes\part\rod.json">
+  <Content Update="assets\tethysserverpatches\patches\external\wildfarmingrevival\recipes\grid\fruitseeds.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\itemtypes\resource\flaxfibers.json">
+  <Content Update="assets\tethysserverpatches\patches\external\wildfarmingrevival\recipes\grid\mushroomsubstrate.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\itemtypes\resource\flaxtwine.json">
+  <Content Update="assets\tethysserverpatches\patches\external\wool\itemtypes\resource\fibers.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\itemtypes\resource\metalnailsandstrips.json">
+  <Content Update="assets\tethysserverpatches\patches\external\wool\itemtypes\resource\twine.json">
     <CopyToOutputDirectory>Always</CopyToOutputDirectory>
   </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\recipes\smithing\nails.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\recipes\smithing\poundercap.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\game\recipes\smithing\rod.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\pipeleaf\recipes\smithing\smokingpipestem.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\spyglass\itemtypes\spyglass.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\spyglass\itemtypes\spytube.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\spyglass\recipes\smithing\spytube.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\wildfarmingrevival\recipes\grid\fruitseeds.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\wildfarmingrevival\recipes\grid\mushroomsubstrate.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\wool\itemtypes\resource\fibers.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\tethysserverpatches\patches\wool\itemtypes\resource\twine.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
-  <Content Update="assets\thecritterpack\lang\en.json">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
+</ItemGroup>
+    
+
+<ItemGroup>
+  <Folder Include="assets\tethysserverpatches\postpatches\" />
+  <Folder Include="assets\tethysserverpatches\prepatches\" />
 </ItemGroup>
     
 

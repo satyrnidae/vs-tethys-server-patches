@@ -1,0 +1,64 @@
+﻿[
+  {
+    // Remove chef "clumsy"
+    "file": "allclasses:config/characterclasses.json",
+    "op": "Remove",
+    "path": "/2/traits/4",
+    "condition": {
+      "when": "ChefBuffs",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Remove chef "exhausted"
+    "file": "allclasses:config/characterclasses.json",
+    "op": "Remove",
+    "path": "/2/traits/3",
+    "condition": {
+      "when": "ChefBuffs",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "farmer" and "nearsighted" to chef
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/2/traits",
+    "value": [ "farmer", "inaccurate", "nearsighted" ],
+    "condition": {
+      "when": "ChefBuffs",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "scavenger" to homesteader
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/3/traits",
+    "value": [ "scavenger", "clothier" ],
+    "condition": {
+      "when": "HomesteaderBuffs",
+      "isValue": "true"
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

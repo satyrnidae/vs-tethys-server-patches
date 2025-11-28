@@ -1,0 +1,29 @@
+[
+  // Add props for spinning
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "Add",
+    "path": "/attributesByType",
+    "value": {
+      "@.*-(plain|black|blue|brown|gray|green|orange|pink|purple|red|white|yellow|darkblue|darkbrown|darkgreen|darkred)": {
+        "clothierheirloomsmod:weavingProps": {
+          "input": 3,
+          "output": {
+            "type": "block",
+            "code": "wool-{color}",
+            "quantity": 2
+          }
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  }
+]
