@@ -30,11 +30,11 @@
     ]
   },
   {
-    // Add "farmer" and "nearsighted" to chef
+    // Add "farmer", "knifeskills", and "inaccurate" to chef
     "file": "allclasses:config/characterclasses.json",
     "op": "AddMerge",
     "path": "/2/traits",
-    "value": [ "farmer", "inaccurate", "nearsighted" ],
+    "value": [ "farmer", "knifeskills", "nearsighted" ],
     "condition": {
       "when": "ChefBuffs",
       "isValue": "true"

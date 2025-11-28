@@ -33,12 +33,12 @@
   "allclasses:block-metalpot-meteoricsteel-fired": "Meteoric steel metal cooking pot",
   "allclasses:block-metalpot-meteoricsteel-cooked": "Meteoric steel metal pot of cooked food",
   "allclasses:blockdesc-metalpot-meteoricsteel-*": "<font color=\"#00cc00\">It's like steel, but from the sky. You can make up to 18 servings in this pot.</font><br><font color=\"#ff4d88\">For cooking food only!</font>",
-  
+
   "clothierheirloomsmod:block-autoloom-aluminum-*": "Aluminum autoloom",
   "clothierheirloomsmod:block-spinner-aluminum-*": "Aluminum spinner",
-  
+
   "coffee:item-coffeeportion": "Coffee portion",
-  
+
   "firstaidkit:item-firstaidkit-clean": "First aid kit (Clean)",
   "firstaidkit:item-firstaidkit-sterile": "First aid kit (Sterile)",
   "firstaidkit:item-firstaidkitsmall-poultice-honey": "Small first aid kit (Honey-sulfur poultice)",
@@ -47,9 +47,9 @@
   "firstaidkit:poultice-honey-reed-bundle": "Honey-sulfur poultice bundle (from reeds)",
   "firstaidkit:poultice-horsetail-linen-bundle": "Horsetail poultice bundle (from linen)",
   "firstaidkit:poultice-honey-linen-bundle": "Honey-sulfur poultice bundle (from linen)",
-  
+
   "floatingfish:item-deadfish-salmon-vanilla": "Salmon (Dead)",
-  
+
   "game:block-dirtyclaypot-tinbronze-empty": "Tin bronze metal pot",
   "game:block-dirtyclaypot-tinbronze-cooked": "Tin-bronze metal pot",
   "game:block-dirtyclaypot-blackbronze-empty": "Black bronze metal pot",
@@ -174,6 +174,8 @@
   "game:traitname-skeletons-co-smith": "Smith - Skeletons x Combat Overhaul",
   "game:traitname-pyromaniac": "Pyromaniac",
   "game:traitname-knifeskills": "Knife skills",
+  "game:trait-knifeskills": "<font color=\"#84ff84\">Knife skills</font>",
+  "game:charattribute-meleeWeaponsDamage-0.25": "+25% melee weapons damage",
   "game:pie-single-pemmicantofu:boiledsoybeans-wet-perfect": "Boiled soybean pie",
   "game:pie-single-pemmicantofu:boiledsoybeans-dry-perfect": "Cooked soybean pie",
   "game:poultice-horsetail-reed-bundle": "Horsetail poultice bundle (from reeds)",
