@@ -1,3 +1,14 @@
+v1.3.3
+- Fixed compatibility issue with Spinning Wheel re: regex matching on attributesByType
+- Add "forager" to chef class (toggleable via config)
+- Renamed world settings to ensure uniqueness
+- Add trait-specific configuration flags for each altered trait in All Classes Chef and Homesteader
+- Uranium expansion and pewter pounder caps for craftable chandeliers
+- Uranium expansion rods for craftable chandeliers
+
+v1.3.2
+- Attempt to fix wool :P
+
 v1.3.1
 - Add missing tranlsation entries for Haz Monitors
 - Add missing translation entries for Fox Taming

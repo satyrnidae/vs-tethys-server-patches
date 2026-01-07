@@ -1,0 +1,21 @@
+﻿[
+  {
+    "side": "Server",
+    "file": "allclasses:config/traits.json",
+    "op": "AddMerge",
+    "path": "/12/attributes",
+    "value": {
+      "servingNutritionMul": 0.2,
+      "servingHealthMul": 0.1
+    },
+    "condition": {
+      "when": "ChefBuffs",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

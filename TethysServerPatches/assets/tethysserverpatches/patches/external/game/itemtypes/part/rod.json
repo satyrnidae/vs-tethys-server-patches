@@ -112,5 +112,85 @@
         "modid": "meteoricsteel"
       }
     ]
+  },
+
+  // Uranium Steel
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "ferrousuranium", "uraniumsteel" ],
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/materialDensityByType/*-ferrousuranium",
+    "value": 7900,
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/materialDensityByType/*-uraniumsteel",
+    "value": 7900,
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/rod-ferrousuranium",
+    "value": {
+      "meltingPoint": 1450,
+      "meltingDuration": 30,
+      "smeltedRatio": 1,
+      "smeltedStack": {
+        "type": "item",
+        "code": "game:ingot-ferrousuranium",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod",
+    "op": "AddMerge",
+    "path": "/combustiblePropsByType/rod-uraniumsteel",
+    "value": {
+      "meltingPoint": 1450,
+      "meltingDuration": 30,
+      "smeltedRatio": 1,
+      "smeltedStack": {
+        "type": "item",
+        "code": "game:ingot-uraniumsteel",
+        "quantity": 1
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
   }
 ]

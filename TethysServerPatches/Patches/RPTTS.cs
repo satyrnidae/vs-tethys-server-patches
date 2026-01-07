@@ -31,7 +31,7 @@ class KittenTTSEngine_InitializationGreet
 
     static bool Prefix(Object __instance, Random ___MessageRNG, ICoreClientAPI ___ClientAPI)
     {
-        RPTTSPatchOptions opts = TethysServerPatchesCore.Configuration.RPTTSPatches;
+        RpTtsPatches opts = TethysServerPatchesCore.Configuration.RpTtsPatches;
         if (opts.Enabled)
         {
             if (opts.InitializationGreetings.Length != 0)
@@ -82,7 +82,7 @@ class KittenTTSEngine_Speak
 
     static bool Prefix(Object __instance, Random ___MessageRNG, ref string text)
     {
-        RPTTSPatchOptions opts = TethysServerPatchesCore.Configuration.RPTTSPatches;
+        RpTtsPatches opts = TethysServerPatchesCore.Configuration.RpTtsPatches;
         if (!opts.Enabled)
         {
             return true;

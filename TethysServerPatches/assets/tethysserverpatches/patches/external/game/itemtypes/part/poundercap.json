@@ -23,5 +23,29 @@
         "modid": "meteoricsteel"
       }
     ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/poundercap.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "ferrousuranium", "uraniumsteel" ],
+    "dependsOn": [
+      {
+        "modid": "uraniumexpanded"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/poundercap.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "pewter" ],
+    "dependsOn": [
+      {
+        "modid": "pewter"
+      }
+    ]
   }
 ]

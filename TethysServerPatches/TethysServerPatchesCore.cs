@@ -19,8 +19,8 @@ public abstract class TethysServerPatchesCore : ModSystem
     protected Harmony HarmonyInstance { get; private set; }
     protected INetworkChannel NetworkChannel { get; private set; }
 
-    private bool clothierHeirloomsModInstalled;
-    private bool rpttsInstalled;
+    private bool _clothierHeirloomsModInstalled;
+    private bool _rpttsInstalled;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -29,20 +29,21 @@ public abstract class TethysServerPatchesCore : ModSystem
         Logger = Mod.Logger;
         ModId = Mod.Info.ModID;
         HarmonyInstance = new Harmony(ModId);
-        clothierHeirloomsModInstalled = api.ModLoader.IsModEnabled("clothierheirloomsmod");
-        rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
-        if (Configuration == null)
+        _clothierHeirloomsModInstalled = api.ModLoader.IsModEnabled("clothierheirloomsmod");
+        _rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
+        Configuration ??= LoadConfiguration(api);
+        if (_clothierHeirloomsModInstalled)
         {
-            Configuration = LoadConfiguration(api);
-        }
-        if (clothierHeirloomsModInstalled)
-        {
+            Logger.Notification("Patching category clothierheirloomsmod");
             HarmonyInstance.PatchCategory("clothierheirloomsmod");
         }
-        if (rpttsInstalled)
+        if (_rpttsInstalled)
         {
+            Logger.Notification("Patching category rptts");
             HarmonyInstance.PatchCategory("rptts");
         }
+
+        //HarmonyInstance.PatchCategory("survival");
     }
 
     public override void Start(ICoreAPI api)
@@ -66,13 +67,14 @@ public abstract class TethysServerPatchesCore : ModSystem
     {
         if (HarmonyInstance != null)
         {
-            if (clothierHeirloomsModInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("clothierheirloomsmod");
-            }
-            if (rpttsInstalled)
+            //HarmonyInstance.UnpatchCategory("survival");
+            if (_rpttsInstalled)
             {
                 HarmonyInstance.UnpatchCategory("rptts");
+            }
+            if (_clothierHeirloomsModInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("clothierheirloomsmod");
             }
         }
         NetworkChannel = null;

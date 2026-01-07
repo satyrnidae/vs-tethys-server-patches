@@ -1,22 +1,245 @@
 ﻿[
-  // Add props for spinning
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "Move",
+    "fromPath": "/attributesByType/*",
+    "path": "/tmp",
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  // For spinningwheel we have to manually modify each of the entries that mod adds, because it comes first aphabetically
+  // and the patches from that mod don't use regex, so they take priority.
   {
     "side": "Server",
     "file": "wool:itemtypes/resource/fibers.json",
     "op": "AddMerge",
-    "path": "/attributesByType",
+    "path": "/attributesByType/fibers-generic-black",
     "value": {
-      "@.*-(generic|angora)-(plain|black|brown|lightbrown|gray|yellow|white)": {
-        "clothierheirloomsmod:spinningProps": {
-          "input": 3,
-          "output": {
-            "type": "item",
-            "code": "twine-wool-{color}",
-            "quantity": 2
-          }
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-black",
+          "quantity": 2
         }
       }
     },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-brown",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-brown",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-gray",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-gray",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-yellow",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-yellow",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-redbrown",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-brown",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-lightbrown",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-brown",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-plain",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-plain",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-muskox-brown",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-brown",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/fibers-angora-white",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-white",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  // Replace moved wildcard
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "Move",
+    "fromPath": "/tmp",
+    "path": "/attributesByType/*",
     "dependsOn": [
       {
         "modid": "wool"

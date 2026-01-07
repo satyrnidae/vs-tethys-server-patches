@@ -20,7 +20,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -50,7 +50,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -80,7 +80,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -110,7 +110,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -140,7 +140,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -170,7 +170,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -200,7 +200,7 @@
       ]
     },
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -228,7 +228,7 @@
     "path": "/9/ingredients/C/code",
     "value": "allclasses:metalpotdirty-copper-empty",
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": false
     },
     "dependsOn": [
@@ -244,7 +244,7 @@
     "path": "/9/ingredients/C/code",
     "value": "game:dirtyclaypot-*-empty",
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -272,7 +272,7 @@
     "path": "/10/ingredients/C/code",
     "value": "allclasses:metalpotdirty-copper-empty",
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": false
     },
     "dependsOn": [
@@ -288,7 +288,7 @@
     "path": "/10/ingredients/C/code",
     "value": "game:dirtyclaypot-*-empty",
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [

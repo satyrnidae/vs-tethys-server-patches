@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TethysServerPatches.Config;
 using Vintagestory.API.Common;
 using Vintagestory.API.Server;
+using Vintagestory.GameContent;
 
 namespace TethysServerPatches
 {
@@ -14,11 +11,17 @@ namespace TethysServerPatches
         private ICoreServerAPI ServerApi => Api as ICoreServerAPI;
         private IServerNetworkChannel ServerNetworkChannel => NetworkChannel as IServerNetworkChannel;
 
+        public static CharacterSystem CharacterSystem { get; private set; }
+
         public override void StartServerSide(ICoreServerAPI api)
         {
             base.StartServerSide(api);
 
+            CharacterSystem = api.ModLoader.GetModSystem<CharacterSystem>() ?? throw new Exception(
+                $"Failed to locate the {nameof(CharacterSystem)} built-in mod. Are you running with Survival Mod enabled?");
+
             api.Event.PlayerJoin += Event_PlayerJoin;
+
         }
 
         public override void Dispose()
@@ -51,11 +54,15 @@ namespace TethysServerPatches
             }
 
             configInstance ??= new Configuration();
-            api.World.Config.SetBool("AltMetalPotRecipes", configInstance.AllClassesPatches.AltMetalPotRecipes);
-            api.World.Config.SetBool("CheaperChefPots", configInstance.AllClassesPatches.CheaperChefPots);
-            api.World.Config.SetBool("ChefBuffs", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs);
-            api.World.Config.SetBool("HomesteaderBuffs", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs);
-
+            api.World.Config.SetBool("TethysServerPatches_AltMetalPotRecipes", configInstance.AllClassesPatches.AltMetalPotRecipes);
+            api.World.Config.SetBool("TethysServerPatches_CheaperChefPots", configInstance.AllClassesPatches.CheaperChefPots);
+            api.World.Config.SetBool("TethysServerPatches_Chef_AddFarmer", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs && configInstance.AllClassesPatches.ClassCustomizations.ChefTraitFlags.AddFarmer);
+            api.World.Config.SetBool("TethysServerPatches_Chef_AddKnifeSkills", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs && configInstance.AllClassesPatches.ClassCustomizations.ChefTraitFlags.AddKnifeSkills);
+            api.World.Config.SetBool("TethysServerPatches_Chef_AddForager", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs && configInstance.AllClassesPatches.ClassCustomizations.ChefTraitFlags.AddForager);
+            api.World.Config.SetBool("TethysServerPatches_Chef_ReplaceExhaustedWithNearsighted", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs && configInstance.AllClassesPatches.ClassCustomizations.ChefTraitFlags.ReplaceExhaustedWithNearsighted);
+            api.World.Config.SetBool("TethysServerPatches_Chef_RemoveClumsy", configInstance.AllClassesPatches.ClassCustomizations.ChefBuffs && configInstance.AllClassesPatches.ClassCustomizations.ChefTraitFlags.RemoveClumsy);
+            api.World.Config.SetBool("TethysServerPatches_Homesteader_AddClothier", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs && configInstance.AllClassesPatches.ClassCustomizations.HomesteaderTraitFlags.AddClothier);
+            api.World.Config.SetBool("TethysServerPatches_Homesteader_AddScavenger", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs && configInstance.AllClassesPatches.ClassCustomizations.HomesteaderTraitFlags.AddScavenger);
 
             if (loadSuccessful)
             {

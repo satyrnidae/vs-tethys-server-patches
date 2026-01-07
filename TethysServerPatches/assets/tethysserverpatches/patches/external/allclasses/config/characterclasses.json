@@ -5,8 +5,8 @@
     "op": "Remove",
     "path": "/2/traits/4",
     "condition": {
-      "when": "ChefBuffs",
-      "isValue": "true"
+      "when": "TethysServerPatches_Chef_RemoveClumsy",
+      "isValue": true
     },
     "dependsOn": [
       {
@@ -20,8 +20,8 @@
     "op": "Remove",
     "path": "/2/traits/3",
     "condition": {
-      "when": "ChefBuffs",
-      "isValue": "true"
+      "when": "TethysServerPatches_Chef_ReplaceExhaustedWithNearsighted",
+      "isValue": true
     },
     "dependsOn": [
       {
@@ -30,14 +30,78 @@
     ]
   },
   {
-    // Add "farmer", "knifeskills", and "inaccurate" to chef
+    // Add "nearsighted" to chef
     "file": "allclasses:config/characterclasses.json",
     "op": "AddMerge",
     "path": "/2/traits",
-    "value": [ "farmer", "knifeskills", "nearsighted" ],
+    "value": [ "nearsighted" ],
     "condition": {
-      "when": "ChefBuffs",
-      "isValue": "true"
+      "when": "TethysServerPatches_Chef_ReplaceExhaustedWithNearsighted",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "farmer" to chef
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/2/traits",
+    "value": [ "farmer" ],
+    "condition": {
+      "when": "TethysServerPatches_Chef_AddFarmer",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "knifeskills" to chef
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/2/traits",
+    "value": [ "knifeskills" ],
+    "condition": {
+      "when": "TethysServerPatches_Chef_AddKnifeSkills",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "forager" to chef
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/2/traits",
+    "value": [ "forager" ],
+    "condition": {
+      "when": "TethysServerPatches_Chef_AddForager",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    // Add "clothier" to homesteader
+    "file": "allclasses:config/characterclasses.json",
+    "op": "AddMerge",
+    "path": "/3/traits",
+    "value": [ "clothier" ],
+    "condition": {
+      "when": "TethysServerPatches_Homesteader_AddClothier",
+      "isValue": true
     },
     "dependsOn": [
       {
@@ -50,10 +114,10 @@
     "file": "allclasses:config/characterclasses.json",
     "op": "AddMerge",
     "path": "/3/traits",
-    "value": [ "scavenger", "clothier" ],
+    "value": [ "scavenger" ],
     "condition": {
-      "when": "HomesteaderBuffs",
-      "isValue": "true"
+      "when": "TethysServerPatches_Homesteader_AddScavenger",
+      "isValue": true
     },
     "dependsOn": [
       {

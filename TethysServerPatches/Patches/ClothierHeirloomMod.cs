@@ -22,14 +22,11 @@ class BlockEntityAutoloom_get_InputGrindProps
         var asm = Assembly.Load("ClothierHeirloomsmod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
         Type type;
         MethodBase getMethod;
-        if (asm == null
-            || (type = asm.GetType("ClothierHeirloomsmod.NSBlockEntity.BlockEntityAutoloom", throwOnError: false)) == null
-            || (getMethod = type.GetProperty("InputGrindProps")?.GetGetMethod()) == null)
-        {
-            TethysServerPatchesCore.Logger.Error("Failed to patch method even though mod is loaded! Did the name change?");
-            throw new Exception();
-        }
-        return [getMethod];
+        if ((type = asm.GetType("ClothierHeirloomsmod.NSBlockEntity.BlockEntityAutoloom", throwOnError: false)) != null
+            && (getMethod = type.GetProperty("InputGrindProps")?.GetGetMethod()) != null) return [getMethod];
+
+        TethysServerPatchesCore.Logger.Error("Failed to patch method even though mod is loaded! Did the name change?");
+        throw new Exception();
     }
 
     // Add support for wool and whatever
@@ -40,21 +37,18 @@ class BlockEntityAutoloom_get_InputGrindProps
             return true;
         }
 
-        ItemSlot val = ___inventory[0];
-        JsonObject weavingProps = val.Itemstack?.Collectible?.Attributes?["clothierheirloomsmod:weavingProps"];
-        if (weavingProps != null && weavingProps.Exists)
-        {
-            int inputnum = weavingProps["input"].AsInt();
-            if (val.Itemstack.StackSize >= inputnum)
-            {
-                var jsonItemStack = weavingProps["output"].AsObject<JsonItemStack>(null, val.Itemstack.Collectible.Code.Domain);
-                if (jsonItemStack.Resolve(__instance.Api.World, TethysServerPatchesCore.ModId))
-                {
-                    __result = jsonItemStack.ResolvedItemstack;
-                    ___inputnum = inputnum; // bit of a hack job tbh
-                }
-            }
-        }
+        var val = ___inventory[0];
+        var weavingProps = val.Itemstack?.Collectible?.Attributes?["clothierheirloomsmod:weavingProps"];
+        if (weavingProps is not { Exists: true }) return false;
+
+        var inputNum = weavingProps["input"].AsInt();
+        if (val.Itemstack.StackSize < inputNum) return false;
+
+        var jsonItemStack = weavingProps["output"].AsObject<JsonItemStack>(null, val.Itemstack.Collectible.Code.Domain);
+        if (!jsonItemStack.Resolve(__instance.Api.World, TethysServerPatchesCore.ModId)) return false;
+
+        __result = jsonItemStack.ResolvedItemstack;
+        ___inputnum = inputNum; // bit of a hack job tbh
         return false;
     }
 }

@@ -34,10 +34,26 @@
   "allclasses:block-metalpot-meteoricsteel-cooked": "Meteoric steel metal pot of cooked food",
   "allclasses:blockdesc-metalpot-meteoricsteel-*": "<font color=\"#00cc00\">It's like steel, but from the sky. You can make up to 18 servings in this pot.</font><br><font color=\"#ff4d88\">For cooking food only!</font>",
 
+  "asianmonitorlizards:item-creature-varanus-adult-male-favescens": "Flavescens monitor lizard (Male)",
+  "asianmonitorlizards:item-creature-varanus-adult-female-favescens": "Flavescens monitor lizard (Female)",
+
+  "charlottesclothes:item-clothes-upperbodyover-coatpuffedsleevespinkflowers": "Pink flowery puffed-sleeve coat",
+  "charlottesclothes:item-clothes-upperbodyover-coatpuffedsleevesgreen": "Green puffed-sleeve coat",
+  "charlottesclothes:item-clothes-upperbodyover-coatpuffedsleevesblue": "Blue puffed-sleeve coat",
+  "charlottesclothes:item-clothes-upperbodyover-coatpuffedsleevespink": "Pink puffed-sleeve coat",
+
   "clothierheirloomsmod:block-autoloom-aluminum-*": "Aluminum autoloom",
   "clothierheirloomsmod:block-spinner-aluminum-*": "Aluminum spinner",
 
   "coffee:item-coffeeportion": "Coffee portion",
+
+  "feverstonewilds:item-fsmountwearables-percheron-head-bridle": "Percheron bridle",
+  "feverstonewilds:item-fsmountwearables-arabian-head-bridle": "Arabian bridle",
+  "feverstonewilds:item-fsmountwearables-percheron-lowerbackside-saddlebags": "Percheron saddlebags",
+  "feverstonewilds:item-fsmountwearables-arabian-lowerbackside-saddlebags": "Arabian saddlebags",
+  "feverstonewilds:item-creature-horse-wild-male-draft": "Horse (Male, draft)",
+  "feverstonewilds:item-creature-horse-wild-female-draft": "Horse (Female, draft)",
+  "feverstonewilds:item-creature-foal-wild-draft": "Foal (Draft)",
 
   "firstaidkit:item-firstaidkit-clean": "First aid kit (Clean)",
   "firstaidkit:item-firstaidkit-sterile": "First aid kit (Sterile)",
@@ -59,6 +75,8 @@
   "game:block-craftablechandelier-aluminum-candle8": "Aluminum chandelier",
   "game:block-craftablechandelier-meteoricsteel-candle0": "Meteoric steel chandelier",
   "game:block-craftablechandelier-meteoricsteel-candle8": "Meteoric steel chandelier",
+  "game:block-craftablechandelier-ferrousuranium-candle0": "Ferrous uranium chandelier",
+  "game:block-craftablechandelier-ferrousuranium-candle8": "Ferrous uranium chandelier",
   "game:item-poundercap-aluminum": "Aluminum pounder cap",
   "game:item-rod-aluminum": "Aluminum rod",
   "game:item-poundercap-meteoricsteel": "Meteoric steel pounder cap",
@@ -174,10 +192,14 @@
   "game:traitname-skeletons-co-smith": "Smith - Skeletons x Combat Overhaul",
   "game:traitname-pyromaniac": "Pyromaniac",
   "game:traitname-knifeskills": "Knife skills",
-  "game:trait-knifeskills": "<font color=\"#84ff84\">Knife skills</font>",
+  "game:trait-knifeskills": "<font color=\"#84ff84\">• Knife skills</font>",
   "game:charattribute-meleeWeaponsDamage-0.25": "+25% melee weapons damage",
   "game:pie-single-pemmicantofu:boiledsoybeans-wet-perfect": "Boiled soybean pie",
   "game:pie-single-pemmicantofu:boiledsoybeans-dry-perfect": "Cooked soybean pie",
+  "game:pie-single-pemmicantofu:boiledsoybeans-wet-partbaked": "Boiled soybean pie (part-baked)",
+  "game:pie-single-pemmicantofu:boiledsoybeans-dry-partbaked": "Cooked soybean pie (part-baked)",
+  "game:pie-single-pemmicantofu:boiledsoybeans-wet-charred": "Boiled soybean pie (charred)",
+  "game:pie-single-pemmicantofu:boiledsoybeans-dry-charred": "Cooked soybean pie (charred)",
   "game:poultice-horsetail-reed-bundle": "Horsetail poultice bundle (from reeds)",
   "game:poultice-honey-reed-bundle": "Honey-sulfur poultice bundle (from reeds)",
   "game:poultice-horsetail-linen-bundle": "Horsetail poultice bundle (from linen)",
@@ -192,14 +214,32 @@
   "game:creaturegroup-tamefox-red-adult": "Adult red fox (tame)",
   "game:creaturegroup-tamefox-arctic-adult": "Adult arctic fox (tame)",
   "game:creaturegroup-tamefox-*-baby": "Fox kit (tame)",
+  "game:pie-single-acorns:acorn-meal-perfect": "Acorn meal pie",
+  "game:pie-single-acorns:acorn-meal-partbaked": "Acorn meal pie (part-baked)",
+  "game:pie-single-acorns:acorn-meal-charred": "Acorn meal pie (charred)",
+
   "immersivewoodchopping:block-logsplitter": "Log splitter",
+
+  "immersivewoodsawing:block-sawablelog": "Sawable log",
+
   "pipeleaf:item-smokingpipestem-aluminum": "Aluminum smoking pipe stem",
   "pipeleaf:item-smokingpipe-briarburl-aluminum": "Briar pipe - Aluminum stem",
   "pipeleaf:item-pipelighter-aluminum": "Aluminum pipe lighter",
   "pipeleaf:item-smokingpipestem-meteoricsteel": "Meteoric steel smoking pipe stem",
   "pipeleaf:item-smokingpipe-briarburl-meteoricsteel": "Briar pipe - Meteoric steel stem",
   "pipeleaf:item-pipelighter-meteoricsteel": "Meteoric steel pipe lighter",
+  "pipeleaf:item-pipelighter-ferrousuranium": "Ferrous uranium pipe lighter",
+  "pipeleaf:item-pipelighter-uraniumsteel": "Uranium steel pipe lighter",
+  "pipeleaf:item-smokingpipe-briarburl-ferrousuranium": "Briar pipe - Ferrous uranium stem",
+  "pipeleaf:item-smokingpipe-briarburl-uraniumsteel": "Briar pipe - Uranium steel stem",
+  "pipeleaf:item-smokingpipestem-ferrousuranium": "Ferrous uranium smoking pipe stem",
+  "pipeleaf:item-smokingpipestem-uraniumsteel": "Uranium steel smoking pipe stem",
+  "pipeleaf:item-smokingpipestem-pewter": "Pewter smoking pipe stem",
+  "pipeleaf:item-smokingpipe-briarburl-pewter": "Briar pipe - Pewter stem",
+  "pipeleaf:item-pipelighter-pewter": "Pewter pipe lighter",
+
   "saltandsands:block-coralseed": "Coral seed block",
+
   "signals:item-blueprint-empty": "Empty blueprint",
   "signals:item-blueprint-full": "Full blueprint",
   "signals:block-connection-up": "Connection",
@@ -211,10 +251,14 @@
   "signals:block-blockwire": "Wire block",
   "signals:block-testbreadboard-down": "Breadboard (Testing)",
   "signals:block-blockscreen-east": "Screen",
+  "signals:block-connection-north": "Connection",
+
   "soaplyeandbloom:recipeingredient-item-herb": "herb",
   "soaplyeandbloom:recipeingredient-item-herb-instrumentalcase": "herb",
+
   "spyglass:item-spytube-aluminum": "Aluminum spytube half",
   "spyglass:item-spyglass-aluminum": "Aluminum spyglass",
+
   "thecritterpack:recipeingredient-item-egg-call-raw": "call duck egg",
   "thecritterpack:recipeingredient-item-egg-mallard-raw": "mallard egg",
   "thecritterpack:recipeingredient-item-egg-pekin-raw": "pekin duck egg",
@@ -222,5 +266,9 @@
   "thecritterpack:recipeingredient-item-egg-call-raw-instrumentalcase": "call duck egg",
   "thecritterpack:recipeingredient-item-egg-mallard-raw-instrumentalcase": "mallard egg",
   "thecritterpack:recipeingredient-item-egg-pekin-raw-instrumentalcase": "pekin duck egg",
-  "thecritterpack:recipeingredient-item-egg-crow-raw-instrumentalcase": "crow egg"
+  "thecritterpack:recipeingredient-item-egg-crow-raw-instrumentalcase": "crow egg",
+  "thecritterpack:recipeingredient-item-egg-instrumentalcase": "duck egg",
+
+  "wolftaming:item-creature-peach-dog-female": "Peach dog (female)",
+  "wolftaming:item-creature-peach-dog-male": "Peach dog (male)"
 }

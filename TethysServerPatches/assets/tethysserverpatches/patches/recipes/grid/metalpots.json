@@ -7,7 +7,7 @@
     "path": "/0/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -23,7 +23,7 @@
     "path": "/1/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -39,7 +39,7 @@
     "path": "/2/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -55,7 +55,7 @@
     "path": "/3/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -71,7 +71,7 @@
     "path": "/4/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -87,7 +87,7 @@
     "path": "/5/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -103,7 +103,7 @@
     "path": "/6/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -119,7 +119,7 @@
     "path": "/7/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -135,7 +135,7 @@
     "path": "/8/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -151,7 +151,7 @@
     "path": "/9/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -167,7 +167,7 @@
     "path": "/10/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
@@ -186,7 +186,7 @@
     "path": "/11/enabled",
     "value": true,
     "condition": {
-      "when": "AltMetalPotRecipes",
+      "when": "TethysServerPatches_AltMetalPotRecipes",
       "isValue": true
     },
     "dependsOn": [
