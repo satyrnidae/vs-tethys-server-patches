@@ -1,3 +1,7 @@
+v1.3.4
+- Add wood ash from Soap and Lye / Soap and Lye: Bloom and Lather to Smell the Ashes' ash block. Varies based on ash layers.
+- Altered ashes slightly to closer match snow layers (slower walk speed in ash, for example)
+
 v1.3.3
 - Fixed compatibility issue with Spinning Wheel re: regex matching on attributesByType
 - Add "forager" to chef class (toggleable via config)

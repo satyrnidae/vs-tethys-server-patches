@@ -1,0 +1,332 @@
+[
+	// Add wood ash to the ash pile block type's drops
+	// Should depend on layer height.
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "AddMerge",
+		"path": "/dropsByType",
+		"value": {
+			"@^ashpile-(1)": [
+				{
+					"type": "item",
+					"code": "soapandlye:woodash",
+					"quantity": {
+						"avg": 0,
+						"var": 1,
+						"dist": "uniform"
+					}
+				}
+			],
+			"@^ashpile-(2|3|4)": [
+				{
+					"type": "item",
+					"code": "soapandlye:woodash",
+					"quantity": {
+						"avg": 1,
+						"var": 1,
+						"dist": "uniform"
+					}
+				}
+			],
+			"@^ashpile-(5|6|7|8)": [
+				{
+					"type": "item",
+					"code": "soapandlye:woodash",
+					"quantity": {
+						"avg": 2,
+						"var": 2,
+						"dist": "invexp"
+					}
+				}
+			]
+		},
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			},
+			{
+				"modid": "soapandlye"
+			},
+			{
+				"modid": "soaplyeandbloom",
+				"invert": true
+			}
+		]
+	},
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "AddMerge",
+		"path": "/dropsByType",
+		"value": {
+			"@^ashpile-(1)": [
+				{
+					"type": "item",
+					"code": "soaplyeandbloom:woodash",
+					"quantity": {
+						"avg": 0,
+						"var": 1,
+						"dist": "uniform"
+					}
+				}
+			],
+			"@^ashpile-(2|3|4)": [
+				{
+					"type": "item",
+					"code": "soaplyeandbloom:woodash",
+					"quantity": {
+						"avg": 1,
+						"var": 1,
+						"dist": "invexp"
+					}
+				}
+			],
+			"@^ashpile-(5|6|7|8)": [
+				{
+					"type": "item",
+					"code": "soaplyeandbloom:woodash",
+					"quantity": {
+						"avg": 1,
+						"var": 2,
+						"dist": "strongerinvexp"
+					}
+				}
+			]
+		},
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			},
+			{
+				"modid": "soaplyeandbloom"
+			}
+		]
+	},
+	// Remove drops[]
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "Remove",
+		"path": "/drops",
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			},
+			{
+				"modid": "soapandlye"
+			},
+			{
+				"modid": "soaplyeandbloom",
+				"invert": true
+			}
+		]
+	},
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "Remove",
+		"path": "/drops",
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			},
+			{
+				"modid": "soaplyeandbloom"
+			}
+		]
+	},
+	// Fix jank selection and collision on ash
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "Remove",
+		"path": "/collisionbox",
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			}
+		]
+	},
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "Remove",
+		"path": "/selectionbox",
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			}
+		]
+	},
+	// Snow parity
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "AddMerge",
+		"path": "/collisionBoxByType",
+		"value": {
+			"ashpile-1": null,
+			"ashpile-2": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.125,
+				"z2": 1
+			},
+			"ashpile-3": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.125,
+				"z2": 1
+			},
+			"ashpile-4": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.125,
+				"z2": 1
+			},
+			"ashpile-5": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.25,
+				"z2": 1
+			},
+			"ashpile-6": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.25,
+				"z2": 1
+			},
+			"ashpile-7": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.25,
+				"z2": 1
+			},
+			"ashpile-8": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1
+			}
+		},
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			}
+		]
+	},
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "AddMerge",
+		"path": "/selectionBoxByType",
+		"value": {
+			"ashpile-1": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.125,
+				"z2": 1
+			},
+			"ashpile-2": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.25,
+				"z2": 1
+			},
+			"ashpile-3": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.375,
+				"z2": 1
+			},
+			"ashpile-4": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.5,
+				"z2": 1
+			},
+			"ashpile-5": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.625,
+				"z2": 1
+			},
+			"ashpile-6": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.75,
+				"z2": 1
+			},
+			"ashpile-7": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 0.875,
+				"z2": 1
+			},
+			"ashpile-8": {
+				"x1": 0,
+				"y1": 0,
+				"z1": 0,
+				"x2": 1,
+				"y2": 1,
+				"z2": 1
+			}
+		},
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			}
+		]
+	},
+	// Slower walk speed than snow.
+	{
+		"side": "Server",
+		"file": "smelltheashes:blocktypes/ashpile.json",
+		"op": "AddMerge",
+		"path": "/walkSpeedMultiplierByType",
+		"value": {
+			"ashpile-1": 0.9,
+			"ashpile-2": 0.8,
+			"ashpile-3": 0.7,
+			"ashpile-4": 0.6,
+			"ashpile-5": 0.5,
+			"ashpile-6": 0.4,
+			"ashpile-7": 0.3,
+			"ashpile-8": 0.2
+		},
+		"dependsOn": [
+			{
+				"modid": "smelltheashes"
+			}
+		]
+	}
+]
