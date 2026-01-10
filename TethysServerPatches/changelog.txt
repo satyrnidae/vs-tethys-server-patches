@@ -1,3 +1,8 @@
+v1.3.5
+- Pickled cabbage was rendering in a weird positon on my server. Added a new config flag for the fix.
+- Missed white wool fibers in the previous fix for Spinning Wheel compatibility.
+- Fixed broken transforms when using Flour Bags with Soap and Lye(: Bloom and Lather) and Aluminum from Bauxite
+
 v1.3.4
 - Add wood ash from Soap and Lye / Soap and Lye: Bloom and Lather to Smell the Ashes' ash block. Varies based on ash layers.
 - Altered ashes slightly to closer match snow layers (slower walk speed in ash, for example)

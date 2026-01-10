@@ -1,0 +1,31 @@
+[
+  {
+    // Fix weird transform issue with cabbage
+    "side": "Server",
+    "file": "game:itemtypes/food/pickledvegetable.json",
+    "op": "AddMerge",
+    "path": "/tpHandTransformByType/*-cabbage",
+    "value": {
+      "translation": {
+        "x": -0.14,
+        "y": -1,
+        "z": -0.8
+      },
+      "rotation": {
+        "x": 131,
+        "y": -2,
+        "z": -72
+      },
+      "origin": {
+        "x": -0.05,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "scale": 0.5
+    },
+    "condition": {
+      "when": "TethysServerPatches_FixCabbageOffsets",
+      "isValue": true
+    }
+  }
+]

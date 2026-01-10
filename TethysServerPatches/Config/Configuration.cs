@@ -8,6 +8,7 @@ public class Configuration
     public PatchFlag ClothiersHeirloomsPatches = new();
     public RpTtsPatches RpTtsPatches = new();
     public AllClassesPatchOptions AllClassesPatches = new();
+    public VanillaFixes VanillaFixes = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -17,9 +18,14 @@ public class PatchFlag
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
-public class RpTtsPatches
+public class VanillaFixes
 {
-    public bool Enabled = true;
+    public bool FixCabbageOffsets = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class RpTtsPatches : PatchFlag
+{
     public bool SkipGreeting;
     public string[] InitializationGreetings = [];
     public string[] ShortenedMessageBackups = [];

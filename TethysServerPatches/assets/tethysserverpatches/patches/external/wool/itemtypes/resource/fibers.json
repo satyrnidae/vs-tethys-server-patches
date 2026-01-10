@@ -44,6 +44,30 @@
     "side": "Server",
     "file": "wool:itemtypes/resource/fibers.json",
     "op": "AddMerge",
+    "path": "/attributesByType/fibers-generic-white",
+    "value": {
+      "clothierheirloomsmod:spinningProps": {
+        "input": 3,
+        "output": {
+          "type": "item",
+          "code": "twine-wool-white",
+          "quantity": 2
+        }
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/fibers.json",
+    "op": "AddMerge",
     "path": "/attributesByType/fibers-generic-brown",
     "value": {
       "clothierheirloomsmod:spinningProps": {
