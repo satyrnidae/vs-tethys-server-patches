@@ -1,0 +1,18 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/smithing/metalpot-empty.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": {
+      "when": "TethysServerPatches_AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  }
+]

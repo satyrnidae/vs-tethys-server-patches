@@ -1,0 +1,82 @@
+{
+  "enabled": false,
+  // This probably doesn't work
+  "requiresTrait": "smith",
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    // Also supports Aluminum and Meteoric Steel
+    "allowedVariants": [
+      "copper",
+      "bismuthbronze",
+      "iron",
+      "meteoriciron",
+      "steel",
+      "gold"
+    ]
+  },
+  "pattern": [
+    [
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    // Probably more difficult than it's actually worth lmao
+    [
+      "_______",
+      "_#####_",
+      "_#___#_",
+      "_#___#_",
+      "_#___#_",
+      "_#####_",
+      "_______"
+    ]
+  ],
+  "name": "metalpot-fired",
+  "output": {
+    "type": "block",
+    "code": "allclasses:metalpot-{metal}-fired",
+    "stacksize": 1
+  }
+}

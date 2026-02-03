@@ -18,7 +18,7 @@
 					}
 				}
 			],
-			"@^ashpile-(2|3|4)": [
+			"@^ashpile-(2)": [
 				{
 					"type": "item",
 					"code": "soapandlye:woodash",
@@ -29,7 +29,7 @@
 					}
 				}
 			],
-			"@^ashpile-(5|6|7|8)": [
+			"@^ashpile-(3|4)": [
 				{
 					"type": "item",
 					"code": "soapandlye:woodash",
@@ -39,7 +39,29 @@
 						"dist": "invexp"
 					}
 				}
-			]
+			],
+			"@^ashpile-(5|6)": [
+				{
+					"type": "item",
+					"code": "soapandlye:woodash",
+					"quantity": {
+						"avg": 3,
+						"var": 3,
+						"dist": "invexp"
+					}
+				}
+			],
+      "@^ashpile-(7|8)": [
+        {
+          "type": "item",
+          "code": "soapandlye:woodash",
+          "quantity": {
+            "avg": 4,
+            "var": 4,
+            "dist": "stronginvexp"
+          }
+        }
+      ],
 		},
 		"dependsOn": [
 			{

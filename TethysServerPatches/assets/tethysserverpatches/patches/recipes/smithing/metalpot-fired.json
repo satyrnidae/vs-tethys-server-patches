@@ -1,0 +1,42 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/smithing/metalpot-fired.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": {
+      "when": "TethysServerPatches_AltMetalPotRecipes",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "allclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/smithing/metalpot-fired.json",
+    "op": "Add",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "meteoricsteel",
+    "dependsOn": [
+      {
+        "modid": "meteoricsteel"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/smithing/metalpot-fired.json",
+    "op": "Add",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "aluminum",
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]
