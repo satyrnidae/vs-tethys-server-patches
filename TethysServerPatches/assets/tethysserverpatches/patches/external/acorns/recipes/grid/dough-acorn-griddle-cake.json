@@ -109,7 +109,12 @@
     "side": "Server",
     "file": "acorns:recipes/grid/dough-acorn-griddle-cake.json",
     "op": "Remove",
-    "path": "/1/attributes"
+    "path": "/1/attributes",
+    "dependsOn": [
+      {
+        "modid": "acorns"
+      }
+    ]
   },
   {
     // Width

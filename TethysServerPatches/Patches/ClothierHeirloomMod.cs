@@ -19,7 +19,7 @@ class BlockEntityAutoloom_get_InputGrindProps
 {
     static IEnumerable<MethodBase> TargetMethods()
     {
-        var asm = Assembly.Load("ClothierHeirloomsmod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+        var asm = Assembly.Load("ClothierHeirloomsmod, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
         Type type;
         MethodBase getMethod;
         if ((type = asm.GetType("ClothierHeirloomsmod.NSBlockEntity.BlockEntityAutoloom", throwOnError: false)) != null

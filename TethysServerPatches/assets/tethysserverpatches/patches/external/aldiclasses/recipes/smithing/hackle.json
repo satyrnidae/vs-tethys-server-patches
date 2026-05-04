@@ -1,0 +1,18 @@
+[
+  {
+    "side": "Server",
+    "file": "aldiclasses:recipes/smithing/hackle",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedvariants",
+    "value": [ "tinbronze", "bismuthbronze", "iron", "meteoriciron", "silver", "gold" ],
+    "condition": {
+      "when": "TethysServerPatches_MoreHackles",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "aldiclasses"
+      }
+    ]
+  }
+]

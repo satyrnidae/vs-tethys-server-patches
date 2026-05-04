@@ -64,6 +64,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_Homesteader_AddClothier", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs && configInstance.AllClassesPatches.ClassCustomizations.HomesteaderTraitFlags.AddClothier);
             api.World.Config.SetBool("TethysServerPatches_Homesteader_AddScavenger", configInstance.AllClassesPatches.ClassCustomizations.HomesteaderBuffs && configInstance.AllClassesPatches.ClassCustomizations.HomesteaderTraitFlags.AddScavenger);
             api.World.Config.SetBool("TethysServerPatches_FixCabbageOffsets", configInstance.VanillaFixes.FixCabbageOffsets);
+            api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
 
             if (loadSuccessful)
             {

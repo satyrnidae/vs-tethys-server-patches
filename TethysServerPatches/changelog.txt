@@ -1,3 +1,21 @@
+v1.3.8-pre.1
+- 1.22.x support
+  - Update to .net 10.0
+  - Patches work on 1.22; haven't tested Harmony compat yet
+    - May not work with Clothier's Heirloom 1.1.0 (untested)
+    - May not work with RPTTS (untested)
+    - Default config for harmony patches now False
+- Aldi's Classes patches:
+  - Added more metals to make Hackles
+  - Added translation for new Hackles
+  - Added config options for new hackles (AldiClassesPatches/MoreHackles, default true)
+  - Added brush recipes for turning Wool fleece into threads
+- Acorns:
+  - Fixed missing dependsOn patch condition in griddle cakes recipe
+- All Classes:
+  - Fixed a broken condition on chef pot recipes
+  - Remove never-implemented chef harmony patch
+
 v1.3.7
 - Fix typo in wood ash drops
 - Add metal pot smithing to alt metal pot recipes (using the same recipe as clay pots) >:3c

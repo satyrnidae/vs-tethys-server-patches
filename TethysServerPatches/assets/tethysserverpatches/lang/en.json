@@ -1,4 +1,10 @@
 {
+  "aldiclasses:block-hackle-iron": "Iron hackle",
+  "aldiclasses:block-hackle-gold": "Golden hackle",
+  "aldiclasses:block-hackle-silver": "Silver hackle",
+  "aldiclasses:block-hackle-tinbronze": "Tin bronze hackle",
+  "aldiclasses:block-hackle-meteoriciron": "Meteoric iron hackle",
+  "aldiclasses:block-hackle-bismuthbronze": "Bismuth bronze hackle",
   "allclasses:block-metalpotdirty-copper-empty": "Residue-covered copper metal pot",
   "allclasses:block-metalpotdirty-copper-cooked": "Residue-covered copper metal pot",
   "allclasses:block-metalpotdirty-bismuthbronze-empty": "Residue-covered bismuth bronze metal pot",

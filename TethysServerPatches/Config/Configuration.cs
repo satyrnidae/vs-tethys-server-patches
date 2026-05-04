@@ -9,12 +9,19 @@ public class Configuration
     public RpTtsPatches RpTtsPatches = new();
     public AllClassesPatchOptions AllClassesPatches = new();
     public VanillaFixes VanillaFixes = new();
+    public AldiClassesPatchOptions AldiClassesPatches = new();
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class AldiClassesPatchOptions
+{
+    public bool MoreHackles = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
 public class PatchFlag
 {
-    public bool Enabled = true;
+    public bool Enabled;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

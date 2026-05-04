@@ -1,0 +1,274 @@
+﻿[
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-plain",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-plain"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-brown",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-brown"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-redbrown",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-redbrown"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-lightbrown",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-lightbrown"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-black",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-black"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-gray",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-gray"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-white",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-white"
+    }
+  },
+  {
+    "code": "brushingfleece",
+    "enabled": false,
+    "ingredientPattern": "_B_,SFS,_H_",
+    "width": 3,
+    "height": 3,
+    "ingredients": {
+      "B": {
+        "type": "item",
+        "code": "aldiclasses:brush-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "S": {
+        "type": "item",
+        "code": "game:stick"
+      },
+      "H": {
+        "type": "block",
+        "code": "aldiclasses:hackle-*",
+        "isTool": true,
+        "toolDurabilityCost": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "wool:fleece-*-yellow",
+        "name": "type"
+      }
+    },
+    "output": {
+      "type": "item",
+      "code": "wool:fibers-{type}-yellow"
+    }
+  }
+]

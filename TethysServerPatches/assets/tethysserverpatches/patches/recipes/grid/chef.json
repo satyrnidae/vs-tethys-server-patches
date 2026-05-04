@@ -6,7 +6,7 @@
     "path": "/0/enabled",
     "value": true,
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": false
     },
     "dependsOn": [
@@ -25,7 +25,7 @@
     "path": "/1/enabled",
     "value": true,
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
@@ -44,7 +44,7 @@
     "path": "/2/enabled",
     "value": true,
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": false
     },
     "dependsOn": [
@@ -63,7 +63,7 @@
     "path": "/3/enabled",
     "value": true,
     "condition": {
-      "when": "CheaperChefPots",
+      "when": "TethysServerPatches_CheaperChefPots",
       "isValue": true
     },
     "dependsOn": [
