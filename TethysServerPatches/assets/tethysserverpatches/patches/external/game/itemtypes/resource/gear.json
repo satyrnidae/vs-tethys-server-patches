@@ -1,0 +1,14 @@
+[
+  // Temporal gear stacking
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/gear.json",
+    "op": "Replace",
+    "path": "/maxstacksizeByType/gear-temporal",
+    "value": 16,
+    "condition": {
+      "when": "TethysServerPatches_StackableTemporalGears",
+      "isValue": true
+    }
+  }
+]

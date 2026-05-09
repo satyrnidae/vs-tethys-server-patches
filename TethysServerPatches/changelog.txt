@@ -1,3 +1,12 @@
+v1.3.8-pre.2
+- New soft dependency on JSON Patch Lib by Maltiez
+- Vanilla fixes
+  - Temporal gears now stack to 16 (toggleable via VanillaFixes/StackableTemporalGears, default true)
+- Aldi's Classes x BaconBaconBacon compat
+  - Fixed cabbage crop patch conflicts when BaconBaconBacon's bacon crops are enabled
+    - Disables conflicting Aldi's Classes cabbage patches and injects the effects into BaconBaconBacon's patch instead
+    - Seed yields and produce drop rate stat now apply correctly either way
+
 v1.3.8-pre.1
 - 1.22.x support
   - Update to .net 10.0

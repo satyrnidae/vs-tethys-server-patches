@@ -1,0 +1,67 @@
+[
+  // Disable failing aldiclasses cabbage patches.
+  // All entries in each file are disabled via the -/enabled wildcard path.
+  // These patches rely on vanilla wildcard keys (*-11, *-12, *) which are
+  // replaced entirely by baconbaconbacon when its bacon crops are enabled.
+  {
+    "priority": 9999,
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsEarlyStage/survival-blocktypes-plant-crop-cabbage",
+    "path": "/-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ]
+  },
+  {
+    "priority": 9999,
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsDropRate/survival-blocktypes-plant-crop-cabbage",
+    "path": "/-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ]
+  },
+
+  // Inject aldiclasses effects into baconbaconbacon's replace patch value.
+  // jsonpatches lib runs before vanilla patches, so we cannot patch game:blocktypes/...
+  // directly and expect baconbaconbacon's replace to run afterward. Instead we modify
+  // the value object inside baconbaconbacon's replace patch entry (index 2) so that
+  // when the vanilla patch system applies it, both mods' effects are present.
+  {
+    "priority": 9999,
+    "op": "Replace",
+    "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
+    "path": "/2/value/@@@crop-(cabbage|baconcrop)-7/0/quantity",
+    "value": { "avg": 2.5, "var": 0.5 },
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ]
+  },
+  {
+    "priority": 9999,
+    "op": "Add",
+    "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
+    "path": "/2/value/@@@crop-(cabbage|baconcrop)-11/1/dropModbyStat",
+    "value": "produceDropRate",
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ]
+  },
+  {
+    "priority": 9999,
+    "op": "Add",
+    "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
+    "path": "/2/value/@@@crop-(cabbage|baconcrop)-12/1/dropModbyStat",
+    "value": "produceDropRate",
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ]
+  }
+]

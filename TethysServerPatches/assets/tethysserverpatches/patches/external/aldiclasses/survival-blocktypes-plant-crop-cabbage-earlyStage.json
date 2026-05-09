@@ -1,0 +1,47 @@
+[
+  // Replicates aldiclasses patches when BaconBaconBacon is installed but bacon crop patching
+  // is disabled.
+  {
+    "op": "move",
+    "frompath": "/dropsByType/*",
+    "path": "/temp",
+    "file": "game:blocktypes/plant/crop/cabbage.json",
+    "dependsOn": [
+      { "modid": "artofgrowingpatch", "invert": true },
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ],
+    "condition": { "when": "BaconBaconBacon_EnableBaconCrops", "isValue": false }
+  },
+  {
+    "op": "addmerge",
+    "path": "/dropsByType/*-7",
+    "value": [
+      {
+        "type": "item",
+        "code": "seeds-cabbage",
+        "quantity": { "avg": 2.5, "var": 0.5 }
+      }
+    ],
+    "file": "game:blocktypes/plant/crop/cabbage.json",
+    "dependsOn": [
+      { "modid": "artofgrowingpatch", "invert": true },
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ],
+    "condition": { "when": "BaconBaconBacon_EnableBaconCrops", "isValue": false },
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "frompath": "/temp",
+    "path": "/dropsByType/*",
+    "file": "game:blocktypes/plant/crop/cabbage.json",
+    "dependsOn": [
+      { "modid": "artofgrowingpatch", "invert": true },
+      { "modid": "aldiclasses" },
+      { "modid": "baconbaconbacon" }
+    ],
+    "condition": { "when": "BaconBaconBacon_EnableBaconCrops", "isValue": false }
+  }
+]

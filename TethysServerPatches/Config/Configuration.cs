@@ -28,6 +28,7 @@ public class PatchFlag
 public class VanillaFixes
 {
     public bool FixCabbageOffsets = true;
+    public bool StackableTemporalGears = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
