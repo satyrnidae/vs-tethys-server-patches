@@ -1,20 +1,14 @@
 [
-  // Add props for spinning
   {
     "side": "Server",
     "file": "wool:itemtypes/resource/twine.json",
-    "op": "Add",
-    "path": "/attributesByType",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-plain",
     "value": {
-      "@.*-(plain|black|blue|brown|gray|green|orange|pink|purple|red|white|yellow|darkblue|darkbrown|darkgreen|darkred)": {
-        "clothierheirloomsmod:weavingProps": {
-          "input": 3,
-          "output": {
-            "type": "block",
-            "code": "wool-{color}",
-            "quantity": 2
-          }
-        }
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-plain",
+        "outputQuantity": 2
       }
     },
     "dependsOn": [
@@ -23,6 +17,385 @@
       },
       {
         "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-black",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-black",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-blue",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-blue",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-brown",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-brown",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-gray",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-gray",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-green",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-green",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-orange",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-orange",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-pink",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-pink",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-purple",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-purple",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-red",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-red",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-white",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-white",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-yellow",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-yellow",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-darkblue",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-darkblue",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-darkbrown",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-darkbrown",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-darkgreen",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-darkgreen",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "wool:itemtypes/resource/twine.json",
+    "op": "AddMerge",
+    "path": "/attributesByType/twine-wool-darkred",
+    "value": {
+      "weavingProps": {
+        "inputQuantity": 3,
+        "outputType": "wool:wool-darkred",
+        "outputQuantity": 2
+      }
+    },
+    "dependsOn": [
+      {
+        "modid": "wool"
+      },
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "spinningwheel",
+        "invert": true
       }
     ]
   }

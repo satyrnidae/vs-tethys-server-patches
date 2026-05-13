@@ -1,12 +1,7 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Text.Json;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.GameContent;
@@ -29,26 +24,27 @@ class BlockEntityAutoloom_get_InputGrindProps
         throw new Exception();
     }
 
-    // Add support for wool and whatever
     static bool Prefix(BlockEntity __instance, InventoryQuern ___inventory, ref int ___inputnum, ref ItemStack __result)
     {
         if (!TethysServerPatchesCore.Configuration.ClothiersHeirloomsPatches.Enabled)
-        {
             return true;
-        }
 
         var val = ___inventory[0];
-        var weavingProps = val.Itemstack?.Collectible?.Attributes?["clothierheirloomsmod:weavingProps"];
+        var weavingProps = val.Itemstack?.Collectible?.Attributes?["weavingProps"];
         if (weavingProps is not { Exists: true }) return false;
 
-        var inputNum = weavingProps["input"].AsInt();
+        int inputNum = weavingProps["inputQuantity"].AsInt(1);
         if (val.Itemstack.StackSize < inputNum) return false;
 
-        var jsonItemStack = weavingProps["output"].AsObject<JsonItemStack>(null, val.Itemstack.Collectible.Code.Domain);
-        if (!jsonItemStack.Resolve(__instance.Api.World, TethysServerPatchesCore.ModId)) return false;
+        string outputType = weavingProps["outputType"].AsString();
+        int outputQuantity = weavingProps["outputQuantity"].AsInt(1);
+        if (outputType == null) return false;
 
-        __result = jsonItemStack.ResolvedItemstack;
-        ___inputnum = inputNum; // bit of a hack job tbh
+        var loc = new AssetLocation(outputType);
+        var item = __instance.Api.World.GetItem(loc);
+        if (item != null) { __result = new ItemStack(item, outputQuantity); ___inputnum = inputNum; return false; }
+        var block = __instance.Api.World.GetBlock(loc);
+        if (block != null) { __result = new ItemStack(block, outputQuantity); ___inputnum = inputNum; return false; }
         return false;
     }
 }
@@ -59,7 +55,7 @@ class BlockEntitySpinner_get_InputGrindProps
 {
     static IEnumerable<MethodBase> TargetMethods()
     {
-        var asm = Assembly.Load("ClothierHeirloomsmod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+        var asm = Assembly.Load("ClothierHeirloomsmod, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
         Type type;
         MethodBase getMethod;
         if (asm == null
@@ -72,25 +68,27 @@ class BlockEntitySpinner_get_InputGrindProps
         return [getMethod];
     }
 
-    // Add support for wool and whatever
     static bool Prefix(BlockEntity __instance, InventoryQuern ___inventory, ref ItemStack __result)
     {
         if (!TethysServerPatchesCore.Configuration.ClothiersHeirloomsPatches.Enabled)
-        {
             return true;
-        }
 
         ItemSlot val = ___inventory[0];
-        JsonObject spinnerProps = val.Itemstack?.Collectible?.Attributes?["clothierheirloomsmod:spinningProps"];
+        JsonObject spinnerProps = val.Itemstack?.Collectible?.Attributes?["spinningProps"];
         if (spinnerProps != null && spinnerProps.Exists)
         {
-            int inputnum = spinnerProps["input"].AsInt();
+            int inputnum = spinnerProps["inputQuantity"].AsInt(1);
             if (val.Itemstack.StackSize >= inputnum)
             {
-                var jsonItemStack = spinnerProps["output"].AsObject<JsonItemStack>(null, val.Itemstack.Collectible.Code.Domain);
-                if (jsonItemStack.Resolve(__instance.Api.World, TethysServerPatchesCore.ModId))
+                string outputType = spinnerProps["outputType"].AsString();
+                int outputQuantity = spinnerProps["outputQuantity"].AsInt(1);
+                if (outputType != null)
                 {
-                    __result = jsonItemStack.ResolvedItemstack;
+                    var loc = new AssetLocation(outputType);
+                    var item = __instance.Api.World.GetItem(loc);
+                    if (item != null) { __result = new ItemStack(item, outputQuantity); return false; }
+                    var block = __instance.Api.World.GetBlock(loc);
+                    if (block != null) { __result = new ItemStack(block, outputQuantity); return false; }
                 }
             }
         }
@@ -104,7 +102,7 @@ class BlockEntitySpinner_get_inputnum
 {
     static IEnumerable<MethodBase> TargetMethods()
     {
-        var asm = Assembly.Load("ClothierHeirloomsmod, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
+        var asm = Assembly.Load("ClothierHeirloomsmod, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
         Type type;
         MethodBase getMethod;
         if (asm == null
@@ -120,15 +118,13 @@ class BlockEntitySpinner_get_inputnum
     static bool Prefix(BlockEntity __instance, InventoryQuern ___inventory, ref int __result)
     {
         if (!TethysServerPatchesCore.Configuration.ClothiersHeirloomsPatches.Enabled)
-        {
             return true;
-        }
 
         ItemSlot val = ___inventory[0];
-        JsonObject spinnerProps = val.Itemstack?.Collectible?.Attributes?["clothierheirloomsmod:spinningProps"];
+        JsonObject spinnerProps = val.Itemstack?.Collectible?.Attributes?["spinningProps"];
         if (spinnerProps != null && spinnerProps.Exists)
         {
-            __result = spinnerProps["input"].AsInt();
+            __result = spinnerProps["inputQuantity"].AsInt(1);
             return false;
         }
         return true;

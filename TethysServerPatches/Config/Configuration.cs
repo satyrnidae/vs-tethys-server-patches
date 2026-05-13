@@ -31,6 +31,8 @@ public class VanillaFixes
     public bool FixCabbageOffsets = true;
     public bool StackableTemporalGears = true;
     public bool AsyncInteractionHelp = true;
+    // Max entries composed at once; each adds ~80 unscaled px to the Cairo surface. Set to 0 for no limit.
+    public int MaxInteractionHelpEntries = 16;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

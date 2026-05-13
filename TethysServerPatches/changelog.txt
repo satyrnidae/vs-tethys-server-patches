@@ -1,3 +1,22 @@
+v1.3.8-pre.4
+- Vanilla fixes
+  - Cap interaction help entry count to limit Cairo surface size and GPU upload
+    stalls on systems without Resizable BAR (VanillaFixes/MaxInteractionHelpEntries,
+    default 16, 0 = no limit)
+- Clothier's Heirlooms patches
+  - Fixed Harmony patches failing to load against Clothier's Heirlooms 1.1.x
+    (assembly version mismatch: expected 1.0.0.0, actual is 0.0.0.0)
+  - Fixed autoloom and autospinner "Metal parts (tinkerer)" recipe patches
+    targeting wrong array index (/0/ instead of /3/)
+  - Migrated spinner and loom attribute schema to match Immersive Fibercraft's
+    spinningProps/weavingProps format (inputQuantity, outputType, outputQuantity)
+    so items patched by either mod work with both
+  - Flax fibers, flax twine, wool fibers, and wool twine patches now skip when
+    Immersive Fibercraft is installed (those items are already handled by IF)
+  - Added wool twine -> wool weaving recipes for all 16 wool colors
+    (plain, black, blue, brown, gray, green, orange, pink, purple, red, white,
+    yellow, darkblue, darkbrown, darkgreen, darkred)
+
 v1.3.8-pre.3
 - Aldi's Classes patches
   - Enable fishing pole bait recipes that Aldi's ships disabled by default

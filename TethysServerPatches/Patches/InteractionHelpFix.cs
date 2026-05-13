@@ -208,31 +208,44 @@ class HudElementInteractionHelp_ComposeBlockWorldInteractionHelp_Async
         return false; // main thread is free immediately; tooltip appears on next tick
     }
 
-    /// <summary>
-    /// Temporarily replaces each interaction's GetMatchingStacks delegate with a
-    /// lambda returning pre-resolved stacks, calls the vanilla compose method
-    /// (now fast - no ARL iteration), then restores the original delegates.
-    /// Must be called on the main/game thread.
-    /// </summary>
+    // ComposeBlockWorldInteractionHelp's inner loop guard is:
+    //   if (wi.Itemstacks != null && wi.GetMatchingStacks != null) stacks = wi.GetMatchingStacks(...)
+    // Replacing only GetMatchingStacks doesn't help when Itemstacks is null — the guard
+    // short-circuits and the lambda is never called. Instead we swap Itemstacks to the
+    // pre-resolved result and null out GetMatchingStacks so the compose method uses
+    // Itemstacks directly with no delegate call.
     static void ComposeWithPreResolved(
         DrawWorldInteractionUtil wiUtil,
         WorldInteraction[]       interactions,
         ItemStack[][]            resolved)
     {
-        var originals = new InteractionStacksDelegate[interactions.Length];
+        int max = TethysServerPatchesCore.Configuration?.VanillaFixes.MaxInteractionHelpEntries ?? 16;
+        if (max > 0 && interactions.Length > max)
+        {
+            interactions = interactions[..max];
+            resolved     = resolved[..max];
+        }
+
+        var origItemstacks        = new ItemStack[interactions.Length][];
+        var origGetMatchingStacks = new InteractionStacksDelegate[interactions.Length];
         for (int i = 0; i < interactions.Length; i++)
         {
-            originals[i] = interactions[i].GetMatchingStacks;
-            var stacks = resolved[i];
-            interactions[i].GetMatchingStacks = stacks != null
-                ? (wi, bs, es) => stacks
-                : null;
+            origItemstacks[i]        = interactions[i].Itemstacks;
+            origGetMatchingStacks[i] = interactions[i].GetMatchingStacks;
+            if (resolved[i] != null)
+            {
+                interactions[i].Itemstacks        = resolved[i];
+                interactions[i].GetMatchingStacks = null;
+            }
         }
         try   { _wiUtilCompose.Invoke(wiUtil, [interactions]); }
         finally
         {
             for (int i = 0; i < interactions.Length; i++)
-                interactions[i].GetMatchingStacks = originals[i];
+            {
+                interactions[i].Itemstacks        = origItemstacks[i];
+                interactions[i].GetMatchingStacks = origGetMatchingStacks[i];
+            }
         }
     }
 }
