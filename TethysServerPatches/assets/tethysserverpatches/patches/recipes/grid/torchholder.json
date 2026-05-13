@@ -1,0 +1,13 @@
+[
+  {
+    "side": "Server",
+    "file": "recipes/grid/torchholder.json",
+    "op": "Replace",
+    "path": "/0/enabled",
+    "value": true,
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "alatyrstorcholders" }
+    ]
+  }
+]

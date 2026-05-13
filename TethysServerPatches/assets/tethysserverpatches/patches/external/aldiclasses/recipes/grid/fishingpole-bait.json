@@ -1,0 +1,50 @@
+[
+  {
+    "side": "Server",
+    "file": "aldiclasses:recipes/grid/fishingpole",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "condition": {
+      "when": "TethysServerPatches_CarbonPoleBaitFix",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "aldiclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "aldiclasses:recipes/grid/fishingpole",
+    "op": "Replace",
+    "path": "/2/enabled",
+    "value": true,
+    "condition": {
+      "when": "TethysServerPatches_CarbonPoleBaitFix",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "aldiclasses"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "aldiclasses:recipes/grid/fishingpole",
+    "op": "Replace",
+    "path": "/3/enabled",
+    "value": true,
+    "condition": {
+      "when": "TethysServerPatches_CarbonPoleBaitFix",
+      "isValue": true
+    },
+    "dependsOn": [
+      {
+        "modid": "aldiclasses"
+      }
+    ]
+  }
+]

@@ -1,3 +1,18 @@
+v1.3.8-pre.3
+- Aldi's Classes patches
+  - Enable fishing pole bait recipes that Aldi's ships disabled by default
+    (toggleable via AldiClassesPatches/CarbonPoleBaitFix, default true)
+- Aldi's Classes x BaconBaconBacon compat fixes
+  - Fixed incorrect JSON Patch array-append paths (/-/ -> -/)
+  - Fixed dependsOn key casing (modid -> modId)
+- Aldi's Classes x Alatyr's Torchholders compat
+  - Smith trait grid recipes for all Alatyr's Torchholders metal variants
+    (active when both mods are installed)
+- Vanilla fixes
+  - Async interaction help patch to prevent main-thread stalls caused by
+    AttributeRenderingLibrary + ImprovedMetallurgy's FindByVariant calls
+    (toggleable via VanillaFixes/AsyncInteractionHelp, default true)
+
 v1.3.8-pre.2
 - New soft dependency on JSON Patch Lib by Maltiez
 - Vanilla fixes

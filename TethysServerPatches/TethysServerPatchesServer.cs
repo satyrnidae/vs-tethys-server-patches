@@ -66,6 +66,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_FixCabbageOffsets", configInstance.VanillaFixes.FixCabbageOffsets);
             api.World.Config.SetBool("TethysServerPatches_StackableTemporalGears", configInstance.VanillaFixes.StackableTemporalGears);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
+            api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
 
             if (loadSuccessful)
             {

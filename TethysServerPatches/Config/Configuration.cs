@@ -16,6 +16,7 @@ public class Configuration
 public class AldiClassesPatchOptions
 {
     public bool MoreHackles = true;
+    public bool CarbonPoleBaitFix = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -29,6 +30,7 @@ public class VanillaFixes
 {
     public bool FixCabbageOffsets = true;
     public bool StackableTemporalGears = true;
+    public bool AsyncInteractionHelp = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

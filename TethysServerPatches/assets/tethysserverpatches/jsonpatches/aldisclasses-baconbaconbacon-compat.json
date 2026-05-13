@@ -7,22 +7,22 @@
     "priority": 9999,
     "op": "Add",
     "file": "aldiclasses:patches/cropsEarlyStage/survival-blocktypes-plant-crop-cabbage",
-    "path": "/-/enabled",
+    "path": "-/enabled",
     "value": false,
     "dependsOn": [
-      { "modid": "aldiclasses" },
-      { "modid": "baconbaconbacon" }
+      { "modId": "aldiclasses" },
+      { "modId": "baconbaconbacon" }
     ]
   },
   {
     "priority": 9999,
     "op": "Add",
     "file": "aldiclasses:patches/cropsDropRate/survival-blocktypes-plant-crop-cabbage",
-    "path": "/-/enabled",
+    "path": "-/enabled",
     "value": false,
     "dependsOn": [
-      { "modid": "aldiclasses" },
-      { "modid": "baconbaconbacon" }
+      { "modId": "aldiclasses" },
+      { "modId": "baconbaconbacon" }
     ]
   },
 
@@ -35,33 +35,33 @@
     "priority": 9999,
     "op": "Replace",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "/2/value/@@@crop-(cabbage|baconcrop)-7/0/quantity",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-7/0/quantity",
     "value": { "avg": 2.5, "var": 0.5 },
     "dependsOn": [
-      { "modid": "aldiclasses" },
-      { "modid": "baconbaconbacon" }
+      { "modId": "aldiclasses" },
+      { "modId": "baconbaconbacon" }
     ]
   },
   {
     "priority": 9999,
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "/2/value/@@@crop-(cabbage|baconcrop)-11/1/dropModbyStat",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-11/1/dropModbyStat",
     "value": "produceDropRate",
     "dependsOn": [
-      { "modid": "aldiclasses" },
-      { "modid": "baconbaconbacon" }
+      { "modId": "aldiclasses" },
+      { "modId": "baconbaconbacon" }
     ]
   },
   {
     "priority": 9999,
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "/2/value/@@@crop-(cabbage|baconcrop)-12/1/dropModbyStat",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-12/1/dropModbyStat",
     "value": "produceDropRate",
     "dependsOn": [
-      { "modid": "aldiclasses" },
-      { "modid": "baconbaconbacon" }
+      { "modId": "aldiclasses" },
+      { "modId": "baconbaconbacon" }
     ]
   }
 ]
