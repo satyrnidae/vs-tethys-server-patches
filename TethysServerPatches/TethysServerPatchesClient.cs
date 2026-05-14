@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using TethysServerPatches.Config;
 using TethysServerPatches.Patches;
 using Vintagestory.API.Client;
@@ -19,7 +14,7 @@ class TethysServerPatchesClient : TethysServerPatchesCore
 
     public override void StartPre(ICoreAPI api)
     {
-        InteractionHelpFixState.GameThreadId = Thread.CurrentThread.ManagedThreadId;
+        InteractionHelpFixState.Create(Thread.CurrentThread.ManagedThreadId);
         base.StartPre(api); // creates HarmonyInstance and applies other categories
         HarmonyInstance.PatchCategory("interactionhelpfix");
     }
@@ -28,10 +23,10 @@ class TethysServerPatchesClient : TethysServerPatchesCore
     {
         base.StartClientSide(api);
 
-        InteractionHelpFixState.Capi = api;
+        InteractionHelpFixState.Instance.Capi = api;
         api.Event.RegisterGameTickListener(_ =>
         {
-            Interlocked.Exchange(ref InteractionHelpFixState.PendingCompose, null)?.Invoke();
+            InteractionHelpFixState.Instance?.PendingCompose?.Invoke();
         }, 1);
 
         ClientNetworkChannel.SetMessageHandler<Configuration>(ReceiveServerConfiguration);
@@ -40,16 +35,11 @@ class TethysServerPatchesClient : TethysServerPatchesCore
     public override void Dispose()
     {
         HarmonyInstance?.UnpatchCategory("interactionhelpfix");
-        InteractionHelpFixState.PendingCompose   = null;
-        InteractionHelpFixState.Capi             = null;
-        InteractionHelpFixState.CachedInteractions = null;
-        InteractionHelpFixState.CachedStacks     = null;
+        InteractionHelpFixState.Instance?.Dispose();
 
         base.Dispose();
         if (Instance == this)
-        {
             Instance = null;
-        }
     }
 
     public override bool ShouldLoad(EnumAppSide forSide)

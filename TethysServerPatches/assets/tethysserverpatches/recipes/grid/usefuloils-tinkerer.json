@@ -1,0 +1,350 @@
+[
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "PXP,RSF",
+    "ingredients": {
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true },
+      "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
+      "R": { "type": "item", "code": "game:resin" },
+      "P": { "type": "item", "code": "game:stick" },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 2,
+    "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,S_S,RLF",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 20 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 20 },
+      "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
+      "S": { "type": "item", "code": "game:stick", "quantity": 8 },
+      "R": { "type": "item", "code": "game:resin" },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,S_S,RLF",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 20 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 20 },
+      "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
+      "S": { "type": "item", "code": "game:stick", "quantity": 8 },
+      "R": { "type": "item", "code": "game:resin" },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,S_S,RLF",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 20 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 20 },
+      "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
+      "S": { "type": "item", "code": "game:stick", "quantity": 8 },
+      "R": { "type": "item", "code": "game:resin" },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCR,PA_,_F_",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 30 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 2 },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCR,PA_,_F_",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 30 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 2 },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCR,PA_,_F_",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 30 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 2 },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "A": { "type": "block", "code": "game:woodenaxle-ud" },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:log-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:log-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:log-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,PAS,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "P": { "type": "item", "code": "game:plank-*", "quantity": 4 },
+      "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
+      "S": { "type": "item", "code": "game:stick", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,GPG,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "G": { "type": "block", "code": "game:angledgears-s" },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "bowl-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,GPG,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "G": { "type": "block", "code": "game:angledgears-s" },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "woodbucket" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  },
+  {
+    "enabled": false,
+    "requiresTrait": "tinkerer",
+    "ingredientPattern": "HCX,GPG,R_F",
+    "ingredients": {
+      "H": { "type": "item", "tags": ["tool-hammer"], "isTool": true, "toolDurabilityCost": 20 },
+      "C": { "type": "item", "tags": ["tool-chisel"], "isTool": true, "toolDurabilityCost": 10 },
+      "X": { "type": "item", "tags": ["tool-saw"], "isTool": true, "toolDurabilityCost": 15 },
+      "G": { "type": "block", "code": "game:angledgears-s" },
+      "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
+      "R": { "type": "item", "code": "game:resin", "quantity": 1 },
+      "F": { "type": "block", "code": "jug-*-fired" }
+    },
+    "width": 3, "height": 3,
+    "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+  }
+]

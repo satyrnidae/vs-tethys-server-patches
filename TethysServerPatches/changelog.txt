@@ -1,3 +1,22 @@
+v1.3.8-pre.5
+- Vanilla tweaks (new config section: VanillaTweaks)
+  - Right-click pickup: right-click a dropped item entity to pick it up;
+    shows an interaction tooltip when looking at a dropped item entity
+    - replicates ClickToPick mod
+    - toggleable via VanillaTweaks/RightClickPickup/Enabled, default true
+    - VanillaTweaks/RightClickPickup/RequireEmptyHand: if true, block pickup
+      when holding a different item; if false, allow pickup with any item
+      held, default false
+  - StackableTemporalGears moved from VanillaFixes to VanillaTweaks
+    (config migration: move the key to the VanillaTweaks section)
+- Useful Oils x Aldi's Classes compat
+  - Tinkerer and Handwright class-efficient oil recipes for mechanical power
+    blocks: angledgears (x2 output), spurgear (x2 output), woodentoggle,
+    clutch, transmission - using half the oil of standard Useful Oils recipes
+    and the reduced ingredient costs from Aldi's Classes
+  - Tinkerer recipes active when Useful Oils is installed
+  - Handwright recipes active when Useful Oils + Aldi's Classes are installed
+
 v1.3.8-pre.4
 - Vanilla fixes
   - Cap interaction help entry count to limit Cairo surface size and GPU upload

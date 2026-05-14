@@ -9,7 +9,22 @@ public class Configuration
     public RpTtsPatches RpTtsPatches = new();
     public AllClassesPatchOptions AllClassesPatches = new();
     public VanillaFixes VanillaFixes = new();
+    public VanillaTweaks VanillaTweaks = new();
     public AldiClassesPatchOptions AldiClassesPatches = new();
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class VanillaTweaks
+{
+    public bool StackableTemporalGears = true;
+    public RightClickPickupOptions RightClickPickup = new();
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class RightClickPickupOptions
+{
+    public bool Enabled = true;
+    public bool RequireEmptyHand = false;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -29,9 +44,8 @@ public class PatchFlag
 public class VanillaFixes
 {
     public bool FixCabbageOffsets = true;
-    public bool StackableTemporalGears = true;
     public bool AsyncInteractionHelp = true;
-    // Max entries composed at once; each adds ~80 unscaled px to the Cairo surface. Set to 0 for no limit.
+    // Max entries composed per unique interaction type (ActionLangCode); 0 = no limit.
     public int MaxInteractionHelpEntries = 16;
 }
 

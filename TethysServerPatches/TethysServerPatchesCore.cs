@@ -43,6 +43,8 @@ public abstract class TethysServerPatchesCore : ModSystem
             HarmonyInstance.PatchCategory("rptts");
         }
 
+        HarmonyInstance.PatchCategory("rightclickpickup");
+
         //HarmonyInstance.PatchCategory("survival");
     }
 
@@ -68,6 +70,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (HarmonyInstance != null)
         {
             //HarmonyInstance.UnpatchCategory("survival");
+            HarmonyInstance.UnpatchCategory("rightclickpickup");
             if (_rpttsInstalled)
             {
                 HarmonyInstance.UnpatchCategory("rptts");

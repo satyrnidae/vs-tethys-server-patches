@@ -275,6 +275,10 @@
   "thecritterpack:recipeingredient-item-egg-crow-raw-instrumentalcase": "crow egg",
   "thecritterpack:recipeingredient-item-egg-instrumentalcase": "duck egg",
 
+  "tethysserverpatches:rightclickpickup-action": "Pick up",
+  "game:ingameerror-tethysserverpatches-wrongitem": "Can't pick up {0}, wrong item in hand!",
+  "game:ingameerror-tethysserverpatches-invfull": "Can't pick up {0}, inventory full!",
+
   "wolftaming:item-creature-peach-dog-female": "Peach dog (female)",
   "wolftaming:item-creature-peach-dog-male": "Peach dog (male)"
 }

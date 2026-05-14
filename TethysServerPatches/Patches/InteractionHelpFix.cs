@@ -11,32 +11,63 @@ using Vintagestory.Client.NoObf;
 namespace TethysServerPatches.Patches;
 
 /// <summary>
-/// Shared state for the interaction help async patch. Initialised by TethysServerPatchesClient
-/// before the category is applied.
+/// Shared state for the interaction help async patch. Created by TethysServerPatchesClient
+/// before the category is applied; disposed when the mod unloads.
 /// </summary>
-static class InteractionHelpFixState
+sealed class InteractionHelpFixState : IDisposable
 {
-    /// <summary>ManagedThreadId of the VS game/render thread, set at patch-apply time.</summary>
-    public static int GameThreadId;
+    public static InteractionHelpFixState Instance { get; private set; }
+
+    public static InteractionHelpFixState Create(int gameThreadId)
+    {
+        Instance = new InteractionHelpFixState(gameThreadId);
+        return Instance;
+    }
+
+    InteractionHelpFixState(int gameThreadId) => GameThreadId = gameThreadId;
+
+    /// <summary>ManagedThreadId of the VS game/render thread, set at creation time.</summary>
+    public int GameThreadId { get; }
 
     /// <summary>Client API reference, set in StartClientSide.</summary>
-    public static ICoreClientAPI Capi;
+    public ICoreClientAPI Capi { get; set; }
+
+    // ----- PendingCompose — thread-safe Action queue -----
+    // Getter atomically takes and clears the pending action (take-and-clear semantics).
+    // Setter atomically replaces the pending action (background thread queues here).
+
+    private volatile Action _pendingCompose;
+
+    public Action PendingCompose
+    {
+        get => Interlocked.Exchange(ref _pendingCompose, null);
+        set => Interlocked.Exchange(ref _pendingCompose, value);
+    }
 
     /// <summary>
-    /// Compose action queued by the background resolver for execution on the game thread.
-    /// Written from the thread pool, read + cleared atomically by the game-tick drain listener.
+    /// Re-entry guard: true while vanilla's compose body is running with pre-swapped delegates,
+    /// so a recursive call to ComposeBlockWorldInteractionHelp passes through unmodified.
     /// </summary>
-    public static volatile Action PendingCompose;
+    public bool IsComposing { get; set; }
 
     // ----- Result cache -----
     // Keyed on (blockId, x, y, z, selectionBoxIndex) so the expensive resolve only runs once
     // per distinct block the player targets.
 
-    public static (int blockId, int x, int y, int z, int selIdx) CacheKey;
-    /// <summary>The WorldInteraction[] that was resolved for CacheKey (same reference as passed to compose).</summary>
-    public static WorldInteraction[] CachedInteractions;
-    /// <summary>Pre-resolved ItemStack[] per interaction index for CacheKey.</summary>
-    public static ItemStack[][] CachedStacks;
+    public (int blockId, int x, int y, int z, int selIdx) CacheKey { get; set; }
+    public WorldInteraction[] CachedInteractions { get; set; }
+    public ItemStack[][] CachedStacks { get; set; }
+
+    public void Dispose()
+    {
+        PendingCompose     = null;
+        Capi               = null;
+        IsComposing        = false;
+        CachedInteractions = null;
+        CachedStacks       = null;
+        if (Instance == this)
+            Instance = null;
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -44,9 +75,8 @@ static class InteractionHelpFixState
 //
 // ARL's FindByVariant calls FrameProfilerUtil.Enter regardless of which thread
 // it is on.  The profiler is not thread-safe and NPEs when Enter is called from
-// a thread pool thread (null currentEntry or null stopwatch context depending on
-// game version).  This prefix makes Enter a no-op off the game thread so moving
-// GetMatchingStacks resolution to Task.Run is safe.
+// a thread pool thread.  This prefix makes Enter a no-op off the game thread
+// so resolving GetMatchingStacks in Task.Run is safe.
 // ---------------------------------------------------------------------------
 [HarmonyPatch]
 [HarmonyPatchCategory("interactionhelpfix")]
@@ -65,76 +95,101 @@ class FrameProfilerUtil_Enter_ThreadGuard
 
     static bool Prefix()
     {
-        if (TethysServerPatchesCore.Configuration?.VanillaFixes.AsyncInteractionHelp != true)
+        if (TethysServerPatchesCore.Configuration?.VanillaFixes.AsyncInteractionHelp == false)
             return true;
-        return Thread.CurrentThread.ManagedThreadId == InteractionHelpFixState.GameThreadId;
+        var state = InteractionHelpFixState.Instance;
+        if (state == null) return true;
+        return Thread.CurrentThread.ManagedThreadId == state.GameThreadId;
     }
 }
 
 // ---------------------------------------------------------------------------
-// Patch 2 - HudElementInteractionHelp.ComposeBlockWorldInteractionHelp (no-arg)
+// Patch 2 - DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[])
 //
-// The private ComposeBlockWorldInteractionHelp() triggers
-// DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[])
-// which iterates each WorldInteraction and calls wi.GetMatchingStacks().
-// For blocks patched by AttributeRenderingLibrary + ImprovedMetallurgy the
-// GetMatchingStacks delegate calls FindByVariant which can take 1-6 seconds on
-// the main thread.
+// The previous implementation patched the no-arg HudElementInteractionHelp
+// wrapper.  On .NET 10 the JIT inlines that tiny private method, making the
+// Harmony prefix unreachable; profiling confirms the ~6 s freeze still lands
+// inside this util method.  Patching the inner method directly is reliable.
 //
 // Strategy:
-//   - Cache hit  -> swap delegates to pre-resolved stacks, call compose, restore.
-//                  Main-thread cost is only the fast Cairo/GUI work (~1 ms).
-//   - Cache miss -> resolve GetMatchingStacks off-thread in a Task, store a
-//                  pending compose action that the game-tick drain listener
-//                  executes on the next tick.  Returns false immediately so the
-//                  main thread is never blocked.
+//   Cache hit  -> swap all GetMatchingStacks delegates to pre-resolved Itemstacks,
+//                 null the delegates, let vanilla compose run fast (~1 ms), restore.
+//   Cache miss -> null all GetMatchingStacks so vanilla runs instantly without
+//                 delegated-item rows (interaction help appears immediately, partial);
+//                 resolve off-thread; next game tick PendingCompose updates the cache
+//                 and re-invokes this method, which then takes the cache-hit path.
 // ---------------------------------------------------------------------------
 [HarmonyPatch]
 [HarmonyPatchCategory("interactionhelpfix")]
-class HudElementInteractionHelp_ComposeBlockWorldInteractionHelp_Async
+class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
 {
-    static FieldInfo _wiUtilField;
-    static MethodInfo _getWorldInteractions;
     static MethodInfo _wiUtilCompose;
 
     static IEnumerable<MethodBase> TargetMethods()
     {
-        // Private no-arg overload that orchestrates getWorldInteractions() + wiUtil.Compose()
-        var method = AccessTools.Method(typeof(HudElementInteractionHelp),
-            "ComposeBlockWorldInteractionHelp", Type.EmptyTypes);
+        var method = AccessTools.Method(typeof(DrawWorldInteractionUtil),
+            "ComposeBlockWorldInteractionHelp", [typeof(WorldInteraction[])]);
         if (method == null)
         {
             TethysServerPatchesCore.Logger.Error(
-                "[interactionhelpfix] Could not find HudElementInteractionHelp.ComposeBlockWorldInteractionHelp() - interaction help async patch will not apply");
+                "[interactionhelpfix] Could not find DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[]) - async patch will not apply");
             yield break;
         }
-
-        _wiUtilField = AccessTools.Field(typeof(HudElementInteractionHelp), "wiUtil");
-        _getWorldInteractions = AccessTools.Method(typeof(HudElementInteractionHelp),
-            "getWorldInteractions", Type.EmptyTypes);
-        _wiUtilCompose = AccessTools.Method(typeof(DrawWorldInteractionUtil),
-            "ComposeBlockWorldInteractionHelp", [typeof(WorldInteraction[])]);
-
-        if (_wiUtilField == null || _getWorldInteractions == null || _wiUtilCompose == null)
-        {
-            TethysServerPatchesCore.Logger.Error(
-                "[interactionhelpfix] One or more reflected members not found - interaction help async patch will not apply");
-            yield break;
-        }
-
+        _wiUtilCompose = method;
         yield return method;
     }
 
-    static bool Prefix(HudElementInteractionHelp __instance)
+    // State passed from Prefix to Finalizer so the Finalizer can restore the
+    // WorldInteraction objects that the Prefix modified.
+    class PatchState
     {
-        if (TethysServerPatchesCore.Configuration?.VanillaFixes.AsyncInteractionHelp != true)
-            return true;
-        if (!__instance.IsOpened()) return true;
+        public WorldInteraction[] ActiveWis;
+        public ItemStack[][] OrigItemstacks;
+        public InteractionStacksDelegate[] OrigDelegates;
+    }
 
-        var capi = InteractionHelpFixState.Capi;
+    static bool Prefix(DrawWorldInteractionUtil __instance, ref WorldInteraction[] wis, out PatchState __state)
+    {
+        __state = null;
+
+        if (TethysServerPatchesCore.Configuration?.VanillaFixes.AsyncInteractionHelp == false)
+            return true;
+
+        var state = InteractionHelpFixState.Instance;
+        if (state == null) return true;
+
+        // Re-entry: PendingCompose called us with pre-swapped delegates already in place.
+        if (state.IsComposing)
+            return true;
+
+        var capi = state.Capi;
+        if (capi == null || wis == null || wis.Length == 0)
+            return true;
+
+        // Per-ActionLangCode cap: show at most N entries per interaction type so that
+        // every category is represented even when one type has many variants (e.g. anvil metals).
+        int max = TethysServerPatchesCore.Configuration?.VanillaFixes.MaxInteractionHelpEntries ?? 16;
+        if (max > 0)
+        {
+            var counts = new Dictionary<string, int>();
+            var outWis = new List<WorldInteraction>(wis.Length);
+            foreach (var wi in wis)
+            {
+                var actionKey = wi.ActionLangCode ?? "";
+                counts.TryGetValue(actionKey, out int n);
+                if (n < max) { counts[actionKey] = n + 1; outWis.Add(wi); }
+            }
+            wis = [..outWis];
+        }
+
+        // Only intercept if at least one interaction has a (potentially slow) delegate.
+        bool hasDelegate = false;
+        foreach (var wi in wis)
+            if (wi.Itemstacks != null && wi.GetMatchingStacks != null) { hasDelegate = true; break; }
+        if (!hasDelegate) return true;
+
         var blockSel = capi.World.Player.CurrentBlockSelection;
         if (blockSel == null) return true;
-
         var block = capi.World.BlockAccessor.GetBlock(blockSel.Position);
         if (block == null || block.BlockId == 0) return true;
 
@@ -144,108 +199,97 @@ class HudElementInteractionHelp_ComposeBlockWorldInteractionHelp_Async
                    blockSel.Position.Z,
                    blockSel.SelectionBoxIndex);
 
-        var wiUtil = (DrawWorldInteractionUtil)_wiUtilField.GetValue(__instance);
-
-        // -- Cache hit: compose instantly on the main thread ------------------
-        if (InteractionHelpFixState.CacheKey == key
-            && InteractionHelpFixState.CachedInteractions != null
-            && InteractionHelpFixState.CachedStacks != null)
+        // Save originals — the Finalizer restores these after vanilla's compose body
+        // runs, even if the body throws.
+        var origItemstacks = new ItemStack[wis.Length][];
+        var origDelegates  = new InteractionStacksDelegate[wis.Length];
+        for (int i = 0; i < wis.Length; i++)
         {
-            ComposeWithPreResolved(wiUtil,
-                InteractionHelpFixState.CachedInteractions,
-                InteractionHelpFixState.CachedStacks);
-            return false;
+            origItemstacks[i] = wis[i].Itemstacks;
+            origDelegates[i]  = wis[i].GetMatchingStacks;
+        }
+        __state = new PatchState { ActiveWis = wis, OrigItemstacks = origItemstacks, OrigDelegates = origDelegates };
+        state.IsComposing = true;
+
+        // Cache hit: swap to pre-resolved stacks, vanilla compose runs without any delegate calls.
+        if (state.CacheKey == key
+            && state.CachedStacks != null
+            && state.CachedStacks.Length == wis.Length)
+        {
+            for (int i = 0; i < wis.Length; i++)
+            {
+                wis[i].GetMatchingStacks = null;
+                if (state.CachedStacks[i] != null)
+                    wis[i].Itemstacks = state.CachedStacks[i];
+            }
+            return true;
         }
 
-        // -- Cache miss: get interaction definitions (fast) and resolve off-thread --
-        var interactions = (WorldInteraction[])_getWorldInteractions.Invoke(__instance, null);
-        if (interactions == null || interactions.Length == 0) return true;
+        // Cache miss: null delegates so vanilla runs instantly (partial help, no delegated items).
+        for (int i = 0; i < wis.Length; i++)
+            wis[i].GetMatchingStacks = null;
 
-        // Only async-path if at least one interaction has a GetMatchingStacks delegate;
-        // if none do, the vanilla loop is already fast.
-        bool needsAsync = false;
-        foreach (var wi in interactions)
-        {
-            if (wi.Itemstacks != null && wi.GetMatchingStacks != null) { needsAsync = true; break; }
-        }
-        if (!needsAsync) return true;
-
-        // Capture mutable game-state references before leaving the main thread.
-        // BlockSelection objects are replaced (not mutated) by the game loop, so
-        // holding the reference is safe for reads.
+        // Capture everything the background task needs before leaving the main thread.
+        var capturedWis        = wis;
+        var capturedWiUtil     = __instance;
+        var capturedKey        = key;
+        var capturedItemstacks = origItemstacks;
+        var capturedDelegates  = origDelegates;
         var capturedBlockSel   = blockSel;
         var capturedEntitySel  = capi.World.Player.CurrentEntitySelection;
-        var capturedKey        = key;
-        var capturedWiUtil     = wiUtil;
+        var capturedState      = state;
 
         Task.Run(() =>
         {
-            var resolved = new ItemStack[interactions.Length][];
-            for (int i = 0; i < interactions.Length; i++)
+            var resolved = new ItemStack[capturedWis.Length][];
+            for (int i = 0; i < capturedWis.Length; i++)
             {
-                var wi = interactions[i];
-                if (wi.Itemstacks != null && wi.GetMatchingStacks != null)
+                if (capturedItemstacks[i] != null && capturedDelegates[i] != null)
                 {
-                    try   { resolved[i] = wi.GetMatchingStacks(wi, capturedBlockSel, capturedEntitySel); }
-                    catch { resolved[i] = wi.Itemstacks; }
+                    try   { resolved[i] = capturedDelegates[i](capturedWis[i], capturedBlockSel, capturedEntitySel) ?? capturedItemstacks[i]; }
+                    catch { resolved[i] = capturedItemstacks[i]; }
                 }
                 else
                 {
-                    resolved[i] = wi.Itemstacks;
+                    resolved[i] = capturedItemstacks[i];
                 }
             }
 
-            // Queue the compose for the game-tick drain listener (never blocks the main thread).
-            Interlocked.Exchange(ref InteractionHelpFixState.PendingCompose, () =>
+            capturedState.PendingCompose = () =>
             {
-                ComposeWithPreResolved(capturedWiUtil, interactions, resolved);
-                InteractionHelpFixState.CacheKey          = capturedKey;
-                InteractionHelpFixState.CachedInteractions = interactions;
-                InteractionHelpFixState.CachedStacks       = resolved;
-            });
+                capturedState.CacheKey           = capturedKey;
+                capturedState.CachedInteractions = capturedWis;
+                capturedState.CachedStacks       = resolved;
+
+                // Only recompose if the player is still targeting the same block;
+                // otherwise the cache is primed for the next time they look at it.
+                var c   = capturedState.Capi;
+                var sel = c?.World.Player.CurrentBlockSelection;
+                if (sel == null) return;
+                var blk = c.World.BlockAccessor.GetBlock(sel.Position);
+                if (blk == null) return;
+                var cur = (blk.BlockId, sel.Position.X, sel.Position.Y, sel.Position.Z, sel.SelectionBoxIndex);
+                if (cur != capturedKey) return;
+
+                _wiUtilCompose.Invoke(capturedWiUtil, [capturedWis]);
+            };
         });
 
-        return false; // main thread is free immediately; tooltip appears on next tick
+        return true;
     }
 
-    // ComposeBlockWorldInteractionHelp's inner loop guard is:
-    //   if (wi.Itemstacks != null && wi.GetMatchingStacks != null) stacks = wi.GetMatchingStacks(...)
-    // Replacing only GetMatchingStacks doesn't help when Itemstacks is null — the guard
-    // short-circuits and the lambda is never called. Instead we swap Itemstacks to the
-    // pre-resolved result and null out GetMatchingStacks so the compose method uses
-    // Itemstacks directly with no delegate call.
-    static void ComposeWithPreResolved(
-        DrawWorldInteractionUtil wiUtil,
-        WorldInteraction[]       interactions,
-        ItemStack[][]            resolved)
+    // Runs after vanilla's compose body (even if it threw) to restore the
+    // WorldInteraction objects back to their original state.
+    static void Finalizer(PatchState __state)
     {
-        int max = TethysServerPatchesCore.Configuration?.VanillaFixes.MaxInteractionHelpEntries ?? 16;
-        if (max > 0 && interactions.Length > max)
+        if (__state == null) return;
+        var wis = __state.ActiveWis;
+        for (int i = 0; i < wis.Length; i++)
         {
-            interactions = interactions[..max];
-            resolved     = resolved[..max];
+            wis[i].Itemstacks        = __state.OrigItemstacks[i];
+            wis[i].GetMatchingStacks = __state.OrigDelegates[i];
         }
-
-        var origItemstacks        = new ItemStack[interactions.Length][];
-        var origGetMatchingStacks = new InteractionStacksDelegate[interactions.Length];
-        for (int i = 0; i < interactions.Length; i++)
-        {
-            origItemstacks[i]        = interactions[i].Itemstacks;
-            origGetMatchingStacks[i] = interactions[i].GetMatchingStacks;
-            if (resolved[i] != null)
-            {
-                interactions[i].Itemstacks        = resolved[i];
-                interactions[i].GetMatchingStacks = null;
-            }
-        }
-        try   { _wiUtilCompose.Invoke(wiUtil, [interactions]); }
-        finally
-        {
-            for (int i = 0; i < interactions.Length; i++)
-            {
-                interactions[i].Itemstacks        = origItemstacks[i];
-                interactions[i].GetMatchingStacks = origGetMatchingStacks[i];
-            }
-        }
+        if (InteractionHelpFixState.Instance is {} state)
+            state.IsComposing = false;
     }
 }
