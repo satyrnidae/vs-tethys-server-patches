@@ -11,6 +11,37 @@ using Vintagestory.API.Server;
 
 namespace TethysServerPatches.Patches;
 
+// Block.CanPlaceBlock rejects placement when IsInteractable entities occupy the collision box.
+// EntityItem.IsInteractable is patched to true (so items are ray-trace selectable), so we
+// correct the placement check: re-allow if item entities are the only obstruction.
+[HarmonyPatch]
+[HarmonyPatchCategory("rightclickpickup")]
+class Block_CanPlaceBlock_AllowThroughEntityItem_Patch
+{
+    static IEnumerable<MethodBase> TargetMethods()
+    {
+        var m = AccessTools.Method(typeof(Block), "CanPlaceBlock",
+            [typeof(IWorldAccessor), typeof(IPlayer), typeof(BlockSelection), typeof(string).MakeByRefType()]);
+        if (m != null) yield return m;
+    }
+
+    static void Postfix(Block __instance, IWorldAccessor world, BlockSelection blockSel, ref string failureCode, ref bool __result)
+    {
+        if (__result) return;
+        if (failureCode != "entityintersecting") return;
+        if (TethysServerPatchesCore.Configuration?.VanillaTweaks.RightClickPickup.Enabled != true) return;
+
+        // Re-run the check excluding EntityItem: if nothing else blocks, allow placement.
+        var boxes = __instance.GetCollisionBoxes(world.BlockAccessor, blockSel.Position);
+        if (boxes == null || boxes.Length == 0) return;
+        if (world.GetIntersectingEntities(blockSel.Position, boxes, e => e.IsInteractable && e is not EntityItem).Length == 0)
+        {
+            __result = true;
+            failureCode = null;
+        }
+    }
+}
+
 [HarmonyPatch(typeof(EntityItem), "IsInteractable", MethodType.Getter)]
 [HarmonyPatchCategory("rightclickpickup")]
 class EntityItem_IsInteractable_Patch

@@ -1,3 +1,13 @@
+v1.3.8-pre.6
+- Vanilla fixes
+  - Async interaction help fixes (prevent potential stalls on blocks like anvils)
+    - Fix bypass for delegate-only WorldInteractions (GetMatchingStacks set, no static Itemstacks)
+    - Fix bypass for offset block selections (DidOffset=true resolving wrong position)
+    - Move GetPlacedBlockInteractionHelp/GetInteractionHelp off the main thread
+      - Results cached per block/entity type; multiple types resolve in parallel
+- Vanilla tweaks
+  - Right-click pickup: fix block placement blocked near dropped item entities
+
 v1.3.8-pre.5
 - Vanilla tweaks (new config section: VanillaTweaks)
   - Right-click pickup: right-click a dropped item entity to pick it up;

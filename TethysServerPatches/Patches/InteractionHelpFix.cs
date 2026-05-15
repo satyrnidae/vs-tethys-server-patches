@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.Client.NoObf;
 
 namespace TethysServerPatches.Patches;
@@ -17,6 +19,13 @@ namespace TethysServerPatches.Patches;
 sealed class InteractionHelpFixState : IDisposable
 {
     public static InteractionHelpFixState Instance { get; private set; }
+
+    /// <summary>
+    /// Per-thread bypass flag. Set to true on background Task threads so that
+    /// Block/Entity wis-cache prefixes pass through to the original method.
+    /// </summary>
+    [ThreadStatic]
+    public static bool BypassWisCache;
 
     public static InteractionHelpFixState Create(int gameThreadId)
     {
@@ -32,7 +41,13 @@ sealed class InteractionHelpFixState : IDisposable
     /// <summary>Client API reference, set in StartClientSide.</summary>
     public ICoreClientAPI Capi { get; set; }
 
-    // ----- PendingCompose — thread-safe Action queue -----
+    /// <summary>DrawWorldInteractionUtil instance, captured on first compose call.</summary>
+    public DrawWorldInteractionUtil WiUtil { get; set; }
+
+    /// <summary>DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[]) method ref.</summary>
+    public MethodInfo WiUtilComposeMethod { get; set; }
+
+    // ----- PendingCompose - thread-safe Action queue -----
     // Getter atomically takes and clears the pending action (take-and-clear semantics).
     // Setter atomically replaces the pending action (background thread queues here).
 
@@ -50,7 +65,7 @@ sealed class InteractionHelpFixState : IDisposable
     /// </summary>
     public bool IsComposing { get; set; }
 
-    // ----- Result cache -----
+    // ----- Delegate-resolution result cache -----
     // Keyed on (blockId, x, y, z, selectionBoxIndex) so the expensive resolve only runs once
     // per distinct block the player targets.
 
@@ -58,13 +73,32 @@ sealed class InteractionHelpFixState : IDisposable
     public WorldInteraction[] CachedInteractions { get; set; }
     public ItemStack[][] CachedStacks { get; set; }
 
+    // ----- Wis population cache (Block and Entity) -----
+    // Keyed by block.BlockId or entity.Code.ToString() so the expensive GetInteractionHelp
+    // scan runs only once per interactable type across all game sessions.
+
+    public ConcurrentDictionary<int, WorldInteraction[]> BlockWisCache { get; } = new();
+    // One SemaphoreSlim(1,1) per block type: allows parallel resolution across types,
+    // prevents duplicate tasks for the same type.
+    public ConcurrentDictionary<int, SemaphoreSlim> BlockWisLocks { get; } = new();
+    public ConcurrentDictionary<string, WorldInteraction[]> EntityWisCache { get; } = new();
+    public ConcurrentDictionary<string, SemaphoreSlim> EntityWisLocks { get; } = new();
+
     public void Dispose()
     {
-        PendingCompose     = null;
-        Capi               = null;
-        IsComposing        = false;
-        CachedInteractions = null;
-        CachedStacks       = null;
+        PendingCompose      = null;
+        Capi                = null;
+        WiUtil              = null;
+        WiUtilComposeMethod = null;
+        IsComposing         = false;
+        CachedInteractions  = null;
+        CachedStacks        = null;
+        BlockWisCache.Clear();
+        foreach (var sem in BlockWisLocks.Values) sem.Dispose();
+        BlockWisLocks.Clear();
+        EntityWisCache.Clear();
+        foreach (var sem in EntityWisLocks.Values) sem.Dispose();
+        EntityWisLocks.Clear();
         if (Instance == this)
             Instance = null;
     }
@@ -104,7 +138,164 @@ class FrameProfilerUtil_Enter_ThreadGuard
 }
 
 // ---------------------------------------------------------------------------
-// Patch 2 - DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[])
+// Patch 2 - HudElementInteractionHelp.getWorldInteractions() wis population cache
+//
+// This is the single call site that dispatches (via vtable) to either
+// block.GetPlacedBlockInteractionHelp or entity.GetInteractionHelp.  Patching
+// here - rather than on the base Block/Entity methods - correctly intercepts
+// overrides like BlockAnvil, which does its expensive ObjectCacheUtil item-
+// registry scan inside its own override before the base call.
+//
+//   Cache hit  -> return cached wis immediately (sub-ms), skip original.
+//   Computing  -> semaphore already held; return [] so the HUD shows nothing
+//                 rather than stalling.
+//   Cache miss -> acquire semaphore, return [], launch Task.Run.
+//                 Task calls the virtual method directly (vtable dispatch)
+//                 off the main thread.  On completion: store cache, release
+//                 semaphore, set PendingCompose so the HUD recomposes.
+// ---------------------------------------------------------------------------
+[HarmonyPatch]
+[HarmonyPatchCategory("interactionhelpfix")]
+class HudElementInteractionHelp_GetWorldInteractions_WisCache
+{
+    static IEnumerable<MethodBase> TargetMethods()
+    {
+        var method = AccessTools.Method(typeof(HudElementInteractionHelp), "getWorldInteractions");
+        if (method == null)
+        {
+            TethysServerPatchesCore.Logger.Error("[interactionhelpfix] Could not find HudElementInteractionHelp.getWorldInteractions - wis population cache will not apply");
+            yield break;
+        }
+        yield return method;
+    }
+
+    static bool Prefix(ref WorldInteraction[] __result)
+    {
+        if (TethysServerPatchesCore.Configuration?.VanillaFixes.AsyncInteractionHelp == false)
+            return true;
+
+        var state = InteractionHelpFixState.Instance;
+        if (state == null) return true;
+
+        // Background tasks call GetPlacedBlockInteractionHelp/GetInteractionHelp directly,
+        // never through this method, so no re-entry risk; BypassWisCache not needed here.
+
+        var capi = state.Capi;
+        if (capi == null) return true;
+
+        var blockSel = capi.World.Player.CurrentBlockSelection;
+        if (blockSel != null)
+        {
+            var block = blockSel.DidOffset
+                ? capi.World.BlockAccessor.GetBlock(blockSel.Position.AddCopy(blockSel.Face.Opposite.Normali))
+                : capi.World.BlockAccessor.GetBlock(blockSel.Position);
+            if (block == null || block.BlockId == 0) return true;
+
+            int blockId = block.BlockId;
+
+            if (state.BlockWisCache.TryGetValue(blockId, out var cached))
+            {
+                __result = cached;
+                return false;
+            }
+
+            var sem = state.BlockWisLocks.GetOrAdd(blockId, _ => new SemaphoreSlim(1, 1));
+            if (!sem.Wait(0)) { __result = []; return false; }
+
+            __result = [];
+
+            var capturedBlock  = block;
+            var capturedWorld  = capi.World;
+            var capturedSel    = blockSel;
+            var capturedPlayer = capi.World.Player;
+            var capturedId     = blockId;
+            var capturedSem    = sem;
+            var capturedState  = state;
+
+            Task.Run(() =>
+            {
+                WorldInteraction[] wis;
+                try   { wis = capturedBlock.GetPlacedBlockInteractionHelp(capturedWorld, capturedSel, capturedPlayer) ?? []; }
+                catch { wis = []; }
+                finally { capturedSem.Release(); }
+
+                capturedState.BlockWisCache[capturedId] = wis;
+
+                capturedState.PendingCompose = () =>
+                {
+                    var c      = capturedState.Capi;
+                    var sel    = c?.World.Player.CurrentBlockSelection;
+                    if (sel == null) return;
+                    var blk    = sel.DidOffset
+                        ? c.World.BlockAccessor.GetBlock(sel.Position.AddCopy(sel.Face.Opposite.Normali))
+                        : c.World.BlockAccessor.GetBlock(sel.Position);
+                    if (blk?.BlockId != capturedId) return;
+                    var wiUtil  = capturedState.WiUtil;
+                    var compose = capturedState.WiUtilComposeMethod;
+                    if (wiUtil == null || compose == null) return;
+                    compose.Invoke(wiUtil, [wis]);
+                };
+            });
+
+            return false;
+        }
+
+        var entSel = capi.World.Player.CurrentEntitySelection;
+        if (entSel?.Entity != null && entSel.Entity is not EntityItem)
+        {
+            var entity     = entSel.Entity;
+            var entityCode = entity.Code?.ToString();
+            if (entityCode == null) return true;
+
+            if (state.EntityWisCache.TryGetValue(entityCode, out var cached))
+            {
+                __result = cached;
+                return false;
+            }
+
+            var sem = state.EntityWisLocks.GetOrAdd(entityCode, _ => new SemaphoreSlim(1, 1));
+            if (!sem.Wait(0)) { __result = []; return false; }
+
+            __result = [];
+
+            var capturedEntity = entity;
+            var capturedWorld  = capi.World;
+            var capturedEs     = entSel;
+            var capturedPlayer = capi.World.Player;
+            var capturedCode   = entityCode;
+            var capturedSem    = sem;
+            var capturedState  = state;
+
+            Task.Run(() =>
+            {
+                WorldInteraction[] wis;
+                try   { wis = capturedEntity.GetInteractionHelp(capturedWorld, capturedEs, capturedPlayer) ?? []; }
+                catch { wis = []; }
+                finally { capturedSem.Release(); }
+
+                capturedState.EntityWisCache[capturedCode] = wis;
+
+                capturedState.PendingCompose = () =>
+                {
+                    var c      = capturedState.Capi;
+                    var esel   = c?.World.Player.CurrentEntitySelection;
+                    if (esel?.Entity?.Code?.ToString() != capturedCode) return;
+                    var wiUtil  = capturedState.WiUtil;
+                    var compose = capturedState.WiUtilComposeMethod;
+                    if (wiUtil == null || compose == null) return;
+                    compose.Invoke(wiUtil, [wis]);
+                };
+            });
+
+            return false;
+        }
+
+        return true;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Patch 3 - DrawWorldInteractionUtil.ComposeBlockWorldInteractionHelp(WorldInteraction[])
 //
 // The previous implementation patched the no-arg HudElementInteractionHelp
 // wrapper.  On .NET 10 the JIT inlines that tiny private method, making the
@@ -158,6 +349,10 @@ class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
         var state = InteractionHelpFixState.Instance;
         if (state == null) return true;
 
+        // Capture WiUtil and compose method for wis population cache recompose triggers.
+        state.WiUtil ??= __instance;
+        state.WiUtilComposeMethod ??= _wiUtilCompose;
+
         // Re-entry: PendingCompose called us with pre-swapped delegates already in place.
         if (state.IsComposing)
             return true;
@@ -185,12 +380,14 @@ class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
         // Only intercept if at least one interaction has a (potentially slow) delegate.
         bool hasDelegate = false;
         foreach (var wi in wis)
-            if (wi.Itemstacks != null && wi.GetMatchingStacks != null) { hasDelegate = true; break; }
+            if (wi.GetMatchingStacks != null) { hasDelegate = true; break; }
         if (!hasDelegate) return true;
 
         var blockSel = capi.World.Player.CurrentBlockSelection;
         if (blockSel == null) return true;
-        var block = capi.World.BlockAccessor.GetBlock(blockSel.Position);
+        var block = blockSel.DidOffset
+            ? capi.World.BlockAccessor.GetBlock(blockSel.Position.AddCopy(blockSel.Face.Opposite.Normali))
+            : capi.World.BlockAccessor.GetBlock(blockSel.Position);
         if (block == null || block.BlockId == 0) return true;
 
         var key = (block.BlockId,
@@ -199,7 +396,7 @@ class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
                    blockSel.Position.Z,
                    blockSel.SelectionBoxIndex);
 
-        // Save originals — the Finalizer restores these after vanilla's compose body
+        // Save originals - the Finalizer restores these after vanilla's compose body
         // runs, even if the body throws.
         var origItemstacks = new ItemStack[wis.Length][];
         var origDelegates  = new InteractionStacksDelegate[wis.Length];
@@ -244,7 +441,7 @@ class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
             var resolved = new ItemStack[capturedWis.Length][];
             for (int i = 0; i < capturedWis.Length; i++)
             {
-                if (capturedItemstacks[i] != null && capturedDelegates[i] != null)
+                if (capturedDelegates[i] != null)
                 {
                     try   { resolved[i] = capturedDelegates[i](capturedWis[i], capturedBlockSel, capturedEntitySel) ?? capturedItemstacks[i]; }
                     catch { resolved[i] = capturedItemstacks[i]; }
@@ -266,7 +463,9 @@ class DrawWorldInteractionUtil_ComposeBlockWorldInteractionHelp_Patch
                 var c   = capturedState.Capi;
                 var sel = c?.World.Player.CurrentBlockSelection;
                 if (sel == null) return;
-                var blk = c.World.BlockAccessor.GetBlock(sel.Position);
+                var blk = sel.DidOffset
+                    ? c.World.BlockAccessor.GetBlock(sel.Position.AddCopy(sel.Face.Opposite.Normali))
+                    : c.World.BlockAccessor.GetBlock(sel.Position);
                 if (blk == null) return;
                 var cur = (blk.BlockId, sel.Position.X, sel.Position.Y, sel.Position.Z, sel.SelectionBoxIndex);
                 if (cur != capturedKey) return;
