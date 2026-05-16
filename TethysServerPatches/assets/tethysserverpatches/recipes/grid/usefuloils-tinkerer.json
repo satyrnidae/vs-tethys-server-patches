@@ -8,11 +8,11 @@
       "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -23,11 +23,11 @@
       "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -38,11 +38,11 @@
       "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -53,11 +53,11 @@
       "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -68,11 +68,11 @@
       "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -83,11 +83,11 @@
       "S": { "type": "block", "code": "game:logsection-placed-*-ud", "name": "wood" },
       "R": { "type": "item", "code": "game:resin" },
       "P": { "type": "item", "code": "game:stick" },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 2,
     "output": { "type": "block", "code": "game:angledgears-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -100,11 +100,11 @@
       "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
       "S": { "type": "item", "code": "game:stick", "quantity": 8 },
       "R": { "type": "item", "code": "game:resin" },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -117,11 +117,11 @@
       "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
       "S": { "type": "item", "code": "game:stick", "quantity": 8 },
       "R": { "type": "item", "code": "game:resin" },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -134,11 +134,11 @@
       "L": { "type": "block", "code": "game:log-placed-*-ud", "quantity": 2 },
       "S": { "type": "item", "code": "game:stick", "quantity": 8 },
       "R": { "type": "item", "code": "game:resin" },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:spurgear-s", "quantity": 2 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -150,11 +150,11 @@
       "R": { "type": "item", "code": "game:resin", "quantity": 2 },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "A": { "type": "block", "code": "game:woodenaxle-ud" },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -166,11 +166,11 @@
       "R": { "type": "item", "code": "game:resin", "quantity": 2 },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "A": { "type": "block", "code": "game:woodenaxle-ud" },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -182,11 +182,11 @@
       "R": { "type": "item", "code": "game:resin", "quantity": 2 },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "A": { "type": "block", "code": "game:woodenaxle-ud" },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:woodentoggle-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -200,11 +200,11 @@
       "A": { "type": "block", "code": "game:log-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -218,11 +218,11 @@
       "A": { "type": "block", "code": "game:log-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -236,11 +236,11 @@
       "A": { "type": "block", "code": "game:log-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -254,11 +254,11 @@
       "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -272,11 +272,11 @@
       "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -290,11 +290,11 @@
       "A": { "type": "block", "code": "game:logsection-placed-*-ud" },
       "S": { "type": "item", "code": "game:stick", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:clutch-north", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.5 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.5 } }
   },
   {
     "enabled": false,
@@ -307,11 +307,11 @@
       "G": { "type": "block", "code": "game:angledgears-s" },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "bowl-*-fired" }
+      "F": { "type": "block", "code": "game:bowl-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -324,11 +324,11 @@
       "G": { "type": "block", "code": "game:angledgears-s" },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "woodbucket" }
+      "F": { "type": "block", "code": "game:woodbucket" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   },
   {
     "enabled": false,
@@ -341,10 +341,10 @@
       "G": { "type": "block", "code": "game:angledgears-s" },
       "P": { "type": "item", "code": "game:plank-*", "name": "wood", "quantity": 4 },
       "R": { "type": "item", "code": "game:resin", "quantity": 1 },
-      "F": { "type": "block", "code": "jug-*-fired" }
+      "F": { "type": "block", "code": "game:jug-*-fired" }
     },
     "width": 3, "height": 3,
     "output": { "type": "block", "code": "game:transmission-ns", "quantity": 1 },
-    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "oilportion-flax" }, "requiresLitres": 0.25 } }
+    "attributes": { "liquidContainerProps": { "requiresContent": { "type": "item", "code": "game:oilportion-flax" }, "requiresLitres": 0.25 } }
   }
 ]

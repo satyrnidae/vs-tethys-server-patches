@@ -1,3 +1,14 @@
+v2.0.0-pre.3
+- Castaway patches
+  - Disable plate mold clay forming recipe
+  - New config section: CastawayPatches
+    - DisablePlateMold, default true
+
+v2.0.0-pre.2
+- Useful Oils x Aldi's Classes compat
+  - Fix oil container ingredients missing game: namespace
+    - woodbucket, jug-*-fired, oilportion-flax
+
 v2.0.0-pre.1
 - Aldi's Classes x Alatyr's Torchholders compat
   - Fix Smith torchholder recipe not applying (wrong output block domain)

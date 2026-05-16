@@ -11,6 +11,7 @@ public class Configuration
     public VanillaFixes VanillaFixes = new();
     public VanillaTweaks VanillaTweaks = new();
     public AldiClassesPatchOptions AldiClassesPatches = new();
+    public CastawayPatchOptions CastawayPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -32,6 +33,12 @@ public class AldiClassesPatchOptions
 {
     public bool MoreHackles = true;
     public bool CarbonPoleBaitFix = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class CastawayPatchOptions
+{
+    public bool DisablePlateMold = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

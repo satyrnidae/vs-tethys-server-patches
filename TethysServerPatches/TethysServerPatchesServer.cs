@@ -67,6 +67,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_StackableTemporalGears", configInstance.VanillaTweaks.StackableTemporalGears);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
+            api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);
 
             if (loadSuccessful)
             {

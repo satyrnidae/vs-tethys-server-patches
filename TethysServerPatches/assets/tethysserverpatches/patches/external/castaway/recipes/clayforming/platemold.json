@@ -1,0 +1,10 @@
+[
+  {
+    "file": "castaway:recipes/clayforming/platemold",
+    "op": "add",
+    "path": "/enabled",
+    "value": false,
+    "condition": { "when": "TethysServerPatches_CastawayDisablePlateMold", "isValue": true },
+    "dependsOn": [{ "modid": "castaway" }]
+  }
+]
