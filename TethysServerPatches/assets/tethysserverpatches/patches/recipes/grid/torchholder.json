@@ -1,7 +1,7 @@
 [
   {
     "side": "Server",
-    "file": "recipes/grid/torchholder.json",
+    "file": "tethysserverpatches:recipes/grid/alatyrstorcholders-smith",
     "op": "Replace",
     "path": "/0/enabled",
     "value": true,

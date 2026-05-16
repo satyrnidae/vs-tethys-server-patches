@@ -1,7 +1,7 @@
 [
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/0/enabled",
     "value": true,
@@ -16,7 +16,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/1/enabled",
     "value": true,
@@ -31,7 +31,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/2/enabled",
     "value": true,
@@ -46,7 +46,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/3/enabled",
     "value": true,
@@ -61,7 +61,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/4/enabled",
     "value": true,
@@ -76,7 +76,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/5/enabled",
     "value": true,
@@ -91,7 +91,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/6/enabled",
     "value": true,
@@ -106,7 +106,7 @@
   },
   {
     "side": "Server",
-    "file": "recipes/grid/brushing_hair.json",
+    "file": "tethysserverpatches:recipes/grid/brushing-hair",
     "op": "Replace",
     "path": "/7/enabled",
     "value": true,

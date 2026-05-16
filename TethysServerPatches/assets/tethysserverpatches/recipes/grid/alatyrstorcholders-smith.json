@@ -47,7 +47,7 @@
     "recipegroup": 2,
     "output": {
       "type": "block",
-      "code": "alatyrstorcholders:torchholder-{metal}-empty-north",
+      "code": "alatyrstorchholders:torchholder-{metal}-empty-north",
       "quantity": 2
     }
   }
