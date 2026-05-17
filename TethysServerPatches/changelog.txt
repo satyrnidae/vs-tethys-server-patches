@@ -1,3 +1,7 @@
+v2.0.0-pre.4
+- Castaway patches
+  - Fix incorrect recipe namespace in disable patch
+
 v2.0.0-pre.3
 - Castaway patches
   - Disable plate mold clay forming recipe

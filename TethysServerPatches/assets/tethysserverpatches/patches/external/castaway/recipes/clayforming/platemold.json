@@ -1,6 +1,6 @@
 [
   {
-    "file": "castaway:recipes/clayforming/platemold",
+    "file": "game:recipes/clayforming/platemold",
     "op": "add",
     "path": "/enabled",
     "value": false,
