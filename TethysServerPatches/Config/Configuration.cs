@@ -54,6 +54,10 @@ public class VanillaFixes
     public bool AsyncInteractionHelp = true;
     // Max entries composed per unique interaction type (ActionLangCode); 0 = no limit.
     public int MaxInteractionHelpEntries = 16;
+    // Guards BlockCookingContainer.GetMatchingCookingRecipe against re-entrant calls.
+    // Prevents a stack overflow triggered by EternalStew's recipe matching recursing
+    // back into GetMatchingCookingRecipe through CookingRecipe.Matches.
+    public bool FixCookingRecipeReentrancy = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

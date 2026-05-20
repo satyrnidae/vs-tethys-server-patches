@@ -44,6 +44,8 @@ public abstract class TethysServerPatchesCore : ModSystem
         }
 
         HarmonyInstance.PatchCategory("rightclickpickup");
+        Logger.Notification("Patching category cookingrecipereentrancyfix");
+        HarmonyInstance.PatchCategory("cookingrecipereentrancyfix");
 
         //HarmonyInstance.PatchCategory("survival");
     }
