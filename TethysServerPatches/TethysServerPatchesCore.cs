@@ -72,6 +72,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (HarmonyInstance != null)
         {
             //HarmonyInstance.UnpatchCategory("survival");
+            HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
             HarmonyInstance.UnpatchCategory("rightclickpickup");
             if (_rpttsInstalled)
             {
