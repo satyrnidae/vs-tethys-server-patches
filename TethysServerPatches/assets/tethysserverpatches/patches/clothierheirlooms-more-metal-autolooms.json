@@ -1,5 +1,39 @@
 [
   {
+    // Add aluminum variant for the autoloom
+    "side": "Server",
+    "file": "clothierheirloomsmod:blocktypes/autoloom.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    // Textures
+    "side": "Server",
+    "file": "clothierheirloomsmod:blocktypes/autoloom.json",
+    "op": "Add",
+    "path": "/textures/aluminum1",
+    "value": {
+      "base": "game:block/metal/sheet/aluminum1"
+    },
+    "dependsOn": [
+      {
+        "modid": "clothierheirloomsmod"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
     "side": "Server",
     "file": "clothierheirloomsmod:recipes/grid/autoloomrecipe.json",
     "op": "AddMerge",
