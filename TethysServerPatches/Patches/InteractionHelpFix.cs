@@ -20,13 +20,6 @@ sealed class InteractionHelpFixState : IDisposable
 {
     public static InteractionHelpFixState Instance { get; private set; }
 
-    /// <summary>
-    /// Per-thread bypass flag. Set to true on background Task threads so that
-    /// Block/Entity wis-cache prefixes pass through to the original method.
-    /// </summary>
-    [ThreadStatic]
-    public static bool BypassWisCache;
-
     public static InteractionHelpFixState Create(int gameThreadId)
     {
         Instance = new InteractionHelpFixState(gameThreadId);

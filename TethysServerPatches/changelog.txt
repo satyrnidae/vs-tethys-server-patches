@@ -1,11 +1,23 @@
 v2.0.0-pre.5
+- Vanilla tweaks
+  - Disable right-click pickup automatically if another right-click pickup mod is installed
+    - Supports precisepickedup, clicktopick, and vsrightclickpickup
 - Vanilla fixes
-  - Guard BlockCookingContainer.GetMatchingCookingRecipe against re-entrant calls
+  - Experimental: Guard BlockCookingContainer.GetMatchingCookingRecipe against re-entrant calls
     - Prevents StackOverflowException caused by EternalStew's recipe matching
       recursing back into GetMatchingCookingRecipe through CookingRecipe.Matches
     - Inner call short-circuits with null; firepit idles that tick safely
     - Logs a one-time warning per thread when the guard fires
     - Toggleable via VanillaFixes/FixCookingRecipeReentrancy (default: true)
+- QP's Chisel Tools
+  - The initial upgrade to 1.22 shipped with broken texture
+- Aldi Classes x BaconBaconBacon
+  - Tweaked patches slightly
+- Toolsmith Tweaks
+  - Added patch and config option to disable cold smithing recipes (default: true)
+- Refactored naming of patch files to fit general mod convention
+  - No more unnecessary nesting and splitting of patches based on their original file name
+  - Probably better to have more descriptive patch names honestly
 
 v2.0.0-pre.4
 - Castaway patches

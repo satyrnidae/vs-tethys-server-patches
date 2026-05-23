@@ -45,7 +45,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         }
 
         var rightClickPickupConflict = api.ModLoader.IsModEnabled("vsrightclickpickup")
-            || api.ModLoader.IsModEnabled("clicktopick");
+            || api.ModLoader.IsModEnabled("clicktopick") || api.ModLoader.IsModEnabled("precisepickedup");
         if (!rightClickPickupConflict)
         {
             Logger.Notification("Patching category rightclickpickup");
