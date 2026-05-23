@@ -13,9 +13,13 @@
         "modid": "bauxitealuminum"
       },
       {
-        "modid": "smithingplus"
+        "modid": "toolsmith"
       }
-    ]
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
   },
   {
     "side": "Server",

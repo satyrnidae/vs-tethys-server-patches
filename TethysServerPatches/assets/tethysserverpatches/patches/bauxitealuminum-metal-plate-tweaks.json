@@ -44,7 +44,12 @@
     "dependsOn": [
       {
         "modid": "bauxitealuminum"
-      }
-    ]
+      },
+      { "modid": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
   }
 ]

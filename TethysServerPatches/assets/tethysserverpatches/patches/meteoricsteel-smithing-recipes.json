@@ -1,17 +1,18 @@
 [
-  // Rod
+  // Pounder cap
   {
     "side": "Server",
-    "file": "game:recipes/smithing/rod.json",
+    "file": "game:recipes/smithing/poundercap.json",
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants",
-    "value": [ "aluminum" ],
+    "value": [ "meteoricsteel" ],
     "dependsOn": [
       {
-        "modid": "bauxitealuminum"
+        "modid": "meteoricsteel"
       }
     ]
   },
+  // Rod
   {
     "side": "Server",
     "file": "game:recipes/smithing/rod.json",

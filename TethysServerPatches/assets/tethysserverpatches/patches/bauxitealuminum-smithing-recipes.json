@@ -1,0 +1,92 @@
+[
+  // Chain
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/chain.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Nails
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/nails.json",
+    "op": "AddMerge",
+    "path": "/0/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/nails.json",
+    "op": "AddMerge",
+    "path": "/1/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Plate
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/plate.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Pounder cap
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/poundercap.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Rod
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/rod.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // Scale
+  {
+    "side": "Server",
+    "file": "game:recipes/smithing/scale.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  }
+]

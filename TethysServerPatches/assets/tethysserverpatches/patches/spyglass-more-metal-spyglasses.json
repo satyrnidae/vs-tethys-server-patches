@@ -44,5 +44,37 @@
         "modid": "bauxitealuminum"
       }
     ]
+  },
+  // spytube.json
+  {
+    "side": "Server",
+    "file": "spyglass:itemtypes/spytube.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
+  },
+  // smithing/spytube.json
+  {
+    "side": "Server",
+    "file": "spyglass:recipes/smithing/spytube.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants",
+    "value": [ "aluminum" ],
+    "dependsOn": [
+      {
+        "modid": "spyglass"
+      },
+      {
+        "modid": "bauxitealuminum"
+      }
+    ]
   }
 ]
