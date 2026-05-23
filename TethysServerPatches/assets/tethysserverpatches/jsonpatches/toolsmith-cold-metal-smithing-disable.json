@@ -1,0 +1,12 @@
+[
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "toolsmith:patches/coldforgemetals",
+    "path": "-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ]
+  }
+]

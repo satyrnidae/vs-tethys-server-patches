@@ -1,0 +1,83 @@
+[
+	{
+    "side": "server",
+		"op": "addmerge",
+		"path": "/attributes/workableTemperatureByType/ingot-copper",
+		"value": 0,
+		"file": "game:itemtypes/resource/ingot.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributes/workableTemperatureByType",
+		"value": {},
+		"file": "game:itemtypes/resource/metalplate.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributes/workableTemperatureByType/metalplate-copper",
+		"value": 0,
+		"file": "game:itemtypes/resource/metalplate.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributes/workableTemperatureByType/metalplate-lead",
+		"value": 0,
+		"file": "game:itemtypes/resource/metalplate.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributes/workableTemperatureByType/metalplate-tin",
+		"value": 0,
+		"file": "game:itemtypes/resource/metalplate.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributesByType/workitem-copper",
+		"value": {
+			"workableTemperature": 0
+		},
+		"file": "game:itemtypes/resource/workitem.json",
+    "dependsOn": [
+      { "modId": "toolsmith" }
+    ],
+    "condition": {
+      "when": "TethysServerPatches_Toolsmith_DisableColdSmithing",
+      "isValue": "false"
+    }
+	}
+]

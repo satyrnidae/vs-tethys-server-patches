@@ -12,6 +12,7 @@ public class Configuration
     public VanillaTweaks VanillaTweaks = new();
     public AldiClassesPatchOptions AldiClassesPatches = new();
     public CastawayPatchOptions CastawayPatches = new();
+    public ToolsmithTweaks Toolsmith = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -73,7 +74,7 @@ public class AllClassesPatchOptions
 {
     public AllClassesClassCustomizations ClassCustomizations = new();
     public bool AltMetalPotRecipes = true;
-    public bool CheaperChefPots = true;   
+    public bool CheaperChefPots = true;
 }
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
 public class AllClassesClassCustomizations
@@ -100,4 +101,9 @@ public class HomesteaderTraitFlags
 {
     public bool AddScavenger = true;
     public bool AddClothier = true;
+}
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class ToolsmithTweaks
+{
+    public bool DisableColdSmithing = true;
 }
