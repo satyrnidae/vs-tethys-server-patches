@@ -57,6 +57,9 @@ public abstract class TethysServerPatchesCore : ModSystem
             Logger.Notification("Skipping rightclickpickup patch: conflicting mod installed (vsrightclickpickup or clicktopick)");
         }
 
+        Logger.Notification("Patching category cookingrecipereentrancyfix");
+        HarmonyInstance.PatchCategory("cookingrecipereentrancyfix");
+
         //HarmonyInstance.PatchCategory("survival");
     }
 
@@ -82,6 +85,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (HarmonyInstance != null)
         {
             //HarmonyInstance.UnpatchCategory("survival");
+            HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
             if (_rightClickPickupPatched)
             {
                 HarmonyInstance.UnpatchCategory("rightclickpickup");
