@@ -1,56 +1,303 @@
 [
   // game:item/tool/material/handle and game:item/tool/material/linen no longer exist in VS 1.22.
-  // Handle moved to survival:item/tool/handle; linen (brush tips) maps to survival:block/cloth/linen/plain.
-
+  // Handle moved to game:item/tool/handle; linen (brush tips) maps to game:block/cloth/linen/plain.
   // blockswapper
-  { "op": "Replace", "file": "chiseltools:itemtypes/blockswapper", "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/blockswapper", "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/blockswapper",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/blockswapper",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // doortool
-  { "op": "Replace", "file": "chiseltools:itemtypes/doortool",     "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/doortool",     "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/doortool",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/doortool",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // handplaner
-  { "op": "Replace", "file": "chiseltools:itemtypes/handplaner",   "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/handplaner",   "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/handplaner",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/handplaner",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // handwedge
-  { "op": "Replace", "file": "chiseltools:itemtypes/handwedge",    "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/handwedge",    "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/handwedge",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/handwedge",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // jonaspaintbrush
-  { "op": "Replace", "file": "chiseltools:itemtypes/jonaspaintbrush", "path": "/textures/wood/base",  "value": "survival:item/tool/handle",        "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/jonaspaintbrush", "path": "/textures/linen/base", "value": "survival:block/cloth/linen/plain", "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/jonaspaintbrush",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/jonaspaintbrush",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // laddermaker
-  { "op": "Replace", "file": "chiseltools:itemtypes/laddermaker",  "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/laddermaker",  "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/laddermaker",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/laddermaker",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // locktool
-  { "op": "Replace", "file": "chiseltools:itemtypes/locktool",     "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/locktool",     "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/locktool",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/locktool",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // megapantograph
-  { "op": "Replace", "file": "chiseltools:itemtypes/megapantograph", "path": "/textures/wood/base",  "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/megapantograph", "path": "/textures/linen/base", "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/megapantograph",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/megapantograph",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // paintbrush
-  { "op": "Replace", "file": "chiseltools:itemtypes/paintbrush",   "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/paintbrush",   "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/paintbrush",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/paintbrush",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // paintscraper
-  { "op": "Replace", "file": "chiseltools:itemtypes/paintscraper", "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/paintscraper", "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/paintscraper",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/paintscraper",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // pantograph
-  { "op": "Replace", "file": "chiseltools:itemtypes/pantograph",   "path": "/textures/wood/base",   "value": "survival:item/tool/handle",          "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/pantograph",   "path": "/textures/linen/base",  "value": "survival:block/cloth/linen/plain",   "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/pantograph",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/pantograph",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // simplepantograph
-  { "op": "Replace", "file": "chiseltools:itemtypes/simplepantograph", "path": "/textures/wood/base",  "value": "survival:item/tool/handle",        "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/simplepantograph", "path": "/textures/linen/base", "value": "survival:block/cloth/linen/plain", "dependsOn": [{ "modId": "chiseltools" }] },
-
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/simplepantograph",
+    "path": "/textures/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/simplepantograph",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
   // palette (uses texturesByType with wildcard keys *-standard, *-glow, *-light)
-  { "op": "Replace", "file": "chiseltools:itemtypes/palette",      "path": "/texturesByType/*/wood/base",  "value": "survival:item/tool/handle",        "dependsOn": [{ "modId": "chiseltools" }] },
-  { "op": "Replace", "file": "chiseltools:itemtypes/palette",      "path": "/texturesByType/*/linen/base", "value": "survival:block/cloth/linen/plain", "dependsOn": [{ "modId": "chiseltools" }] }
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  }
 ]

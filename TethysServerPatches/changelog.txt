@@ -1,3 +1,7 @@
+v2.0.0-pre.6
+- QP's Chisel Tools
+  - Fixed incorrect texture namespace in patches
+
 v2.0.0-pre.5
 - Vanilla tweaks
   - Disable right-click pickup automatically if another right-click pickup mod is installed
