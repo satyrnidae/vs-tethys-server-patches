@@ -21,6 +21,7 @@ public abstract class TethysServerPatchesCore : ModSystem
 
     private bool _clothierHeirloomsModInstalled;
     private bool _rpttsInstalled;
+    private bool _rightClickPickupPatched;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -43,7 +44,18 @@ public abstract class TethysServerPatchesCore : ModSystem
             HarmonyInstance.PatchCategory("rptts");
         }
 
-        HarmonyInstance.PatchCategory("rightclickpickup");
+        var rightClickPickupConflict = api.ModLoader.IsModEnabled("vsrightclickpickup")
+            || api.ModLoader.IsModEnabled("clicktopick");
+        if (!rightClickPickupConflict)
+        {
+            Logger.Notification("Patching category rightclickpickup");
+            HarmonyInstance.PatchCategory("rightclickpickup");
+            _rightClickPickupPatched = true;
+        }
+        else
+        {
+            Logger.Notification("Skipping rightclickpickup patch: conflicting mod installed (vsrightclickpickup or clicktopick)");
+        }
 
         //HarmonyInstance.PatchCategory("survival");
     }
@@ -70,7 +82,10 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (HarmonyInstance != null)
         {
             //HarmonyInstance.UnpatchCategory("survival");
-            HarmonyInstance.UnpatchCategory("rightclickpickup");
+            if (_rightClickPickupPatched)
+            {
+                HarmonyInstance.UnpatchCategory("rightclickpickup");
+            }
             if (_rpttsInstalled)
             {
                 HarmonyInstance.UnpatchCategory("rptts");
