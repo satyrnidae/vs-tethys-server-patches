@@ -1,3 +1,8 @@
+v2.0.0-pre.7
+- From Golden Combs
+  - Fix NullReferenceException in PushEventOnBlockHarvested.OnBlockInteractStop that disconnects any player who harvests a block whose drop table contains a null entry (reproducibly triggered by harvesting wild fruiting bushes such as strawberries)
+  - The FGC harvest event is skipped for that interaction but the player is not disconnected; a warning is logged when the guard fires
+
 v2.0.0-pre.6
 - QP's Chisel Tools
   - Fixed incorrect texture namespace in patches

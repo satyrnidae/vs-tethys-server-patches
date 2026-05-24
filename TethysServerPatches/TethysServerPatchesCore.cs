@@ -20,6 +20,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     protected INetworkChannel NetworkChannel { get; private set; }
 
     private bool _clothierHeirloomsModInstalled;
+    private bool _fgcInstalled;
     private bool _rpttsInstalled;
     private bool _rightClickPickupPatched;
 
@@ -31,12 +32,18 @@ public abstract class TethysServerPatchesCore : ModSystem
         ModId = Mod.Info.ModID;
         HarmonyInstance = new Harmony(ModId);
         _clothierHeirloomsModInstalled = api.ModLoader.IsModEnabled("clothierheirloomsmod");
+        _fgcInstalled = api.ModLoader.IsModEnabled("fromgoldencombs");
         _rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
             Logger.Notification("Patching category clothierheirloomsmod");
             HarmonyInstance.PatchCategory("clothierheirloomsmod");
+        }
+        if (_fgcInstalled)
+        {
+            Logger.Notification("Patching category fromgoldencombs");
+            HarmonyInstance.PatchCategory("fromgoldencombs");
         }
         if (_rpttsInstalled)
         {
@@ -89,6 +96,10 @@ public abstract class TethysServerPatchesCore : ModSystem
             if (_rightClickPickupPatched)
             {
                 HarmonyInstance.UnpatchCategory("rightclickpickup");
+            }
+            if (_fgcInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("fromgoldencombs");
             }
             if (_rpttsInstalled)
             {
