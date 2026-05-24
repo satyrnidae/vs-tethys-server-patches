@@ -26,6 +26,9 @@ class PushEventOnBlockHarvested_OnBlockInteractStop_NullFix
 {
     static IEnumerable<MethodBase> TargetMethods()
     {
+        if (TethysServerPatchesCore.Configuration?.FromGoldenCombsPatches.NullHarvestFix == false)
+            yield break;
+
         var type = AccessTools.TypeByName("FromGoldenCombs.BlockBehaviors.PushEventOnBlockHarvested");
         if (type == null)
         {
