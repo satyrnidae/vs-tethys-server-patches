@@ -13,6 +13,7 @@ public class Configuration
     public AldiClassesPatchOptions AldiClassesPatches = new();
     public CastawayPatchOptions CastawayPatches = new();
     public ToolsmithTweaks Toolsmith = new();
+    public FromGoldenCombsPatchOptions FromGoldenCombsPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -106,4 +107,10 @@ public class HomesteaderTraitFlags
 public class ToolsmithTweaks
 {
     public bool DisableColdSmithing = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class FromGoldenCombsPatchOptions
+{
+    public bool NullHarvestFix = true;
 }
