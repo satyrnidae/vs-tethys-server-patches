@@ -1,3 +1,22 @@
+v2.0.0-pre.8
+- Vanilla tweaks - Custom Omok Pieces (VanillaTweaks/CustomOmokPieces, default true)
+  - New metal variants: silver, electrum, black bronze, brass
+    - Combustible properties set for smelting back to ingots
+  - New vanilla stone variants: flint, chert, granite, andesite, basalt, obsidian, peridotite
+  - New MN Geology stone variants (when mngeology installed): komatiite, pyroxenite,
+    serpentinite, monzonite, syenite
+  - New bone variant (when butchering installed)
+  - Clay forming recipe: craft omok piece molds from blue, fire, or red clay (13x13 pattern,
+    20 pieces per cast, 100 units of metal)
+  - Knapping recipes: flint, stone types (chert/granite/andesite/basalt/obsidian/peridotite),
+    and bone (butchering); stone recipe extended to MN Geology types when installed
+  - All new content disabled when CustomOmokPieces is false
+- QP's Chisel Tools
+  - Fixed palette texture patch targeting `*` as a key (not a glob); now correctly targets
+    `*-standard`, `*-glow`, and `*-light` literal variant keys
+  - Fixed palette-light grid recipe: replaced removed `game:lantern-up` ingredient with
+    `game:lantern-small-up`
+
 v2.0.0-pre.7
 - From Golden Combs
   - Fix NullReferenceException in PushEventOnBlockHarvested.OnBlockInteractStop that disconnects any player who harvests a block whose drop table contains a null entry (reproducibly triggered by harvesting wild fruiting bushes such as strawberries)
