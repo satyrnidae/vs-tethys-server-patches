@@ -1,4 +1,5 @@
 {
+  "enabled": false,
   "ingredient": { "type": "item", "code": "game:stone-*", "name": "rock", "allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite" ] },
   "pattern": [[
     "__________",

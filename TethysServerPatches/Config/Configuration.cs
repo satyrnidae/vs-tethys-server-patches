@@ -21,6 +21,7 @@ public class VanillaTweaks
 {
     public bool StackableTemporalGears = true;
     public RightClickPickupOptions RightClickPickup = new();
+    public bool CustomOmokPieces = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

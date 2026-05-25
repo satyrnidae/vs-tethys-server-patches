@@ -1,4 +1,5 @@
 {
+  "enabled": false,
   "ingredient": { "type": "item", "code": "butchering:strongbone" },
   "pattern": [[
     "__________",

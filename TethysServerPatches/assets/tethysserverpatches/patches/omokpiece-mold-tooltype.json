@@ -5,7 +5,8 @@
     "file": "game:blocktypes/clay/raw/toolmold.json",
     "op": "AddMerge",
     "path": "/variantgroups/2/states",
-    "value": [ "omokpiece" ]
+    "value": [ "omokpiece" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
 
   // Fired toolmold: add omokpiece tooltype
@@ -14,7 +15,8 @@
     "file": "game:blocktypes/clay/fired/toolmold.json",
     "op": "AddMerge",
     "path": "/variantgroups/2/states",
-    "value": [ "omokpiece" ]
+    "value": [ "omokpiece" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
   // Move the catch-all aside so our specific entry is inserted before it —
   // VS matches attributesByType patterns in insertion order (first-match).
@@ -23,7 +25,8 @@
     "file": "game:blocktypes/clay/fired/toolmold.json",
     "op": "Move",
     "path": "/tmp",
-    "fromPath": "/attributesByType/toolmold-*-fired-*"
+    "fromPath": "/attributesByType/toolmold-*-fired-*",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
   {
     "side": "Server",
@@ -35,14 +38,15 @@
       "fillHeight": 1,
       "moldrackable": true,
       "drop": { "type": "item", "code": "omokpiece-{metal}", "quantity": 20 }
-    }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
   {
     "side": "Server",
     "file": "game:blocktypes/clay/fired/toolmold.json",
     "op": "Move",
     "path": "/attributesByType/toolmold-*-fired-*",
-    "fromPath": "/tmp"
-  },
-
+    "fromPath": "/tmp",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  }
 ]

@@ -5,6 +5,7 @@
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants/-",
     "value": "komatiite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
     "dependsOn": [
       { "modid": "mngeology" }
     ]
@@ -15,6 +16,7 @@
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants/-",
     "value": "pyroxenite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
     "dependsOn": [
       { "modid": "mngeology" }
     ]
@@ -25,6 +27,7 @@
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants/-",
     "value": "serpentinite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
     "dependsOn": [
       { "modid": "mngeology" }
     ]
@@ -35,6 +38,7 @@
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants/-",
     "value": "monzonite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
     "dependsOn": [
       { "modid": "mngeology" }
     ]
@@ -45,6 +49,7 @@
     "op": "AddMerge",
     "path": "/ingredient/allowedVariants/-",
     "value": "syenite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
     "dependsOn": [
       { "modid": "mngeology" }
     ]
