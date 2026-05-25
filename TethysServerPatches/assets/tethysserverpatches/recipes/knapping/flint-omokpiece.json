@@ -1,0 +1,17 @@
+{
+  "ingredient": { "type": "item", "code": "game:flint" },
+  "pattern": [[
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__________"
+  ]],
+  "name": "Flint omok pieces",
+  "output": { "type": "item", "code": "game:omokpiece-flint", "stacksize": 8 }
+}

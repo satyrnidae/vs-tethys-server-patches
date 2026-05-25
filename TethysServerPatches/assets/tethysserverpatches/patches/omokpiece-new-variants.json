@@ -1,0 +1,166 @@
+[
+  // New metal variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "silver", "electrum", "blackbronze", "brass" ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-silver",
+    "value": {
+      "meltingPoint": 961,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-silver" }
+    }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-electrum",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-electrum" }
+    }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-blackbronze",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-blackbronze" }
+    }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-brass",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-brass" }
+    }
+  },
+
+  // Vanilla stone variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "flint", "chert", "granite", "andesite", "basalt", "obsidian", "peridotite" ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType",
+    "value": {
+      "omokpiece-flint":     { "material": { "base": "block/stone/flint" } },
+      "omokpiece-chert":     { "material": { "base": "block/stone/rock/chert1" } },
+      "omokpiece-granite":   { "material": { "base": "block/stone/rock/granite1" } },
+      "omokpiece-andesite":  { "material": { "base": "block/stone/rock/andesite1" } },
+      "omokpiece-basalt":    { "material": { "base": "block/stone/rock/basalt1" } },
+      "omokpiece-obsidian":  { "material": { "base": "block/stone/rock/obsidian1" } },
+      "omokpiece-peridotite":{ "material": { "base": "block/stone/rock/peridotite1" } }
+    }
+  },
+
+  // MN Geology stone variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "komatiite", "pyroxenite", "serpentinite", "monzonite", "syenite" ],
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-komatiite",
+    "value": { "material": { "base": "block/stone/rock/komatiite1" } },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-pyroxenite",
+    "value": { "material": { "base": "block/stone/rock/pyroxenite1" } },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-serpentinite",
+    "value": { "material": { "base": "block/stone/rock/serpentinite1" } },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-monzonite",
+    "value": { "material": { "base": "block/stone/rock/monzonite1" } },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-syenite",
+    "value": { "material": { "base": "block/stone/rock/syenite1" } },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+
+  // Bone variant (butchering mod)
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  }
+]

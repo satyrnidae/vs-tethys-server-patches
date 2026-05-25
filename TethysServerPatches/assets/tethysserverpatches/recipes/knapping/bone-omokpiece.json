@@ -1,0 +1,17 @@
+{
+  "ingredient": { "type": "item", "code": "butchering:strongbone" },
+  "pattern": [[
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__________"
+  ]],
+  "name": "Bone omok pieces",
+  "output": { "type": "item", "code": "game:omokpiece-bone", "stacksize": 8 }
+}
