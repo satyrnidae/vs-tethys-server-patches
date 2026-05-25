@@ -70,6 +70,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_DisableColdSmithing", configInstance.Toolsmith.DisableColdSmithing);
+            api.World.Config.SetBool("TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles", configInstance.Toolsmith.ButcheringStrongBoneHandles);
 
             if (loadSuccessful)
             {

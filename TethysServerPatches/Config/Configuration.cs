@@ -108,6 +108,7 @@ public class HomesteaderTraitFlags
 public class ToolsmithTweaks
 {
     public bool DisableColdSmithing = true;
+    public bool ButcheringStrongBoneHandles = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
