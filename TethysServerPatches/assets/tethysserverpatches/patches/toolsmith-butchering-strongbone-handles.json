@@ -1,0 +1,43 @@
+[
+	{
+		"op": "add",
+		"path": "/-",
+		"file": "toolsmith:config/toolsmith/parts/handles/handles-vanilla.json",
+		"value": {
+			"id": "strongbone",
+			"handleStatTag": "strongbone",
+			"canHaveGrip": true,
+			"handleShapePath": "toolsmith:shapes/item/parts/handles/strongbone/handle",
+			"canBeTreated": false,
+			"dryingTimeMult": 1.0
+		},
+		"dependsOn": [
+			{ "modId": "toolsmith" },
+			{ "modId": "butchering" }
+		],
+		"condition": {
+			"when": "TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles",
+			"isValue": "true"
+		}
+	},
+	{
+		"op": "add",
+		"path": "/-",
+		"file": "toolsmith:config/toolsmith/stats/handles/handles.json",
+		"value": {
+			"id": "strongbone",
+			"baseHPfactor": 1.2,
+			"selfHPBonus": 0.05,
+			"bindingHPBonus": 0.2,
+			"speedBonus": 0.05
+		},
+		"dependsOn": [
+			{ "modId": "toolsmith" },
+			{ "modId": "butchering" }
+		],
+		"condition": {
+			"when": "TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles",
+			"isValue": "true"
+		}
+	}
+]
