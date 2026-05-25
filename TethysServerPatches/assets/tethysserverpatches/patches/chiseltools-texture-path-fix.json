@@ -343,5 +343,17 @@
         "modId": "chiseltools"
       }
     ]
+  },
+  // truechisel (QP's chisel - iron/bronze/meteoriciron/steel variants)
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/truechisel",
+    "path": "/textures/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
   }
 ]

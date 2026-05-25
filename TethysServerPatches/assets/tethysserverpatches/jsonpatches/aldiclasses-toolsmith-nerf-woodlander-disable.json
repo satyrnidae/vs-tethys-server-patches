@@ -1,0 +1,14 @@
+[
+  {
+    "priority": 100,
+    "side": "server",
+    "op": "Add",
+    "file": "aldiclasses:patches/compatibility/toolsmith/nerf-woodlander-parchment",
+    "path": "-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "aldiclasses" },
+      { "modId": "toolsmith" }
+    ]
+  }
+]

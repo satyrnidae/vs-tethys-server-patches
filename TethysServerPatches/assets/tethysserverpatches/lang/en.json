@@ -311,5 +311,9 @@
   "game:item-omokpiece-serpentinite": "Omok piece (Serpentinite)",
   "game:item-omokpiece-monzonite": "Omok piece (Monzonite)",
   "game:item-omokpiece-syenite": "Omok piece (Syenite)",
-  "game:item-omokpiece-bone": "Omok piece (Bone)"
+  "game:item-omokpiece-bone": "Omok piece (Bone)",
+
+  "chiseltools:item-truechisel-iron": "QP's chisel (Iron)",
+  "chiseltools:item-truechisel-meteoriciron": "QP's chisel (Meteoric iron)",
+  "chiseltools:item-truechisel-*bronze": "QP's chisel (Bronze)"
 }
