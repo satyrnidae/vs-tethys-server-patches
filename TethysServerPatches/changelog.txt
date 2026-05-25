@@ -1,4 +1,9 @@
 v2.0.0-pre.8
+- Toolsmith Tweaks
+  - Strong Bone handles (Toolsmith/ButcheringStrongBoneHandles, default true, requires butchering)
+    - Adds butchering:strongbone as a valid Toolsmith handle material
+    - Uses Toolsmith bone handle model with butchering's bone texture (bone3)
+    - Stats match the crafted handle tier (1.2x HP, +5% self, +20% binding, +5% speed)
 - Vanilla tweaks - Custom Omok Pieces (VanillaTweaks/CustomOmokPieces, default true)
   - New metal variants: silver, electrum, black bronze, brass
     - Combustible properties set for smelting back to ingots
