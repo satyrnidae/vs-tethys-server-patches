@@ -1,0 +1,16 @@
+[
+  {
+    "file": "aldiclasses:itemtypes/wearable/blacksmithgloves.json",
+    "op": "add",
+    "path": "/attributes/attachableToEntity",
+    "value": {
+      "categoryCode": "hand",
+      "texturePrefixCode": "aldiclasses-smithgloves"
+    },
+    "dependsOn": [
+      {
+        "modid": "aldiclassesadvancedfeatures"
+      }
+    ]
+  }
+]

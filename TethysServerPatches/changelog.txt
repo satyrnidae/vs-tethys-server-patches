@@ -1,3 +1,11 @@
+v2.0.0-pre.10
+- QP's Chisel Tools
+  - Fix missing linen texture on truechisel (QP's chisel) variants
+  - Add display names for iron, meteoric iron, and bronze truechisel variants
+- Aldi Classes
+  - Fix missing texture on blacksmith gloves when aldiclassesadvancedfeatures is installed
+  - Disable aldiclasses toolsmith nerf-woodlander-parchment compatibility patch when toolsmith is installed
+
 v2.0.0-pre.9
 - Vanilla Tweaks
   - Fix omok piece mold texture floor
