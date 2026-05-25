@@ -1,0 +1,18 @@
+{
+  "enabled": false,
+  "ingredient": { "type": "item", "code": "game:stone-*", "name": "rock", "allowedVariants": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite" ] },
+  "pattern": [[
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__#____#__",
+    "__________",
+    "__________"
+  ]],
+  "name": "Stone omok pieces",
+  "output": { "type": "item", "code": "game:omokpiece-{rock}", "stacksize": 8 }
+}

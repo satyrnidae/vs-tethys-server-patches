@@ -1,0 +1,15 @@
+[
+  // game:lantern-up no longer exists in VS 1.22; split into lantern-small-up and lantern-large-up.
+  // lantern-small-up matches the old recipe cost and light level.
+  {
+    "op": "Replace",
+    "file": "chiseltools:recipes/grid/palette-light.json",
+    "path": "/0/ingredients/L/code",
+    "value": "game:lantern-small-up",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  }
+]

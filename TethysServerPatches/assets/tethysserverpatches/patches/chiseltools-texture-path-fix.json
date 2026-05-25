@@ -277,11 +277,11 @@
       }
     ]
   },
-  // palette (uses texturesByType with wildcard keys *-standard, *-glow, *-light)
+  // palette (texturesByType keys are literally *-standard, *-glow, *-light)
   {
     "op": "Replace",
     "file": "chiseltools:itemtypes/palette",
-    "path": "/texturesByType/*/wood/base",
+    "path": "/texturesByType/*-standard/wood/base",
     "value": "game:item/tool/handle",
     "dependsOn": [
       {
@@ -292,7 +292,51 @@
   {
     "op": "Replace",
     "file": "chiseltools:itemtypes/palette",
-    "path": "/texturesByType/*/linen/base",
+    "path": "/texturesByType/*-standard/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*-glow/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*-glow/linen/base",
+    "value": "game:block/cloth/linen/plain",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*-light/wood/base",
+    "value": "game:item/tool/handle",
+    "dependsOn": [
+      {
+        "modId": "chiseltools"
+      }
+    ]
+  },
+  {
+    "op": "Replace",
+    "file": "chiseltools:itemtypes/palette",
+    "path": "/texturesByType/*-light/linen/base",
     "value": "game:block/cloth/linen/plain",
     "dependsOn": [
       {

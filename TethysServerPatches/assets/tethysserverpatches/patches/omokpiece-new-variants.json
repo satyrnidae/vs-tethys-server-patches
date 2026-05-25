@@ -1,0 +1,218 @@
+[
+  // New metal variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "silver", "electrum", "blackbronze", "brass" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-silver",
+    "value": {
+      "meltingPoint": 961,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-silver" }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-electrum",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-electrum" }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-blackbronze",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-blackbronze" }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/combustiblePropsByType/*-brass",
+    "value": {
+      "meltingPoint": 900,
+      "meltingDuration": 30,
+      "smeltedRatio": 20,
+      "smeltedStack": { "type": "item", "code": "ingot-brass" }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+
+  // Vanilla stone variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "flint", "chert", "granite", "andesite", "basalt", "obsidian", "peridotite" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType",
+    "value": {
+      "omokpiece-flint":     { "material": { "base": "block/stone/flint" } },
+      "omokpiece-chert":     { "material": { "base": "block/stone/rock/chert1" } },
+      "omokpiece-granite":   { "material": { "base": "block/stone/rock/granite1" } },
+      "omokpiece-andesite":  { "material": { "base": "block/stone/rock/andesite1" } },
+      "omokpiece-basalt":    { "material": { "base": "block/stone/rock/basalt1" } },
+      "omokpiece-obsidian":  { "material": { "base": "block/stone/rock/obsidian1" } },
+      "omokpiece-peridotite":{ "material": { "base": "block/stone/rock/peridotite1" } }
+    },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+
+  // MN Geology stone variants
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "komatiite", "pyroxenite", "serpentinite", "monzonite", "syenite" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-komatiite",
+    "value": { "material": { "base": "block/stone/rock/komatiite1" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-pyroxenite",
+    "value": { "material": { "base": "block/stone/rock/pyroxenite1" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-serpentinite",
+    "value": { "material": { "base": "block/stone/rock/serpentinite1" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-monzonite",
+    "value": { "material": { "base": "block/stone/rock/monzonite1" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-syenite",
+    "value": { "material": { "base": "block/stone/rock/syenite1" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+
+  // Bone variant (butchering mod)
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/omokpiece.json",
+    "op": "Add",
+    "path": "/texturesByType/omokpiece-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  // Enable recipes when CustomOmokPieces is on
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/clayforming/omokpiecemold.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/flint-omokpiece.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-omokpiece.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  }
+]

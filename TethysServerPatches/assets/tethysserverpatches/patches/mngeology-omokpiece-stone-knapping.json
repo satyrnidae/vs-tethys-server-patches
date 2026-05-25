@@ -1,0 +1,57 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "komatiite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "pyroxenite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "serpentinite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "monzonite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/stone-omokpiece.json",
+    "op": "AddMerge",
+    "path": "/ingredient/allowedVariants/-",
+    "value": "syenite",
+    "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true },
+    "dependsOn": [
+      { "modid": "mngeology" }
+    ]
+  }
+]
