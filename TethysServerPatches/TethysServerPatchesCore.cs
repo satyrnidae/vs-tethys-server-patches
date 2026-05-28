@@ -23,6 +23,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _fgcInstalled;
     private bool _rpttsInstalled;
     private bool _rightClickPickupPatched;
+    private bool _immersiveWoodSawingInstalled;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -34,6 +35,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         _clothierHeirloomsModInstalled = api.ModLoader.IsModEnabled("clothierheirloomsmod");
         _fgcInstalled = api.ModLoader.IsModEnabled("fromgoldencombs");
         _rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
+        _immersiveWoodSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
@@ -67,6 +69,18 @@ public abstract class TethysServerPatchesCore : ModSystem
         Logger.Notification("Patching category cookingrecipereentrancyfix");
         HarmonyInstance.PatchCategory("cookingrecipereentrancyfix");
 
+        // vsrightclickpickup changes pickup semantics so the dropped-entity interaction path that
+        // triggers the NRE never fires — no need for the defensive patch when it is present.
+        if (_immersiveWoodSawingInstalled && !rightClickPickupConflict)
+        {
+            Logger.Notification("Patching category immersivewoodsawing");
+            HarmonyInstance.PatchCategory("immersivewoodsawing");
+        }
+        else if (_immersiveWoodSawingInstalled)
+        {
+            Logger.Notification("Skipping immersivewoodsawing patch: vsrightclickpickup (or equivalent) installed");
+        }
+
         //HarmonyInstance.PatchCategory("survival");
     }
 
@@ -93,6 +107,10 @@ public abstract class TethysServerPatchesCore : ModSystem
         {
             //HarmonyInstance.UnpatchCategory("survival");
             HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
+            if (_immersiveWoodSawingInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("immersivewoodsawing");
+            }
             if (_rightClickPickupPatched)
             {
                 HarmonyInstance.UnpatchCategory("rightclickpickup");

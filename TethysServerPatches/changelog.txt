@@ -1,3 +1,15 @@
+v2.0.0
+- Immersive Wood Sawing
+  - Fix NullReferenceException in CollectibleBehaviorEntityDeconstructTool.OnHeldInteractStop
+    that crashes any sawing interaction completion when a non-deconstructible entity (e.g. a
+    dropped item) is in the player's crosshair
+  - Patch is skipped automatically when vsrightclickpickup (or equivalent) is installed, as
+    those mods suppress the interaction path that triggers the crash
+- Forest Preserve Tweaks
+  - New config section: ForestPreservePatches (active when forestpreserve is installed)
+    - ReduceWoodOutputs (default true): reduces firewood grid recipe output to 8 and plank
+      grid recipe output to 32 to offset Forest Preserve's increased log yields
+
 v2.0.0-pre.10
 - QP's Chisel Tools
   - Fix missing linen texture on truechisel (QP's chisel) variants

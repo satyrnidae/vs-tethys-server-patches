@@ -14,6 +14,7 @@ public class Configuration
     public CastawayPatchOptions CastawayPatches = new();
     public ToolsmithTweaks Toolsmith = new();
     public FromGoldenCombsPatchOptions FromGoldenCombsPatches = new();
+    public ForestPreserveTweaks ForestPreservePatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -116,3 +117,10 @@ public class FromGoldenCombsPatchOptions
 {
     public bool NullHarvestFix = true;
 }
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class ForestPreserveTweaks
+{
+    public bool ReduceWoodOutputs = true;
+}
+

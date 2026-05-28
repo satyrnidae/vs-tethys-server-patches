@@ -71,6 +71,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_DisableColdSmithing", configInstance.Toolsmith.DisableColdSmithing);
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles", configInstance.Toolsmith.ButcheringStrongBoneHandles);
+            api.World.Config.SetBool("TethysServerPatches_ForestPreserve_ReduceWoodOutputs", configInstance.ForestPreservePatches.ReduceWoodOutputs);
 
             if (loadSuccessful)
             {
