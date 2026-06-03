@@ -1,0 +1,29 @@
+[
+  {
+    "file": "game:itemtypes/resource/refractorybrick",
+    "op": "addmerge",
+    "path": "/texturesByType/*-fired-tier4",
+    "value": {
+      "side": { "base": "game:block/clay/refractory/tier4/side" },
+      "top": { "base": "game:block/clay/refractory/tier4/top" }
+    },
+    "dependsOn": [{ "modid": "improvedmetallurgy" }]
+  },
+  {
+    "file": "game:itemtypes/resource/refractorybrick",
+    "op": "addmerge",
+    "path": "/texturesByType/*-raw-tier4",
+    "value": {
+      "raw-side": { "base": "game:block/clay/refractory/tier4/raw-side" },
+      "raw-top": { "base": "game:block/clay/refractory/tier4/raw-top" }
+    },
+    "dependsOn": [{ "modid": "improvedmetallurgy" }]
+  },
+  {
+    "file": "game:blocktypes/clay/refractorybrickgrating",
+    "op": "addmerge",
+    "path": "/attributes/heatResistanceByType/*-tier4",
+    "value": 1.0,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }]
+  }
+]

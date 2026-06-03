@@ -1,3 +1,12 @@
+v2.0.1-pre.1
+- TheMadTesla's Improved Metallurgy
+  - Fix missing texture on tier 4 bricks
+  - Add missing nail types
+  - Add toolsmith compat
+- Wootsteel
+  - Add language entries for wootz steel items
+  - Add wootz steel nails and binding config for toolsmith
+
 v2.0.0
 - Immersive Wood Sawing
   - Fix NullReferenceException in CollectibleBehaviorEntityDeconstructTool.OnHeldInteractStop

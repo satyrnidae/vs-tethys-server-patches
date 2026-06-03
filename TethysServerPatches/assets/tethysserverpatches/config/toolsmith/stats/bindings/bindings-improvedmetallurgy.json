@@ -1,0 +1,35 @@
+[
+	{
+		"id": "toolsteelnails",
+		"texturePath": "improved_metallurgy:block/metal/ingot/toolsteel",
+		"langTag": "tethysserverpatches:binding-nails-toolsteel",
+		"baseHPfactor": 2.5,
+		"selfHPBonus": 0.70,
+		"handleHPBonus": 0.50,
+		"recoveryPercent": 0.28,
+		"isMetal": true,
+		"metalType": "toolsteel"
+	},
+	{
+		"id": "hadfieldsteelnails",
+		"texturePath": "improved_metallurgy:block/metal/ingot/hadfieldsteel",
+		"langTag": "tethysserverpatches:binding-nails-hadfieldsteel",
+		"baseHPfactor": 2.5,
+		"selfHPBonus": 0.72,
+		"handleHPBonus": 0.50,
+		"recoveryPercent": 0.28,
+		"isMetal": true,
+		"metalType": "hadfieldsteel"
+	},
+	{
+		"id": "inconelnails",
+		"texturePath": "improved_metallurgy:block/metal/ingot/inconel",
+		"langTag": "tethysserverpatches:binding-nails-inconel",
+		"baseHPfactor": 2.8,
+		"selfHPBonus": 0.85,
+		"handleHPBonus": 0.60,
+		"recoveryPercent": 0.22,
+		"isMetal": true,
+		"metalType": "inconel"
+	}
+]

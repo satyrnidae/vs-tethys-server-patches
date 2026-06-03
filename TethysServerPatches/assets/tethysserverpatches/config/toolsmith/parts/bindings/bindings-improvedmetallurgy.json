@@ -1,0 +1,20 @@
+[
+	{
+		"id": "metalnailsandstrips-toolsteel",
+		"bindingStatTag": "toolsteelnails",
+		"bindingShapePath": "metal",
+		"bindingTextureOverride": ""
+	},
+	{
+		"id": "metalnailsandstrips-hadfieldsteel",
+		"bindingStatTag": "hadfieldsteelnails",
+		"bindingShapePath": "metal",
+		"bindingTextureOverride": ""
+	},
+	{
+		"id": "metalnailsandstrips-inconel",
+		"bindingStatTag": "inconelnails",
+		"bindingShapePath": "metal",
+		"bindingTextureOverride": ""
+	}
+]

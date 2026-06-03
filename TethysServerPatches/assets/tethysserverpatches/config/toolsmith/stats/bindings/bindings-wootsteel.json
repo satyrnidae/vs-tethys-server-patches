@@ -1,0 +1,13 @@
+[
+  {
+    "id": "wootsteelnails",
+    "texturePath": "game:block/metal/ingot/wootsteel",
+    "langTag": "tethysserverpatches:binding-nails-wootsteel",
+    "baseHPfactor": 2.5,
+    "selfHPBonus": 0.70,
+    "handleHPBonus": 0.50,
+    "recoveryPercent": 0.28,
+    "isMetal": true,
+    "metalType": "wootsteel"
+  }
+]

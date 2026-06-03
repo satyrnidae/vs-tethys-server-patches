@@ -1,0 +1,21 @@
+[
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/materialDensityByType/*-wootsteel",
+    "value": 7840,
+    "dependsOn": [{ "modid": "wootsteel" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/combustiblePropsByType/metalnailsandstrips-wootsteel",
+    "value": {
+      "meltingPoint": 1902,
+      "meltingDuration": 30,
+      "smeltedRatio": 4,
+      "smeltedStack": { "type": "item", "code": "game:ingot-wootsteel", "stacksize": 1 }
+    },
+    "dependsOn": [{ "modid": "wootsteel" }, { "modid": "toolsmith" }]
+  }
+]

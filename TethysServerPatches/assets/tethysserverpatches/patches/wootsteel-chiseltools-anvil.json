@@ -1,0 +1,16 @@
+[
+  {
+    "file": "chiseltools:blocktypes/chiseledanvil",
+    "op": "Add",
+    "path": "/variantgroups/0/states/-",
+    "value": "wootsteel",
+    "dependsOn": [{ "modid": "wootsteel" }, { "modid": "chiseltools" }]
+  },
+  {
+    "file": "chiseltools:blocktypes/chiseledanvil",
+    "op": "Add",
+    "path": "/shapeByType/chiseledanvil-wootsteel",
+    "value": { "base": "game:block/metal/anvil/iron" },
+    "dependsOn": [{ "modid": "wootsteel" }, { "modid": "chiseltools" }]
+  }
+]

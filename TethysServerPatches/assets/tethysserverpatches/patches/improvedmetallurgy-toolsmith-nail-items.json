@@ -1,0 +1,87 @@
+[
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "AddMerge",
+    "path": "/allowedVariants",
+    "value": ["*-toolsteel", "*-hadfieldsteel", "*-inconel"],
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/materialDensityByType/*-toolsteel",
+    "value": 7820,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/materialDensityByType/*-hadfieldsteel",
+    "value": 7520,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/materialDensityByType/*-inconel",
+    "value": 8150,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/attributes/reinforcementStrengthByType/*-toolsteel",
+    "value": 1500,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/attributes/reinforcementStrengthByType/*-hadfieldsteel",
+    "value": 1500,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/attributes/reinforcementStrengthByType/*-inconel",
+    "value": 2000,
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/combustiblePropsByType/metalnailsandstrips-toolsteel",
+    "value": {
+      "meltingPoint": 1740,
+      "meltingDuration": 30,
+      "smeltedRatio": 4,
+      "smeltedStack": { "type": "item", "code": "game:ingot-toolsteel", "stacksize": 1 }
+    },
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/combustiblePropsByType/metalnailsandstrips-hadfieldsteel",
+    "value": {
+      "meltingPoint": 1620,
+      "meltingDuration": 30,
+      "smeltedRatio": 4,
+      "smeltedStack": { "type": "item", "code": "game:ingot-hadfieldsteel", "stacksize": 1 }
+    },
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  },
+  {
+    "file": "game:itemtypes/resource/metalnailsandstrips",
+    "op": "Add",
+    "path": "/combustiblePropsByType/metalnailsandstrips-inconel",
+    "value": {
+      "meltingPoint": 1940,
+      "meltingDuration": 30,
+      "smeltedRatio": 4,
+      "smeltedStack": { "type": "item", "code": "game:ingot-inconel", "stacksize": 1 }
+    },
+    "dependsOn": [{ "modid": "improvedmetallurgy" }, { "modid": "toolsmith" }]
+  }
+]
