@@ -1,3 +1,6 @@
+v2.0.1-pre.3
+- Re-release for missed merges
+
 v2.0.1-pre.2
 - VS Roofing x QP's Chisel Tools compat
   - Fix qp chisels not working on roof fill blocks (VS Roofing requires a hammer in offhand, qp chisels don't need one)
