@@ -1,0 +1,23 @@
+[
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/butchering-bloodbait-fishingpole",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "dependsOn": [
+      { "modid": "aldiclasses" },
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/grid/fishraw-juvenile-fishingpole",
+    "op": "Replace",
+    "path": "/1/enabled",
+    "value": true,
+    "dependsOn": [
+      { "modid": "aldiclasses" }
+    ]
+  }
+]

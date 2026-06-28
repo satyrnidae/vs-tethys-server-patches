@@ -1,0 +1,13 @@
+[
+  {
+    "side": "Server",
+    "file": "butchering:itemtypes/resource/fishingbait",
+    "op": "add",
+    "path": "/storageFlags",
+    "value": 257,
+    "dependsOn": [
+      { "modid": "butchering" },
+      { "modid": "manualbait" }
+    ]
+  }
+]

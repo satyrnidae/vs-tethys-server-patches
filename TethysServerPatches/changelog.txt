@@ -1,3 +1,14 @@
+v2.0.1-pre.2
+- VS Roofing x QP's Chisel Tools compat
+  - Fix qp chisels not working on roof fill blocks (VS Roofing requires a hammer in offhand, qp chisels don't need one)
+  - Add vsroofing.ChiselRoof behavior to qp chisels so VS Roofing recognises them at all
+- Immersive Wood Sawing compat
+  - Fix saw blocking Toolsmith workbench sneak+right-click disassembly
+- Butchering x Manual Bait
+  - Add fishing pole bait recipes for blood bait and juvenile raw fish (wood and bamboo poles)
+  - Aldi's Classes: carbon pole variants of both recipes
+  - Fix blood bait not being pocketable when Manual Bait is installed
+
 v2.0.1-pre.1
 - TheMadTesla's Improved Metallurgy
   - Fix missing texture on tier 4 bricks

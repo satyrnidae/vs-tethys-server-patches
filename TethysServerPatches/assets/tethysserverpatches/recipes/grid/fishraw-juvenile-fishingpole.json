@@ -1,0 +1,29 @@
+[
+  {
+    "name": "fishingpole-bait-fishraw-juvenile",
+    "recipeGroup": 2,
+    "ingredientPattern": "P,B",
+    "shapeless": true,
+    "ingredients": {
+      "P": { "type": "item", "code": "game:fishingpole-simple-{type}", "allowedVariants": ["wood", "bamboo"] },
+      "B": { "type": "item", "code": "game:fishraw-*-*-*-juvenile" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "game:fishingpole-simple-{type}" }
+  },
+  {
+    "name": "fishingpole-bait-fishraw-juvenile-carbon",
+    "enabled": false,
+    "recipeGroup": 2,
+    "ingredientPattern": "P,B",
+    "shapeless": true,
+    "ingredients": {
+      "P": { "type": "item", "code": "aldiclasses:fishingpole-carbon" },
+      "B": { "type": "item", "code": "game:fishraw-*-*-*-juvenile" }
+    },
+    "width": 1,
+    "height": 2,
+    "output": { "type": "item", "code": "aldiclasses:fishingpole-carbon" }
+  }
+]

@@ -22,6 +22,8 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _clothierHeirloomsModInstalled;
     private bool _fgcInstalled;
     private bool _rpttsInstalled;
+    private bool _vsroofingInstalled;
+    private bool _immersiveSawingInstalled;
     private bool _rightClickPickupPatched;
     private bool _immersiveWoodSawingInstalled;
 
@@ -36,6 +38,8 @@ public abstract class TethysServerPatchesCore : ModSystem
         _fgcInstalled = api.ModLoader.IsModEnabled("fromgoldencombs");
         _rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
         _immersiveWoodSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
+        _vsroofingInstalled = api.ModLoader.IsModEnabled("vsroofing");
+        _immersiveSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
@@ -51,6 +55,16 @@ public abstract class TethysServerPatchesCore : ModSystem
         {
             Logger.Notification("Patching category rptts");
             HarmonyInstance.PatchCategory("rptts");
+        }
+        if (_vsroofingInstalled)
+        {
+            Logger.Notification("Patching category vsroofing");
+            HarmonyInstance.PatchCategory("vsroofing");
+        }
+        if (_immersiveSawingInstalled)
+        {
+            Logger.Notification("Patching category immersivesawingcompat");
+            HarmonyInstance.PatchCategory("immersivesawingcompat");
         }
 
         var rightClickPickupConflict = api.ModLoader.IsModEnabled("vsrightclickpickup")
@@ -123,9 +137,17 @@ public abstract class TethysServerPatchesCore : ModSystem
             {
                 HarmonyInstance.UnpatchCategory("rptts");
             }
+            if (_vsroofingInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("vsroofing");
+            }
             if (_clothierHeirloomsModInstalled)
             {
                 HarmonyInstance.UnpatchCategory("clothierheirloomsmod");
+            }
+            if (_immersiveSawingInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("immersivesawingcompat");
             }
         }
         NetworkChannel = null;

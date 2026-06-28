@@ -1,0 +1,25 @@
+[
+  // Add vsroofing.ChiselRoof to the qp chisels (chiseltools:truechisel-*).
+  // VS Roofing only patches game:itemtypes/tool/chisel, so ChiselTools items miss the behavior.
+  {
+    "op": "addmerge",
+    "file": "chiseltools:itemtypes/truechisel",
+    "path": "/behaviors",
+    "value": [{ "name": "vsroofing.ChiselRoof" }],
+    "dependsOn": [
+      { "modId": "chiseltools" },
+      { "modId": "vsroofing" }
+    ]
+  },
+  // truechisel-ult is defined in a separate file with the same code
+  {
+    "op": "addmerge",
+    "file": "chiseltools:itemtypes/qpultchisel",
+    "path": "/behaviors",
+    "value": [{ "name": "vsroofing.ChiselRoof" }],
+    "dependsOn": [
+      { "modId": "chiseltools" },
+      { "modId": "vsroofing" }
+    ]
+  }
+]
