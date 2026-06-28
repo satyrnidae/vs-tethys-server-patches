@@ -1,0 +1,261 @@
+[
+  // Vanilla Armory swords
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/blade/bladearmingtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/blade/bladeclaymoretype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/blade/bladegladiustype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/blade/bladesabretype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic blades/relicarmingtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic blades/relicclaymoretype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic blades/relicgladiustype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic blades/relicsabretype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+
+  // Vanilla Armory knives
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/knife/knifebaselardtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/knife/knifedaggertype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/knife/knifekhanjartype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/knife/knifestilettotype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic knives/relicbaselardtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic knives/relicdaggertype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic knives/relickhanjartype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic knives/relicstilettotype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+
+  // Vanilla Armory spears
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/spearboartype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/spearforktype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/ranseur.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/voulge.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/boarornate.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/forkornate.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/ranseurornate.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/spear/voulgeornate.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic spears/relic boar.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic spears/relic fork.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic spears/relic ranseur.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic spears/relic voulge.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+
+  // Vanilla Armory axes
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/axes/axebardichetype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/axes/axebattletype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/axes/axebeardedtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/axes/axedoubletype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic axes/relicbardichetype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic axes/relicbattletype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic axes/relicbeardedtype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  },
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "vanillaarmory:itemtypes/tool/relic axes/relicdoubletype.json",
+    "dependsOn": [{ "modid": "vanillaarmory" }]
+  }
+]

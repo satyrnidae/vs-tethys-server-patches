@@ -8,7 +8,7 @@
 			"handleStatTag": "strongbone",
 			"canHaveGrip": true,
 			"handleShapePath": "toolsmith:shapes/item/parts/handles/strongbone/handle",
-			"canBeTreated": false,
+			"canBeTreated": true,
 			"dryingTimeMult": 1.0
 		},
 		"dependsOn": [

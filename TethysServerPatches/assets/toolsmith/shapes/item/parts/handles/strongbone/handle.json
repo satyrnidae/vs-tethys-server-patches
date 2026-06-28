@@ -1,0 +1,11 @@
+{
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"bone": "game:block/creature/bone/bone3"
+	},
+	"textureSizes": {
+		"bone": [32, 32]
+	},
+	"parent": "game:item/bone"
+}

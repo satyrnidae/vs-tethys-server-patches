@@ -1,3 +1,13 @@
+v2.0.1-pre.4
+- Toolsmith x Butchering
+  - Add custom strongbone handle shapes for all tool types
+  - Strongbone handles can now be treated (oiled)
+- VS Roofing x QP's Chisel Tools
+  - Fix QP chisels still needing a hammer in hand to remove roof fill voxels
+- Knives, spears, and metal axes can now be sharpened on the grinding wheel
+- Vanilla Armory swords (arming, claymore, gladius, saber), knives, spears, and axes are now sharpenable on vanilla grinding wheels
+  - Relic and ornate variants included
+
 v2.0.1-pre.3
 - Re-release for missed merges
 

@@ -1,0 +1,25 @@
+[
+  // Vanilla knives
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "game:itemtypes/tool/knife.json"
+  },
+
+  // Vanilla spears
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "game:itemtypes/tool/spear.json"
+  },
+
+  // Vanilla metal axes
+  {
+    "op": "AddMerge",
+    "path": "/behaviors",
+    "value": [{ "name": "Sharpenable" }],
+    "file": "game:itemtypes/tool/axe-metal.json"
+  }
+]
