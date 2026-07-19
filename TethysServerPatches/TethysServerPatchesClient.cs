@@ -17,6 +17,7 @@ class TethysServerPatchesClient : TethysServerPatchesCore
         InteractionHelpFixState.Create(Thread.CurrentThread.ManagedThreadId);
         base.StartPre(api); // creates HarmonyInstance and applies other categories
         HarmonyInstance.PatchCategory("interactionhelpfix");
+        HarmonyInstance.PatchCategory("grindingwheelnullfix");
     }
 
     public override void StartClientSide(ICoreClientAPI api)
@@ -35,6 +36,7 @@ class TethysServerPatchesClient : TethysServerPatchesCore
     public override void Dispose()
     {
         HarmonyInstance?.UnpatchCategory("interactionhelpfix");
+        HarmonyInstance?.UnpatchCategory("grindingwheelnullfix");
         InteractionHelpFixState.Instance?.Dispose();
 
         base.Dispose();

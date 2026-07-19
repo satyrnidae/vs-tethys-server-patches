@@ -1,3 +1,6 @@
+v2.0.1-pre.5
+- Fix null grindstone block entity causing crash
+
 v2.0.1-pre.4
 - Toolsmith x Butchering
   - Add custom strongbone handle shapes for all tool types
