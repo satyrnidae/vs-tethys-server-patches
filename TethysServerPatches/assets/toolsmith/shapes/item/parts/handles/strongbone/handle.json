@@ -3,7 +3,7 @@
 	"textureHeight": 16,
 	"textureSizes": {},
 	"textures": {
-		"bone": "game:block/creature/bone"
+		"bone": "game:block/creature/bone/bone3"
 	},
 	"elements": [
 		{
