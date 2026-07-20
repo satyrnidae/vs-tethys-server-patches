@@ -1,0 +1,44 @@
+{
+	"editor": {
+		"backDropShape": "",
+		"collapsedPaths": "",
+		"allAngles": false,
+		"entityTextureMode": false,
+		"singleTexture": false,
+		"vsFormatConverted": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+		"grip": [32, 32]
+	},
+	"textures": {
+		"grip": "game:block/leather/plain"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [8, 0, 8],
+			"to": [8, 0, 8],
+			"rotationOrigin": [8, 0, 8],
+			"children": [
+				{
+					"name": "bone_fabric",
+					"from": [-0.675, 1.75, -0.7],
+					"to": [0.725, 4.75, 0.7],
+					"rotationOrigin": [-0.675, 1.75, -0.7],
+					"faces": {
+						"north": {"texture": "#grip", "uv": [13.4, 18, 14.8, 21], "autoUv": false, "snapUv": false},
+						"east": {"texture": "#grip", "uv": [14.8, 18, 16.2, 21], "autoUv": false, "snapUv": false},
+						"south": {"texture": "#grip", "uv": [16.2, 18, 17.6, 21], "autoUv": false, "snapUv": false},
+						"west": {"texture": "#grip", "uv": [12, 18, 13.4, 21], "autoUv": false, "snapUv": false},
+						"up": {"texture": "#grip", "uv": [13.4, 16.6, 14.8, 18], "autoUv": false, "snapUv": false},
+						"down": {"texture": "#grip", "uv": [14.8, 16.6, 16.2, 18], "autoUv": false, "snapUv": false}
+					},
+					"shade": false
+				}
+			]
+		}
+	],
+	"animations": []
+}

@@ -1,3 +1,6 @@
+v2.0.2
+- add custom handle wrap model for strongbone handles.
+
 v2.0.1
 - Fix issue with the handles
 
