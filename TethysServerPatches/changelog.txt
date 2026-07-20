@@ -1,3 +1,6 @@
+v2.0.1
+- Fix issue with the handles
+
 v2.0.1-pre.5
 - Fix null grindstone block entity causing crash
 
