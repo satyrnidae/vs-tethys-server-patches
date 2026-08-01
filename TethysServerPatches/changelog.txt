@@ -1,3 +1,8 @@
+v.2.0.4
+- Fix toolsmith oiled strongbone crash
+  - Swapped to "wood" texture instead of "bone" texture in strongbone handles
+  - Texture overlay also works!
+
 v2.0.2
 - add custom handle wrap model for strongbone handles.
 
