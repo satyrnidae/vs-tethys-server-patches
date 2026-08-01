@@ -1,5 +1,4 @@
 [
-  // Raw toolmold: add omokpiece tooltype
   {
     "side": "Server",
     "file": "game:blocktypes/clay/raw/toolmold.json",
@@ -8,8 +7,6 @@
     "value": [ "omokpiece" ],
     "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
-
-  // Fired toolmold: add omokpiece tooltype
   {
     "side": "Server",
     "file": "game:blocktypes/clay/fired/toolmold.json",
@@ -18,8 +15,6 @@
     "value": [ "omokpiece" ],
     "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }
   },
-  // Move the catch-all aside so our specific entry is inserted before it —
-  // VS matches attributesByType patterns in insertion order (first-match).
   {
     "side": "Server",
     "file": "game:blocktypes/clay/fired/toolmold.json",
@@ -37,6 +32,7 @@
       "requiredUnits": 100,
       "fillHeight": 1,
       "moldrackable": true,
+      "onmoldrackTransform": { "rotation": { "z": 90 } },
       "drop": { "type": "item", "code": "omokpiece-{metal}", "quantity": 20 }
     },
     "condition": { "when": "TethysServerPatches_CustomOmokPieces", "isValue": true }

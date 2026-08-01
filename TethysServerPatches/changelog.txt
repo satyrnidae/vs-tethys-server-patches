@@ -1,4 +1,7 @@
-v.2.0.4
+v2.0.5
+- Fix omok mold orientation inside of vertical racks
+
+v2.0.4
 - Fix toolsmith oiled strongbone crash
   - Swapped to "wood" texture instead of "bone" texture in strongbone handles
   - Texture overlay also works!
