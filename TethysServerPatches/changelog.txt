@@ -3,6 +3,10 @@ v2.0.6
 - Butchering
   - Add bone tool knapping
   - Fixes for handles with Toolsmith 1.2.18
+- Annealing
+  - New smithing step past Tempering
+  - Removes a quench iteration and halves bonuses / shatter chance (minimum: 5%)
+  - Annealing to Times quenched: 0 will reset all bonuses and shatter chance to 5%
 
 v2.0.5
 - Fix omok mold orientation inside of vertical racks

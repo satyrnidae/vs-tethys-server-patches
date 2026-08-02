@@ -151,8 +151,12 @@ class CollectibleBehaviorQuenchable_TrySettleWorkItem_Anneal
             SetOrRemoveBuff(buffable, itemstack, "miningspeed", newPowerValue);
         }
 
+        // Vanilla's own GetShatterChance falls back to BreakChancePerQuench (5%) whenever the
+        // attribute is unset, so that's the effective floor even on a never-quenched item —
+        // annealing should never leave the item safer than that baseline.
         var shatterChance = behavior.GetShatterChance(world, itemstack);
-        behavior.SetShatterChance(world, itemstack, fullyReset ? 0f : shatterChance / 2f);
+        var newShatterChance = fullyReset ? behavior.BreakChancePerQuench : Math.Max(behavior.BreakChancePerQuench, shatterChance / 2f);
+        behavior.SetShatterChance(world, itemstack, newShatterChance);
 
         itemstack.Attributes.SetInt("quenchIteration", newQuenchIteration);
 
