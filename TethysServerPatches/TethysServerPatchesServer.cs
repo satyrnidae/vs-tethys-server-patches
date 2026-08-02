@@ -66,12 +66,14 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_FixCabbageOffsets", configInstance.VanillaFixes.FixCabbageOffsets);
             api.World.Config.SetBool("TethysServerPatches_StackableTemporalGears", configInstance.VanillaTweaks.StackableTemporalGears);
             api.World.Config.SetBool("TethysServerPatches_CustomOmokPieces", configInstance.VanillaTweaks.CustomOmokPieces);
+            api.World.Config.SetBool("TethysServerPatches_ButcheringBoneTools", configInstance.VanillaTweaks.ButcheringBoneTools);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_DisableColdSmithing", configInstance.Toolsmith.DisableColdSmithing);
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles", configInstance.Toolsmith.ButcheringStrongBoneHandles);
             api.World.Config.SetBool("TethysServerPatches_ForestPreserve_ReduceWoodOutputs", configInstance.ForestPreservePatches.ReduceWoodOutputs);
+            api.World.Config.SetBool("TethysServerPatches_LongTermFood_DisableSoybeanMilkPressing", configInstance.LongTermFoodPatches.DisableSoybeanMilkPressing);
 
             if (loadSuccessful)
             {

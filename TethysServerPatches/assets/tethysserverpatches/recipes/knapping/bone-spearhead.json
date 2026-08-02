@@ -1,0 +1,18 @@
+{
+  "enabled": false,
+  "ingredient": { "type": "item", "code": "butchering:strongbone" },
+  "pattern": [[
+    "____##____",
+    "____##____",
+    "___####___",
+    "___####___",
+    "___####___",
+    "___####___",
+    "___####___",
+    "___####___",
+    "____##____",
+    "___####___"
+  ]],
+  "name": "Bone spear head",
+  "output": { "type": "item", "code": "game:spearhead-bone" }
+}

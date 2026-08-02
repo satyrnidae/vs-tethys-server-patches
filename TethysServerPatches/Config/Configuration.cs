@@ -15,6 +15,7 @@ public class Configuration
     public ToolsmithTweaks Toolsmith = new();
     public FromGoldenCombsPatchOptions FromGoldenCombsPatches = new();
     public ForestPreserveTweaks ForestPreservePatches = new();
+    public LongTermFoodPatchOptions LongTermFoodPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -23,6 +24,7 @@ public class VanillaTweaks
     public bool StackableTemporalGears = true;
     public RightClickPickupOptions RightClickPickup = new();
     public bool CustomOmokPieces = true;
+    public bool ButcheringBoneTools = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -122,5 +124,11 @@ public class FromGoldenCombsPatchOptions
 public class ForestPreserveTweaks
 {
     public bool ReduceWoodOutputs = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class LongTermFoodPatchOptions
+{
+    public bool DisableSoybeanMilkPressing = true;
 }
 

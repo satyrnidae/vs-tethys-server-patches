@@ -2,7 +2,7 @@
 	{
 		"op": "add",
 		"path": "/-",
-		"file": "toolsmith:config/toolsmith/parts/handles/handles-vanilla.json",
+		"file": "toolsmith:config/toolsmith/parts/handles/handles-butchering.json",
 		"value": {
 			"id": "strongbone",
 			"handleStatTag": "strongbone",
@@ -23,7 +23,7 @@
 	{
 		"op": "add",
 		"path": "/-",
-		"file": "toolsmith:config/toolsmith/stats/handles/handles.json",
+		"file": "toolsmith:config/toolsmith/stats/handles/handles-butchering.json",
 		"value": {
 			"id": "strongbone",
 			"baseHPfactor": 1.2,

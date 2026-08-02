@@ -1,0 +1,724 @@
+[
+  // Enable the new bone knapping recipes
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-knifeblade.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-axehead.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-hoehead.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-shovelhead.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:recipes/knapping/bone-spearhead.json",
+    "op": "Replace",
+    "path": "/enabled",
+    "value": true,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  // Vanilla toolhead itemtypes: add "bone" as a material variant
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/knifeblade.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/knifeblade.json",
+    "op": "Add",
+    "path": "/texturesByType/knifeblade-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  // Reorder: move the "*" catch-all back after our new key so it doesn't shadow it.
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/knifeblade.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/knifeblade.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": {
+      "material": { "base": "block/metal/ingot/{material}" },
+      "string": { "base": "block/transparent" },
+      "handle": { "base": "block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/axehead.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/axehead.json",
+    "op": "Add",
+    "path": "/texturesByType/axehead-bone",
+    "value": {
+      "material": { "base": "game:block/creature/bone/bone3" },
+      "string": { "base": "game:block/transparent" },
+      "handle": { "base": "game:block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/axehead.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/axehead.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": {
+      "material": { "base": "block/metal/ingot/{material}" },
+      "string": { "base": "block/transparent" },
+      "handle": { "base": "block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/hoehead.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/hoehead.json",
+    "op": "Add",
+    "path": "/texturesByType/hoehead-bone",
+    "value": {
+      "material": { "base": "game:block/creature/bone/bone3" },
+      "string": { "base": "game:block/transparent" },
+      "handle": { "base": "game:block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/hoehead.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/hoehead.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": {
+      "material": { "base": "block/metal/ingot/{material}" },
+      "string": { "base": "block/transparent" },
+      "handle": { "base": "block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/shovelhead.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/shovelhead.json",
+    "op": "Add",
+    "path": "/texturesByType/shovelhead-bone",
+    "value": {
+      "material": { "base": "game:block/creature/bone/bone3" },
+      "string": { "base": "game:block/transparent" },
+      "handle": { "base": "game:block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/shovelhead.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/shovelhead.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": {
+      "material": { "base": "block/metal/ingot/{material}" },
+      "string": { "base": "block/transparent" },
+      "handle": { "base": "block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/spearhead.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/spearhead.json",
+    "op": "Add",
+    "path": "/shapeByType/spearhead-bone",
+    "value": { "base": "tethysserverpatches:item/tool/spearhead-bone" },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/spearhead.json",
+    "op": "Add",
+    "path": "/texturesByType/spearhead-bone",
+    "value": {
+      "stone": { "base": "game:block/creature/bone/bone3" },
+      "string": { "base": "game:block/transparent" },
+      "handle": { "base": "game:block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/spearhead.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/toolhead/spearhead.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": {
+      "stone": { "base": "block/stone/rock/{material}1" },
+      "string": { "base": "block/transparent" },
+      "handle": { "base": "block/transparent" }
+    },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  // Vanilla finished-tool itemtypes: add "bone" as a variant
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/1/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Add",
+    "path": "/texturesByType/knife-generic-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Remove",
+    "path": "/texturesByType/knife-generic-*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Add",
+    "path": "/texturesByType/knife-generic-*",
+    "value": { "material": { "base": "block/metal/ingot/{material}" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Add",
+    "path": "/durabilitybytype/knife-generic-bone",
+    "value": 90,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Add",
+    "path": "/miningspeedbytype/knife-generic-bone",
+    "value": { "plant": 1 },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/knife.json",
+    "op": "Add",
+    "path": "/attackpowerbytype/knife-generic-bone",
+    "value": 0.75,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/shapeByType/hoe-bone",
+    "value": { "base": "item/tool/hoe-stone" },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/texturesByType/hoe-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": { "material": { "base": "block/stone/rock/{material}1" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/miningspeedbytype/hoe-bone",
+    "value": { "soil": 1.8 },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/durabilitybytype/hoe-bone",
+    "value": 30,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/hoe.json",
+    "op": "Add",
+    "path": "/attackpowerbytype/hoe-bone",
+    "value": 1,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/shapeByType/shovel-bone",
+    "value": { "base": "item/tool/shovel-stone" },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/texturesByType/shovel-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": { "material": { "base": "block/metal/ingot/{material}" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/miningspeedbytype/shovel-bone",
+    "value": { "soil": 2.2, "sand": 2.2, "gravel": 1.9, "snow": 1.9 },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/durabilitybytype/shovel-bone",
+    "value": 50,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/shovel.json",
+    "op": "Add",
+    "path": "/attackpowerbytype/shovel-bone",
+    "value": 0.75,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/1/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/shapeByType/spear-generic-bone",
+    "value": { "base": "item/tool/spear/stone" },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/texturesByType/spear-generic-bone",
+    "value": { "stone": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/durabilitybytype/spear-generic-bone",
+    "value": 16,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/attackpowerbytype/spear-generic-bone",
+    "value": 1.75,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/attributes/damageByType/*-bone",
+    "value": 3.8,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/spear.json",
+    "op": "Add",
+    "path": "/attributes/damageTierByType/*-bone",
+    "value": 0,
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/axe-stone.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/axe-stone.json",
+    "op": "Add",
+    "path": "/texturesByType/axe-bone",
+    "value": { "material": { "base": "game:block/creature/bone/bone3" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/axe-stone.json",
+    "op": "Remove",
+    "path": "/texturesByType/*",
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/tool/axe-stone.json",
+    "op": "Add",
+    "path": "/texturesByType/*",
+    "value": { "material": { "base": "block/stone/rock/{material}1" } },
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+
+  // Grid assembly: allow the new bone heads into recipes with closed allowedVariants lists.
+  // Knife/hoe/shovel grid recipes already use unrestricted wildcards and need no patch.
+  {
+    "side": "Server",
+    "file": "game:recipes/grid/tool/axe.json",
+    "op": "AddMerge",
+    "path": "/1/ingredients/T/allowedVariants",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:recipes/grid/tool/spear.json",
+    "op": "AddMerge",
+    "path": "/ingredients/T/allowedVariants",
+    "value": [ "bone" ],
+    "condition": { "when": "TethysServerPatches_ButcheringBoneTools", "isValue": true },
+    "dependsOn": [
+      { "modid": "butchering" }
+    ]
+  }
+]

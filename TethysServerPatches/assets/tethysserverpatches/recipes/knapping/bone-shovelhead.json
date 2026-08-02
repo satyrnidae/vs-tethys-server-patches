@@ -1,0 +1,18 @@
+{
+  "enabled": false,
+  "ingredient": { "type": "item", "code": "butchering:strongbone" },
+  "pattern": [[
+    "___####___",
+    "__######__",
+    "__######__",
+    "_########_",
+    "_########_",
+    "_########_",
+    "_########_",
+    "_########_",
+    "_########_",
+    "_########_"
+  ]],
+  "name": "Bone shovel head",
+  "output": { "type": "item", "code": "game:shovelhead-bone" }
+}

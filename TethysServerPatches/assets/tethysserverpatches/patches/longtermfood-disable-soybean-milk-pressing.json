@@ -1,0 +1,10 @@
+[
+  {
+    "side": "server",
+    "file": "game:itemtypes/food/legume.json",
+    "op": "remove",
+    "path": "/attributes/juiceablePropertiesByType/*-soybean",
+    "dependsOn": [{ "modid": "longtermfood" }, { "modid": "justtofu" }],
+    "condition": { "when": "TethysServerPatches_LongTermFood_DisableSoybeanMilkPressing", "isValue": true }
+  }
+]
