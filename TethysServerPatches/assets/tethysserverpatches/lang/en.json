@@ -360,6 +360,8 @@
   "thecritterpack:recipeingredient-item-egg-instrumentalcase": "duck egg",
 
   "tethysserverpatches:rightclickpickup-action": "Pick up",
+  "tethysserverpatches:itemstack-annealable": "<font color=\"darkcyan\">Annealable.</font> ({0}°C - {1}°C)",
+  "tethysserverpatches:quenchable-annealed-amount": "Times annealed: {0}",
   "game:ingameerror-tethysserverpatches-wrongitem": "Can't pick up {0}, wrong item in hand!",
   "game:ingameerror-tethysserverpatches-invfull": "Can't pick up {0}, inventory full!",
 

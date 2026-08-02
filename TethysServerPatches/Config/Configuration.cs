@@ -25,6 +25,7 @@ public class VanillaTweaks
     public RightClickPickupOptions RightClickPickup = new();
     public bool CustomOmokPieces = true;
     public bool ButcheringBoneTools = true;
+    public bool Annealing = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

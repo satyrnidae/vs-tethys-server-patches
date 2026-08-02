@@ -26,6 +26,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _immersiveSawingInstalled;
     private bool _rightClickPickupPatched;
     private bool _immersiveWoodSawingInstalled;
+    private bool _smithingPlusInstalled;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -40,6 +41,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         _immersiveWoodSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
         _vsroofingInstalled = api.ModLoader.IsModEnabled("vsroofing");
         _immersiveSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
+        _smithingPlusInstalled = api.ModLoader.IsModEnabled("smithingplus");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
@@ -83,6 +85,15 @@ public abstract class TethysServerPatchesCore : ModSystem
         Logger.Notification("Patching category cookingrecipereentrancyfix");
         HarmonyInstance.PatchCategory("cookingrecipereentrancyfix");
 
+        Logger.Notification("Patching category quenchannealing");
+        HarmonyInstance.PatchCategory("quenchannealing");
+
+        if (_smithingPlusInstalled)
+        {
+            Logger.Notification("Patching category quenchannealing-smithingplus");
+            HarmonyInstance.PatchCategory("quenchannealing-smithingplus");
+        }
+
         // vsrightclickpickup changes pickup semantics so the dropped-entity interaction path that
         // triggers the NRE never fires — no need for the defensive patch when it is present.
         if (_immersiveWoodSawingInstalled && !rightClickPickupConflict)
@@ -121,6 +132,11 @@ public abstract class TethysServerPatchesCore : ModSystem
         {
             //HarmonyInstance.UnpatchCategory("survival");
             HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
+            HarmonyInstance.UnpatchCategory("quenchannealing");
+            if (_smithingPlusInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("quenchannealing-smithingplus");
+            }
             if (_immersiveWoodSawingInstalled)
             {
                 HarmonyInstance.UnpatchCategory("immersivewoodsawing");
