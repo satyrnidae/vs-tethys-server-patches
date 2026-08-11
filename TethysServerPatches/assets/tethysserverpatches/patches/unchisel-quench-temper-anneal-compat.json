@@ -1,0 +1,51 @@
+[
+  // Unchisel only ships a flat "GroundStorable" behavior - unlike vanilla's own chisel.json, it
+  // has no Quenchable behavior at all, so its iron/meteoriciron/steel variants never become
+  // heatable/quenchable/temperable (and by extension never annealable, since our Annealing patch
+  // hooks CollectibleBehaviorQuenchable itself). Mirror vanilla chisel.json's behaviorsByType
+  // split exactly: hardenable metals get Buffable + Quenchable on top of GroundStorable, other
+  // metals just get Buffable added. Quenchable defaults to looking up a "metal" variant group,
+  // but Unchisel's is named "material", so metalVariantgroupCode must be set explicitly or the
+  // behavior silently no-ops (logs a warning and never finds metal properties).
+  {
+    "file": "unchisel:itemtypes/tool/unchisel",
+    "op": "remove",
+    "path": "/behaviors",
+    "dependsOn": [{ "modid": "unchisel" }]
+  },
+  {
+    "file": "unchisel:itemtypes/tool/unchisel",
+    "op": "add",
+    "path": "/behaviorsByType",
+    "value": {
+      "@(.*-steel|.*-meteoriciron|.*-iron)": [
+        {
+          "name": "GroundStorable",
+          "properties": {
+            "layout": "WallHalves",
+            "wallOffY": 1,
+            "sprintKey": true,
+            "selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.1, "z2": 1 },
+            "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 0, "y2": 0, "z2": 0 }
+          }
+        },
+        { "name": "Buffable" },
+        { "name": "Quenchable", "properties": { "metalVariantgroupCode": "material" } }
+      ],
+      "*": [
+        {
+          "name": "GroundStorable",
+          "properties": {
+            "layout": "WallHalves",
+            "wallOffY": 1,
+            "sprintKey": true,
+            "selectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.1, "z2": 1 },
+            "collisionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 0, "y2": 0, "z2": 0 }
+          }
+        },
+        { "name": "Buffable" }
+      ]
+    },
+    "dependsOn": [{ "modid": "unchisel" }]
+  }
+]

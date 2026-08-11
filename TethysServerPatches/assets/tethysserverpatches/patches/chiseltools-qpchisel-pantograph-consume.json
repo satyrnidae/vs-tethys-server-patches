@@ -1,0 +1,20 @@
+[
+  // QP's Chisel ("The True Chisel") currently accepts a pantograph of ANY metal ("pantograph-*"
+  // with no "name" tying it to the chisel's own metal) and treats it as a tool ingredient
+  // ("isTool": true), which CraftingRecipeIngredient.Resolve() forces to Consume=false - meaning
+  // the pantograph only takes 1 durability point of damage and isn't actually used up. Require a
+  // pantograph of the same metal (shared "name"/"allowedVariants" with "L" resolves both
+  // ingredients' wildcards together to the same metal) and consume it fully by dropping isTool.
+  {
+    "file": "chiseltools:recipes/grid/qpchisel",
+    "op": "replace",
+    "path": "/ingredients/P",
+    "value": {
+      "type": "item",
+      "code": "pantograph-*",
+      "name": "metal",
+      "allowedVariants": ["blackbronze", "tinbronze", "bismuthbronze", "iron", "meteoriciron"]
+    },
+    "dependsOn": [{ "modid": "chiseltools" }]
+  }
+]

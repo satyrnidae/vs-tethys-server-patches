@@ -1,3 +1,11 @@
+v2.0.8
+- Unchisel
+  - Register as a Toolsmith single-part tool, giving it Toolsmith's sharpness bonus like other chisels
+  - Add the vanilla Quenchable behavior to its iron/meteoriciron/steel variants (missing entirely before), enabling quench/temper and, by extension, our Annealing mechanic
+  - Preserve quench/temper/anneal state and stat buffs across chisel <-> unchisel conversion (durability already carried over by default)
+- ChiselTools
+  - QP's Chisel now requires a pantograph of the same metal, consumed entirely, instead of any-metal pantograph used only as a tool
+
 v2.0.7
 - ChiselTools
   - Gate the texture-path fix and palette-light recipe fix to ChiselTools <1.17.4

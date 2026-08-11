@@ -1,0 +1,20 @@
+[
+  // Grid recipes only preserve durability by default (RecipeBase.AverageDurability defaults to
+  // true) - everything else in Attributes, including our quenchIteration/temperIteration/
+  // annealIteration and any "hardened" stat buffs, gets wiped on craft unless the recipe opts in
+  // via copyAttributesFrom. "I" is the single ingredient's pattern letter in both recipes.
+  {
+    "file": "unchisel:recipes/grid/tool/unchisel",
+    "op": "add",
+    "path": "/copyAttributesFrom",
+    "value": "I",
+    "dependsOn": [{ "modid": "unchisel" }]
+  },
+  {
+    "file": "unchisel:recipes/grid/tool/rechisel",
+    "op": "add",
+    "path": "/copyAttributesFrom",
+    "value": "I",
+    "dependsOn": [{ "modid": "unchisel" }]
+  }
+]
