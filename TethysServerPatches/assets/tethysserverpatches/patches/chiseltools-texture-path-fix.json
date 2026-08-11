@@ -1,12 +1,16 @@
 [
-  // game:item/tool/material/handle and game:item/tool/material/linen no longer exist in VS 1.22.
-  // Handle moved to game:item/tool/handle; linen (brush tips) maps to game:block/cloth/linen/plain.
+  // chiseltools texture fix
+  // fixed already in chiseltools 1.17.4+, so this patch is only needed for older versions.
   // blockswapper
   {
     "op": "Replace",
     "file": "chiseltools:itemtypes/blockswapper",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -18,6 +22,10 @@
     "file": "chiseltools:itemtypes/blockswapper",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -30,6 +38,10 @@
     "file": "chiseltools:itemtypes/doortool",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -41,6 +53,10 @@
     "file": "chiseltools:itemtypes/doortool",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -53,6 +69,10 @@
     "file": "chiseltools:itemtypes/handplaner",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -64,6 +84,10 @@
     "file": "chiseltools:itemtypes/handplaner",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -76,6 +100,10 @@
     "file": "chiseltools:itemtypes/handwedge",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -87,6 +115,10 @@
     "file": "chiseltools:itemtypes/handwedge",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -99,6 +131,10 @@
     "file": "chiseltools:itemtypes/jonaspaintbrush",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -110,6 +146,10 @@
     "file": "chiseltools:itemtypes/jonaspaintbrush",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -122,6 +162,10 @@
     "file": "chiseltools:itemtypes/laddermaker",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -133,6 +177,10 @@
     "file": "chiseltools:itemtypes/laddermaker",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -145,6 +193,10 @@
     "file": "chiseltools:itemtypes/locktool",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -156,6 +208,10 @@
     "file": "chiseltools:itemtypes/locktool",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -168,6 +224,10 @@
     "file": "chiseltools:itemtypes/megapantograph",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -179,6 +239,10 @@
     "file": "chiseltools:itemtypes/megapantograph",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -191,6 +255,10 @@
     "file": "chiseltools:itemtypes/paintbrush",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -202,6 +270,10 @@
     "file": "chiseltools:itemtypes/paintbrush",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -214,6 +286,10 @@
     "file": "chiseltools:itemtypes/paintscraper",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -225,6 +301,10 @@
     "file": "chiseltools:itemtypes/paintscraper",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -237,6 +317,10 @@
     "file": "chiseltools:itemtypes/pantograph",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -248,6 +332,10 @@
     "file": "chiseltools:itemtypes/pantograph",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -260,6 +348,10 @@
     "file": "chiseltools:itemtypes/simplepantograph",
     "path": "/textures/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -271,6 +363,10 @@
     "file": "chiseltools:itemtypes/simplepantograph",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -283,6 +379,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-standard/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -294,6 +394,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-standard/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -305,6 +409,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-glow/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -316,6 +424,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-glow/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -327,6 +439,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-light/wood/base",
     "value": "game:item/tool/handle",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -338,6 +454,10 @@
     "file": "chiseltools:itemtypes/palette",
     "path": "/texturesByType/*-light/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"
@@ -350,6 +470,10 @@
     "file": "chiseltools:itemtypes/truechisel",
     "path": "/textures/linen/base",
     "value": "game:block/cloth/linen/plain",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"

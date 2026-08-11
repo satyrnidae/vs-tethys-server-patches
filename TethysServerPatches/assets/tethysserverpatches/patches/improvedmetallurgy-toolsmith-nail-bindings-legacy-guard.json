@@ -1,0 +1,71 @@
+[
+  // toolsmith patches for improvedmetallurgy
+  // at some point improvedmetallurgy began shipping this compat layer itself,
+  // so this patch is disabled for newer versions
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/parts/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/2",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/parts/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/1",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/parts/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/0",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/stats/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/2",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/stats/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/1",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "tethysserverpatches:config/toolsmith/stats/bindings/bindings-improvedmetallurgy",
+    "op": "Remove",
+    "path": "/0",
+    "condition": { "when": "TethysServerPatches_ImprovedMetallurgyLegacy", "isValue": false },
+    "dependsOn": [
+      { "modId": "improvedmetallurgy" },
+      { "modId": "toolsmith" }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  // Treasure hunter's "call elk" dialogue trigger (components[60], code "buyelk-callelk") only ever
+  // spawns male elk. Rebalance the existing entries and add female counterparts so gender is random.
+  {
+    "file": "game:config/dialogue/treasurehunter.json",
+    "op": "replace",
+    "path": "/components/60/triggerdata/codes/0/weight",
+    "value": 66,
+    "condition": { "when": "TethysServerPatches_RandomElkGender", "isValue": true }
+  },
+  {
+    "file": "game:config/dialogue/treasurehunter.json",
+    "op": "replace",
+    "path": "/components/60/triggerdata/codes/1/weight",
+    "value": 1,
+    "condition": { "when": "TethysServerPatches_RandomElkGender", "isValue": true }
+  },
+  {
+    "file": "game:config/dialogue/treasurehunter.json",
+    "op": "add",
+    "path": "/components/60/triggerdata/codes/-",
+    "value": { "code": "game:tameddeer-elk-female-adult", "weight": 32 },
+    "condition": { "when": "TethysServerPatches_RandomElkGender", "isValue": true }
+  },
+  {
+    "file": "game:config/dialogue/treasurehunter.json",
+    "op": "add",
+    "path": "/components/60/triggerdata/codes/-",
+    "value": { "code": "game:tameddeer-albinoelk-female-adult", "weight": 1 },
+    "condition": { "when": "TethysServerPatches_RandomElkGender", "isValue": true }
+  }
+]

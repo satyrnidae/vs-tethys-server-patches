@@ -1,0 +1,23 @@
+[
+  // remove colliding player models from racialequality
+  {
+    "side": "Server",
+    "file": "racialequality:config/customplayermodels/ork-char",
+    "op": "Remove",
+    "path": "/ork",
+    "dependsOn": [
+      { "modid": "racialequality" },
+      { "modid": "orrukin" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "racialequality:config/customplayermodels/human-char",
+    "op": "Remove",
+    "path": "/human",
+    "dependsOn": [
+      { "modid": "racialequality" },
+      { "modid": "humans" }
+    ]
+  }
+]

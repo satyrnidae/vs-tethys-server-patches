@@ -1,3 +1,26 @@
+v2.0.7
+- ChiselTools
+  - Gate the texture-path fix and palette-light recipe fix to ChiselTools <1.17.4
+- VS Roofing
+  - Gate the truechisel behavior addmerge to VS Roofing <1.7.1
+- Fix Wallmount smithing recipe collision between Maltiez Crossbows and Maltiez Firearms
+- Disable vanilla slanted-roofing grid recipes when VS Roofing is installed
+  - VS Roofing replaces that crafting entirely, making the vanilla roof blocks redundant
+  - The vanilla copper roofing tip recipe was also shape-colliding with the aldiclasses-gated copper torch holder recipe
+- Treasure hunter's "call elk" trigger can now spawn female elk ⅓ of the time
+  - Male elk: 66%, Male albino elk: 1%, Female elk: 32%, Female albino elk: 1%
+- Butchering
+  - Rebalance strongbone handle stats down to match crude handles
+    - Still slightly better than crude handles because they can be treated
+    - Carved handles are now worth the investment
+    - Will only affect new handles; existing handles will have the same stats
+- Fix duplicate game:rod-brass item registration when both Windchimes and ChandelierCraft are installed
+- Gate our Improved Metallurgy toolsmith nail-binding compat to Improved Metallurgy <1.1.8, which now ships its own
+- Racial Equality
+  - Disable the "ork" player model when Orrukin is installed (colliding race)
+  - Disable the "human" player model when Humans is installed (colliding race)
+  - Disable Antlers' ork/human skinnable-part compat to match
+
 v2.0.6
 - Disable milk from soybeans recipe from Long Term Foods when Just Tofu is installed
 - Butchering

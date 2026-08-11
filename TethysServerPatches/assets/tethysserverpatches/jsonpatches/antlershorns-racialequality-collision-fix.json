@@ -1,0 +1,27 @@
+[
+  // remove antler registration from the removed racialequality player models
+  {
+    "side": "Server",
+    "file": "antlershorns:patches/racialequality",
+    "op": "Add",
+    "path": "/3/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "antlershorns" },
+      { "modId": "racialequality" },
+      { "modId": "humans" }
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "antlershorns:patches/racialequality",
+    "op": "Add",
+    "path": "/4/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "antlershorns" },
+      { "modId": "racialequality" },
+      { "modId": "orrukin" }
+    ]
+  }
+]

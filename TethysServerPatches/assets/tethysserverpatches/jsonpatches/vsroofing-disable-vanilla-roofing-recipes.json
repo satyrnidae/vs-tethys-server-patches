@@ -1,0 +1,13 @@
+[
+  // disable vanilla roofing recipes in favor of vsroofing's roofing method.
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/roofing",
+    "path": "-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "vsroofing" }
+    ]
+  }
+]

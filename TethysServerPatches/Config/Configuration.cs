@@ -26,6 +26,7 @@ public class VanillaTweaks
     public bool CustomOmokPieces = true;
     public bool ButcheringBoneTools = true;
     public bool Annealing = true;
+    public bool RandomElkGender = true;
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]

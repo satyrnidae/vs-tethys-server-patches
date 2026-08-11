@@ -26,10 +26,10 @@
 		"file": "toolsmith:config/toolsmith/stats/handles/handles-butchering.json",
 		"value": {
 			"id": "strongbone",
-			"baseHPfactor": 1.2,
-			"selfHPBonus": 0.05,
-			"bindingHPBonus": 0.2,
-			"speedBonus": 0.05
+			"baseHPfactor": 1.0,
+			"selfHPBonus": 0.0,
+			"bindingHPBonus": 0.05,
+			"speedBonus": 0.0
 		},
 		"dependsOn": [
 			{ "modId": "toolsmith" },

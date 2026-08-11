@@ -1,11 +1,15 @@
 [
-  // game:lantern-up no longer exists in VS 1.22; split into lantern-small-up and lantern-large-up.
-  // lantern-small-up matches the old recipe cost and light level.
+  // Chiseltools glowing pallete recipe fix for 1.22.
+  // No longer applies for chiseltools 1.17.4+ since the mod fixed this itself.
   {
     "op": "Replace",
     "file": "chiseltools:recipes/grid/palette-light.json",
     "path": "/0/ingredients/L/code",
     "value": "game:lantern-small-up",
+    "condition": {
+      "when": "TethysServerPatches_ChiselToolsLegacy",
+      "isValue": true
+    },
     "dependsOn": [
       {
         "modId": "chiseltools"

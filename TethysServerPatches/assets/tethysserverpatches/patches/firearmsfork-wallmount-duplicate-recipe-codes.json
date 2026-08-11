@@ -1,0 +1,43 @@
+[
+  // All 5 metal variants of firearmsfork's wallmount smithing recipe share the exact same
+  // "firearms-wallmount-0-maltiezfirearms-wallmount--metal--east" code, so only the first
+  // (iron) registers cleanly - the other 4 warn "code that is already used by another recipe".
+  // "metal" is clearly meant to be a per-variant placeholder that never got substituted (leaving
+  // a double hyphen); replace it with the actual metal instead of just appending one. Recipe
+  // matching is by voxel pattern, not code, so this doesn't change what's craftable.
+  {
+    "file": "maltiezfirearms:recipes/smithing/wallmount",
+    "op": "replace",
+    "path": "/0/code",
+    "value": "firearms-wallmount-0-maltiezfirearms-wallmount-iron-east",
+    "dependsOn": [{ "modid": "firearmsfork" }]
+  },
+  {
+    "file": "maltiezfirearms:recipes/smithing/wallmount",
+    "op": "replace",
+    "path": "/1/code",
+    "value": "firearms-wallmount-0-maltiezfirearms-wallmount-tinbronze-east",
+    "dependsOn": [{ "modid": "firearmsfork" }]
+  },
+  {
+    "file": "maltiezfirearms:recipes/smithing/wallmount",
+    "op": "replace",
+    "path": "/2/code",
+    "value": "firearms-wallmount-0-maltiezfirearms-wallmount-copper-east",
+    "dependsOn": [{ "modid": "firearmsfork" }]
+  },
+  {
+    "file": "maltiezfirearms:recipes/smithing/wallmount",
+    "op": "replace",
+    "path": "/3/code",
+    "value": "firearms-wallmount-0-maltiezfirearms-wallmount-steel-east",
+    "dependsOn": [{ "modid": "firearmsfork" }]
+  },
+  {
+    "file": "maltiezfirearms:recipes/smithing/wallmount",
+    "op": "replace",
+    "path": "/4/code",
+    "value": "firearms-wallmount-0-maltiezfirearms-wallmount-brass-east",
+    "dependsOn": [{ "modid": "firearmsfork" }]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  // Both forks define a "Wallmount" smithing recipe (iron/tinbronze/copper/steel/brass) with the
+  // exact same anvil voxel pattern and ingredient. Smithing recipes are matched purely by voxel
+  // shape, not output code, so with both mods installed only one mod's wallmount is actually
+  // smithable per metal - the other's recipe never matches. Disable crossbowsfork's copy so
+  // firearmsfork's is always the one that resolves, instead of reshaping either recipe.
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "maltiezcrossbows:recipes/smithing/wallmount",
+    "path": "-/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "crossbowsfork" },
+      { "modId": "firearmsfork" }
+    ]
+  }
+]

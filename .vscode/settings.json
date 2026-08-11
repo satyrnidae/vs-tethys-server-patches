@@ -242,5 +242,8 @@
             "url": "https://raw.githubusercontent.com/SirNoName2705/VintelliSchemas/master/SchemaReleases/current/.schemas/modinfo.json"
         }
     ],
-    "git.detectWorktrees": true
+    "git.detectWorktrees": true,
+    "files.associations": {
+        "*.json": "jsonc"
+    }
 }

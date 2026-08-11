@@ -1,28 +1,6 @@
 [
   {
     "side": "server",
-    "op": "Add",
-    "file": "aldiclasses:patches/cropsEarlyStage/survival/*blocktypes/*plant/*crop/*cabbage",
-    "path": "-/enabled",
-    "value": false,
-    "dependsOn": [
-      { "modId": "aldiclasses" },
-      { "modId": "baconbaconbacon" }
-    ]
-  },
-  {
-    "side": "server",
-    "op": "Add",
-    "file": "aldiclasses:patches/cropsDropRate/survival/*blocktypes/*plant/*crop/*cabbage",
-    "path": "-/enabled",
-    "value": false,
-    "dependsOn": [
-      { "modId": "aldiclasses" },
-      { "modId": "baconbaconbacon" }
-    ]
-  },
-  {
-    "side": "server",
     "op": "Replace",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
     "path": "2/value/@@@crop/*(cabbage|baconcrop)/*7/0/quantity",

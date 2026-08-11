@@ -1,6 +1,7 @@
 ﻿using System;
 using TethysServerPatches.Config;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
@@ -68,6 +69,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_CustomOmokPieces", configInstance.VanillaTweaks.CustomOmokPieces);
             api.World.Config.SetBool("TethysServerPatches_ButcheringBoneTools", configInstance.VanillaTweaks.ButcheringBoneTools);
             api.World.Config.SetBool("TethysServerPatches_Annealing", configInstance.VanillaTweaks.Annealing);
+            api.World.Config.SetBool("TethysServerPatches_RandomElkGender", configInstance.VanillaTweaks.RandomElkGender);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);
@@ -75,6 +77,20 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles", configInstance.Toolsmith.ButcheringStrongBoneHandles);
             api.World.Config.SetBool("TethysServerPatches_ForestPreserve_ReduceWoodOutputs", configInstance.ForestPreservePatches.ReduceWoodOutputs);
             api.World.Config.SetBool("TethysServerPatches_LongTermFood_DisableSoybeanMilkPressing", configInstance.LongTermFoodPatches.DisableSoybeanMilkPressing);
+
+            // VS Roofing added its own chiseltools:itemtypes/truechisel behavior patch in 1.7.1,
+            // making our own truechisel-* addmerge redundant (and duplicated) from that version on.
+            api.World.Config.SetBool("TethysServerPatches_VSRoofingLegacy", IsModOlderThan(api, "vsroofing", "1.7.1"));
+
+            // ChiselTools fixed its own broken texture paths and reworked the palette-light recipe
+            // in 1.17.4, making our fixup patches redundant (and, for the recipe fix, no longer
+            // even applicable, since the ingredient key it targets is gone).
+            api.World.Config.SetBool("TethysServerPatches_ChiselToolsLegacy", IsModOlderThan(api, "chiseltools", "1.17.4"));
+
+            // Improved Metallurgy started shipping its own toolsmith binding compat (nails/strips
+            // for toolsteel, hadfieldsteel, inconel) in 1.1.8, duplicating the BindingPartDefine/
+            // BindingStatDefine entries our own compat config registers under the same codes.
+            api.World.Config.SetBool("TethysServerPatches_ImprovedMetallurgyLegacy", IsModOlderThan(api, "improvedmetallurgy", "1.1.8"));
 
             if (loadSuccessful)
             {
@@ -89,6 +105,12 @@ namespace TethysServerPatches
             }
 
             return configInstance;
+        }
+
+        private static bool IsModOlderThan(ICoreAPI api, string modid, string version)
+        {
+            var mod = api.ModLoader.GetMod(modid);
+            return mod != null && GameVersion.IsLowerVersionThan(mod.Info.Version, version);
         }
 
         private void Event_PlayerJoin(IServerPlayer player)
