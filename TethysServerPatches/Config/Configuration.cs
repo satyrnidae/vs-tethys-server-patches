@@ -17,7 +17,7 @@ public class Configuration
     public ForestPreserveTweaks ForestPreservePatches = new();
     public LongTermFoodPatchOptions LongTermFoodPatches = new();
     public CureFirewoodTweaks CureFirewoodPatches = new();
-    public PatchFlag EmberlandsSleepersPatches = new();
+    public EmberlandsSleepersPatchOptions EmberlandsSleepersPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -140,5 +140,11 @@ public class LongTermFoodPatchOptions
 public class CureFirewoodTweaks
 {
     public bool CharcoalPitFullEfficiency = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class EmberlandsSleepersPatchOptions : PatchFlag
+{
+    public bool DisableMobAttacks = true;
 }
 
