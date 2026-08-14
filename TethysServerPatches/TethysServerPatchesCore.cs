@@ -28,6 +28,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _immersiveWoodSawingInstalled;
     private bool _smithingPlusInstalled;
     private bool _deadPlayerModelLibInstalled;
+    private bool _emberlandsSleepersInstalled;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -44,6 +45,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         _immersiveSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
         _smithingPlusInstalled = api.ModLoader.IsModEnabled("smithingplus");
         _deadPlayerModelLibInstalled = api.ModLoader.IsModEnabled("dead") && api.ModLoader.IsModEnabled("playermodellib");
+        _emberlandsSleepersInstalled = api.ModLoader.IsModEnabled("emberlandssleepers");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
@@ -69,6 +71,11 @@ public abstract class TethysServerPatchesCore : ModSystem
         {
             Logger.Notification("Patching category immersivesawingcompat");
             HarmonyInstance.PatchCategory("immersivesawingcompat");
+        }
+        if (_emberlandsSleepersInstalled)
+        {
+            Logger.Notification("Patching category emberlandssleepers");
+            HarmonyInstance.PatchCategory("emberlandssleepers");
         }
 
         var rightClickPickupConflict = api.ModLoader.IsModEnabled("vsrightclickpickup")
@@ -176,6 +183,10 @@ public abstract class TethysServerPatchesCore : ModSystem
             if (_deadPlayerModelLibInstalled)
             {
                 HarmonyInstance.UnpatchCategory("dead-playermodellib");
+            }
+            if (_emberlandsSleepersInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("emberlandssleepers");
             }
         }
         NetworkChannel = null;

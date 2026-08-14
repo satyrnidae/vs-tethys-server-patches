@@ -17,6 +17,7 @@ public class Configuration
     public ForestPreserveTweaks ForestPreservePatches = new();
     public LongTermFoodPatchOptions LongTermFoodPatches = new();
     public CureFirewoodTweaks CureFirewoodPatches = new();
+    public PatchFlag EmberlandsSleepersPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
