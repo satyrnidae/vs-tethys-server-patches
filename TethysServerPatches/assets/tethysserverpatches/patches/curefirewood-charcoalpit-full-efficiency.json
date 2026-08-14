@@ -1,0 +1,11 @@
+[
+  {
+    "side": "Server",
+    "file": "game:itemtypes/resource/firewood-aged.json",
+    "op": "Add",
+    "path": "/attributes/efficiency",
+    "value": { "avg": 1, "var": 0 },
+    "dependsOn": [{ "modid": "curefirewood" }],
+    "condition": { "when": "TethysServerPatches_CureFirewood_CharcoalPitFullEfficiency", "isValue": true }
+  }
+]

@@ -16,6 +16,7 @@ public class Configuration
     public FromGoldenCombsPatchOptions FromGoldenCombsPatches = new();
     public ForestPreserveTweaks ForestPreservePatches = new();
     public LongTermFoodPatchOptions LongTermFoodPatches = new();
+    public CureFirewoodTweaks CureFirewoodPatches = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
@@ -132,5 +133,11 @@ public class ForestPreserveTweaks
 public class LongTermFoodPatchOptions
 {
     public bool DisableSoybeanMilkPressing = true;
+}
+
+[ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+public class CureFirewoodTweaks
+{
+    public bool CharcoalPitFullEfficiency = true;
 }
 

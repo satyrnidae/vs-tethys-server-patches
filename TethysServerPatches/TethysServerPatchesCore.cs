@@ -27,6 +27,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _rightClickPickupPatched;
     private bool _immersiveWoodSawingInstalled;
     private bool _smithingPlusInstalled;
+    private bool _deadPlayerModelLibInstalled;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -42,6 +43,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         _vsroofingInstalled = api.ModLoader.IsModEnabled("vsroofing");
         _immersiveSawingInstalled = api.ModLoader.IsModEnabled("immersivewoodsawing");
         _smithingPlusInstalled = api.ModLoader.IsModEnabled("smithingplus");
+        _deadPlayerModelLibInstalled = api.ModLoader.IsModEnabled("dead") && api.ModLoader.IsModEnabled("playermodellib");
         Configuration ??= LoadConfiguration(api);
         if (_clothierHeirloomsModInstalled)
         {
@@ -92,6 +94,12 @@ public abstract class TethysServerPatchesCore : ModSystem
         {
             Logger.Notification("Patching category quenchannealing-smithingplus");
             HarmonyInstance.PatchCategory("quenchannealing-smithingplus");
+        }
+
+        if (_deadPlayerModelLibInstalled)
+        {
+            Logger.Notification("Patching category dead-playermodellib");
+            HarmonyInstance.PatchCategory("dead-playermodellib");
         }
 
         // vsrightclickpickup changes pickup semantics so the dropped-entity interaction path that
@@ -164,6 +172,10 @@ public abstract class TethysServerPatchesCore : ModSystem
             if (_immersiveSawingInstalled)
             {
                 HarmonyInstance.UnpatchCategory("immersivesawingcompat");
+            }
+            if (_deadPlayerModelLibInstalled)
+            {
+                HarmonyInstance.UnpatchCategory("dead-playermodellib");
             }
         }
         NetworkChannel = null;

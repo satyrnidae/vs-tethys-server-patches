@@ -7,3 +7,5 @@ obj/
 Releases/
 /.vs
 *claude*
+/softdeps/
+/softdeps-data/

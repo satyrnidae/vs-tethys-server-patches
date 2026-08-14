@@ -77,6 +77,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_Toolsmith_ButcheringStrongBoneHandles", configInstance.Toolsmith.ButcheringStrongBoneHandles);
             api.World.Config.SetBool("TethysServerPatches_ForestPreserve_ReduceWoodOutputs", configInstance.ForestPreservePatches.ReduceWoodOutputs);
             api.World.Config.SetBool("TethysServerPatches_LongTermFood_DisableSoybeanMilkPressing", configInstance.LongTermFoodPatches.DisableSoybeanMilkPressing);
+            api.World.Config.SetBool("TethysServerPatches_CureFirewood_CharcoalPitFullEfficiency", configInstance.CureFirewoodPatches.CharcoalPitFullEfficiency);
 
             // VS Roofing added its own chiseltools:itemtypes/truechisel behavior patch in 1.7.1,
             // making our own truechisel-* addmerge redundant (and duplicated) from that version on.

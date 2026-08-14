@@ -1,3 +1,10 @@
+v2.0.9
+- Cure Firewood
+  - Aged firewood now converts to charcoal at 100% efficiency in a charcoal pit, instead of the default randomized 50-100% yield
+- Dead
+  - Fix corpses always using the default (male) body shape regardless of the dead player's custom player model (e.g. FemaleSeraph), which broke model-specific worn-gear geometry like breast shapes
+  - Applies to any PlayerModelLib-based custom model, not just FemaleSeraph
+
 v2.0.8
 - Unchisel
   - Register as a Toolsmith single-part tool, giving it Toolsmith's sharpness bonus like other chisels
