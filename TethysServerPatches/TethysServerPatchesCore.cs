@@ -29,6 +29,7 @@ public abstract class TethysServerPatchesCore : ModSystem
     private bool _smithingPlusInstalled;
     private bool _deadPlayerModelLibInstalled;
     private bool _emberlandsSleepersInstalled;
+    private bool _betterHoeDesirePathsCompatPatched;
 
     public override void StartPre(ICoreAPI api)
     {
@@ -109,6 +110,13 @@ public abstract class TethysServerPatchesCore : ModSystem
             HarmonyInstance.PatchCategory("dead-playermodellib");
         }
 
+        if (api.ModLoader.IsModEnabled("betterhoe") && api.ModLoader.IsModEnabled("desirepaths"))
+        {
+            Logger.Notification("Patching category betterhoedesirepathscompat");
+            HarmonyInstance.PatchCategory("betterhoedesirepathscompat");
+            _betterHoeDesirePathsCompatPatched = true;
+        }
+
         // vsrightclickpickup changes pickup semantics so the dropped-entity interaction path that
         // triggers the NRE never fires — no need for the defensive patch when it is present.
         if (_immersiveWoodSawingInstalled && !rightClickPickupConflict)
@@ -151,6 +159,10 @@ public abstract class TethysServerPatchesCore : ModSystem
             if (_smithingPlusInstalled)
             {
                 HarmonyInstance.UnpatchCategory("quenchannealing-smithingplus");
+            }
+            if (_betterHoeDesirePathsCompatPatched)
+            {
+                HarmonyInstance.UnpatchCategory("betterhoedesirepathscompat");
             }
             if (_immersiveWoodSawingInstalled)
             {
