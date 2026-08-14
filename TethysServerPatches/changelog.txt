@@ -4,6 +4,9 @@ v2.0.9
 - Dead
   - Fix corpses always using the default (male) body shape regardless of the dead player's custom player model (e.g. FemaleSeraph), which broke model-specific worn-gear geometry like breast shapes
   - Applies to any PlayerModelLib-based custom model, not just FemaleSeraph
+- Emberland's Sleepers
+  - Fix sleeper NPCs always using the default (Seraph) body shape instead of the logged-out player's actual PlayerModelLib model (e.g. Goat, Skaven Rat, Feline, Opossum)
+  - Mirrors the same fix already applied to Dead's corpses
 
 v2.0.8
 - Unchisel
