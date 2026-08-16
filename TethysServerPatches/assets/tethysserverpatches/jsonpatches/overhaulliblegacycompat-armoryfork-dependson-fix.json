@@ -1,0 +1,116 @@
+[
+  // overhaulliblegacycompat's claycovering-armoryparts-toolsmith-selectors.json ships 9 grid
+  // recipes each carrying a "dependsOn": [{ "modid": "armoryfork" }], but GridRecipe has no such
+  // field (only json patches respect dependsOn), so the recipes always load. When the "armoryfork"
+  // mod isn't installed, every one of them references an "armory:part-*" item that was never
+  // registered, so recipe resolution fails on every ingredient/output at startup. Disable the
+  // recipes outright when armoryfork is absent; the underlying dependsOn intent is preserved.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/0/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/1/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/2/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/3/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/4/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/5/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/6/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/7/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:recipes/grid/claycovering-armoryparts-toolsmith-selectors",
+    "path": "/8/enabled",
+    "value": false,
+    "dependsOn": [
+      { "modId": "overhaulliblegacycompat" },
+      { "modId": "armoryfork", "invert": true }
+    ]
+  }
+]

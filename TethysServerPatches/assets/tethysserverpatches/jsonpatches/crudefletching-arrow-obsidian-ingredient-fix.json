@@ -1,0 +1,18 @@
+[
+  // crudefletching's obsidian fletching recipe copies its flint sibling recipe but never fixed the
+  // ingredient code: it references "game:arrow-crude-obsidian", which was never a thing (arrow.json's
+  // "material" variantgroup treats "crude" and "obsidian" as sibling states, not "crude-obsidian").
+  // The flint recipe right above it in the same file uses plain "game:arrow-crude" as its input;
+  // apply the same ingredient here.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Replace",
+    "file": "crudefletching:recipes/grid/tool/crudefletching",
+    "path": "/1/ingredients/A/code",
+    "value": "game:arrow-crude",
+    "dependsOn": [
+      { "modId": "crudefletching" }
+    ]
+  }
+]

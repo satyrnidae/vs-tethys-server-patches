@@ -1,0 +1,20 @@
+[
+  // meteoricsteel extends game:blocktypes/metal/anvil with a "meteoricsteel" state, which feeds
+  // chiseltools' chiseledanvil-true recipe (its "metal" ingredient wildcards over game:anvil-*).
+  // chiseltools' own chiseledanvil blocktype never learns about meteoricsteel, so the recipe
+  // resolves to chiseledanvil-meteoricsteel, an output variant that was never registered.
+  // Add-merge the metal into chiseltools' own variantgroup; its "all" texture template
+  // (game:block/metal/anvil/{metal}) already resolves since meteoricsteel ships that texture.
+  {
+    "priority": 9999,
+    "side": "Server",
+    "file": "chiseltools:blocktypes/chiseledanvil",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "meteoricsteel" ],
+    "dependsOn": [
+      { "modId": "chiseltools" },
+      { "modId": "meteoricsteel" }
+    ]
+  }
+]

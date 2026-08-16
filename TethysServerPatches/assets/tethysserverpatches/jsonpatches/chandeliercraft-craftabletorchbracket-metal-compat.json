@@ -1,0 +1,22 @@
+[
+  // improved_metallurgy (castiron, hadfieldsteel, inconel, pigiron, toolsteel) and meteoricsteel
+  // extend game:itemtypes/resource/metalnailsandstrips with their own metals, which feeds
+  // chandeliercraft's craftabletorchbracket recipe's {metal} wildcard resolution. But
+  // chandeliercraft's own craftabletorchbracket blocktype never learns about those metals, so the
+  // recipe resolves to an output variant (e.g. craftabletorchbracket-toolsteel-empty-north) that
+  // was never registered. Add-merge the missing metals into the block's own variantgroup so the
+  // output block variant actually exists; both source mods ship a matching
+  // game:textures/block/metal/ingot/<metal>.png, so the block's existing "block/metal/ingot/{material}"
+  // texture template resolves for all of them.
+  {
+    "priority": 9999,
+    "side": "Server",
+    "file": "game:blocktypes/metal/craftabletorchbracket",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "castiron", "hadfieldsteel", "inconel", "meteoricsteel", "pigiron", "toolsteel" ],
+    "dependsOn": [
+      { "modId": "chandeliercraft" }
+    ]
+  }
+]

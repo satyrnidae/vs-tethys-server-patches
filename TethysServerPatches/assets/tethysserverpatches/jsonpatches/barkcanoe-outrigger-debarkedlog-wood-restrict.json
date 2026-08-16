@@ -1,0 +1,22 @@
+[
+  // barkcanoe's "Carved Wood Outrigger" recipe binds {wood} via ingredient "L" (game:debarkedlog-{wood}-ud),
+  // which uses "{var}" advanced-wildcard matching. For that match type, GridRecipe.Resolve() ignores
+  // per-ingredient allowedVariants entirely and only consults the RECIPE-level allowedVariants/skipVariants
+  // maps (RecipeBase.GetVariantValuesFromAdvancedWildcard / CollectVariantValues) - so ingredient "W"'s own
+  // allowedVariants (aged + 13 real species, no "veryaged"/"rotten"/"veryrotten") never constrains {wood}.
+  // Since game:debarkedlog has "veryaged", "rotten" and "veryrotten" decay states that game:plank does not,
+  // {wood} resolves to variants game:plank-rotten/-veryrotten never had and barkcanoe's own outrigger
+  // itemtype explicitly skips ("outrigger-carved-veryaged"). Add a recipe-level skipVariants entry so
+  // {wood} only ever resolves to variants both ingredients and the output item actually support.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "barkcanoe:recipes/grid/outrigger-recipe",
+    "path": "/1/skipVariants",
+    "value": { "wood": [ "veryaged", "rotten", "veryrotten" ] },
+    "dependsOn": [
+      { "modId": "barkcanoe" }
+    ]
+  }
+]
