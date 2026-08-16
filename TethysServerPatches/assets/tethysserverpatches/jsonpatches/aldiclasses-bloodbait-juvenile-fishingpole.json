@@ -1,5 +1,6 @@
 [
   {
+    "priority": 9999,
     "side": "Server",
     "file": "tethysserverpatches:recipes/grid/butchering-bloodbait-fishingpole",
     "op": "Replace",
@@ -11,6 +12,7 @@
     ]
   },
   {
+    "priority": 9999,
     "side": "Server",
     "file": "tethysserverpatches:recipes/grid/fishraw-juvenile-fishingpole",
     "op": "Replace",

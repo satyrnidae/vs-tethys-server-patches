@@ -1,5 +1,6 @@
 [
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "toolsmith:patches/coldforgemetals",

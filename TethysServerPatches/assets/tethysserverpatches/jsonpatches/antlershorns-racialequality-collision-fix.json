@@ -1,6 +1,7 @@
 [
   // remove antler registration from the removed racialequality player models
   {
+    "priority": 9999,
     "side": "Server",
     "file": "antlershorns:patches/racialequality",
     "op": "Add",
@@ -13,6 +14,7 @@
     ]
   },
   {
+    "priority": 9999,
     "side": "Server",
     "file": "antlershorns:patches/racialequality",
     "op": "Add",

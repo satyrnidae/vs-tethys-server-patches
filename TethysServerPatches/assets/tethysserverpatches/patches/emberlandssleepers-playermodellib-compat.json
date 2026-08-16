@@ -2,11 +2,14 @@
   // Swap the sleeper's skin-rendering behaviors for PlayerModelLib's own, the same way
   // the "Dead" mod does for its player-corpse entity (dead:patches/playermodellib-compat.json),
   // so non-Seraph models actually render instead of just carrying the right watched attributes.
+  // VS json patches use plain RFC6902 pointers (no "code=value" selector support), so target the
+  // "sleeperskin" behavior by its fixed array index (2) in emberlandssleepers' sleeper.json, same
+  // as "Dead"'s own compat patch does.
   {
     "side": "Client",
     "file": "emberlandssleepers:entities/sleeper",
     "op": "replace",
-    "path": "/client/behaviors/code=sleeperskin/code",
+    "path": "/client/behaviors/2/code",
     "value": "PlayerModelLib:ExtraSkinnable",
     "dependsOn": [
       { "modid": "emberlandssleepers" },
@@ -17,7 +20,7 @@
     "side": "Server",
     "file": "emberlandssleepers:entities/sleeper",
     "op": "replace",
-    "path": "/server/behaviors/code=sleeperskin/code",
+    "path": "/server/behaviors/2/code",
     "value": "PlayerModelLib:ExtraSkinnable",
     "dependsOn": [
       { "modid": "emberlandssleepers" },

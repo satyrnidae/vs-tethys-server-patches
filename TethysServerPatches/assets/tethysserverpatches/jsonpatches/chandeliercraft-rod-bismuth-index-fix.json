@@ -1,0 +1,19 @@
+[
+  // chandeliercraft's survival-recipes-smithing-rod.json patch 9 inserts "bismuth" at the
+  // hardcoded array position /variantgroups/0/states/20, assuming the states array already has
+  // exactly 20 entries from chandeliercraft's own survival-itemtypes-part-rod.json patch plus
+  // vanilla's 11. That assumption breaks (IndexOutOfRange in Newtonsoft's JArray.Insert) whenever
+  // any other installed mod also appends to the same states array (e.g. this mod's own
+  // more-metal-rods.json meteoricsteel entry) and shifts what index 20 means. Disable the broken
+  // indexed insert here; the correct index-independent replacement lives in
+  // patches/chandeliercraft-rod-bismuth-compat.json.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "game:patches/survival-recipes-smithing-rod",
+    "path": "/9/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "chandeliercraft" } ]
+  }
+]

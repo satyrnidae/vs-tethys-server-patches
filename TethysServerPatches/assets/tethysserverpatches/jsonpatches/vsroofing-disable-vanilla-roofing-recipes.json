@@ -1,6 +1,7 @@
 [
   // disable vanilla roofing recipes in favor of vsroofing's roofing method.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "game:recipes/grid/roofing",

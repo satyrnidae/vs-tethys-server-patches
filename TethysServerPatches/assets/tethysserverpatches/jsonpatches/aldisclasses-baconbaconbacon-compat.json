@@ -1,5 +1,6 @@
 [
   {
+    "priority": 9999,
     "side": "server",
     "op": "Replace",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
@@ -11,6 +12,7 @@
     ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
@@ -22,6 +24,7 @@
     ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",

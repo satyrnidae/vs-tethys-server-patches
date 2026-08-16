@@ -1,6 +1,7 @@
 [
   // fix collision between windchimes' brass rod and chandeliercraft's.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Replace",
     "file": "windchimes:patches/brass",

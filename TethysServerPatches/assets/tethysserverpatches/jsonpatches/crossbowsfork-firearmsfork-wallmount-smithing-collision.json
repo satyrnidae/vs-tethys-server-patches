@@ -5,6 +5,7 @@
   // smithable per metal - the other's recipe never matches. Disable crossbowsfork's copy so
   // firearmsfork's is always the one that resolves, instead of reshaping either recipe.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "maltiezcrossbows:recipes/smithing/wallmount",

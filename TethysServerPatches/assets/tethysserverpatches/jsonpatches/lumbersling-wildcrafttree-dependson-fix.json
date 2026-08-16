@@ -1,0 +1,68 @@
+[
+  // lumbersling's wildcraft_trees_and_shrubs compat patches target wildcrafttree blocktypes
+  // unconditionally, causing "File not found" errors on every startup when wildcrafttree
+  // isn't installed. add a dependsOn guard, same fix as lumbersling-fseasonedfirewood-dependson-fix.json.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-section",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-debarked",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-narrow",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-withresin",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-plant-plaintreesapling",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-plant-bamboo",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  }
+]
