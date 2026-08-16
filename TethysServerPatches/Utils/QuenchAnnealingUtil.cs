@@ -44,20 +44,16 @@ static class QuenchAnnealingUtil
             return;
         }
 
-        insertAt += quenchableLine.Length;
-        while (insertAt < dsc.Length && (dsc[insertAt] == '\r' || dsc[insertAt] == '\n'))
-        {
-            insertAt++;
-        }
-        dsc.Insert(insertAt, annealableLine + Environment.NewLine);
+        dsc.Insert(SkipLineBreaks(dsc, insertAt + quenchableLine.Length), annealableLine + Environment.NewLine);
     }
 
     // Anchored immediately before vanilla's "Times tempered" line - the same structural slot
     // vanilla uses for the tempered/quenched counts, right after Quenchable./Temperable./Clay
-    // covered. Falls back to right after "Clay covered." if the item hasn't been tempered, or
-    // to the very top of the tooltip if neither anchor line is present. Same dedup guard as
-    // InsertAnnealableLine.
-    public static void InsertTimesAnnealedLine(StringBuilder dsc, ItemStack itemstack)
+    // covered. Falls back, in order: right after "Clay covered." if the item hasn't been
+    // tempered; otherwise right after whichever of Annealable./Temperable./Quenchable. is
+    // present (call this after InsertAnnealableLine so the Annealable. line, if any, is already
+    // there to anchor on). Same dedup guard as InsertAnnealableLine.
+    public static void InsertTimesAnnealedLine(StringBuilder dsc, ItemStack itemstack, CollectibleBehaviorQuenchable.MetalPropertyVariant metalProps)
     {
         var annealIteration = itemstack.Attributes.GetInt("annealIteration");
         if (annealIteration <= 0) return;
@@ -66,26 +62,46 @@ static class QuenchAnnealingUtil
         var dscText = dsc.ToString();
         if (dscText.Contains(timesAnnealedLine)) return;
 
+        var quenchIteration = itemstack.Attributes.GetInt("quenchIteration");
         var temperIteration = itemstack.Attributes.GetInt("temperIteration");
         int insertAt;
+
         if (temperIteration > 0
             && (insertAt = dscText.IndexOf(Lang.Get("quenchable-tempered-amount", temperIteration), StringComparison.Ordinal)) >= 0)
         {
             dsc.Insert(insertAt, timesAnnealedLine + Environment.NewLine);
+            return;
         }
-        else if (itemstack.Attributes.GetBool("clayCovered")
+
+        if (itemstack.Attributes.GetBool("clayCovered")
             && (insertAt = dscText.IndexOf(Lang.Get("itemstack-claycovered"), StringComparison.Ordinal)) >= 0)
         {
-            insertAt += Lang.Get("itemstack-claycovered").Length;
-            while (insertAt < dsc.Length && (dsc[insertAt] == '\r' || dsc[insertAt] == '\n'))
-            {
-                insertAt++;
-            }
-            dsc.Insert(insertAt, timesAnnealedLine + Environment.NewLine);
+            dsc.Insert(SkipLineBreaks(dsc, insertAt + Lang.Get("itemstack-claycovered").Length), timesAnnealedLine + Environment.NewLine);
+            return;
         }
-        else
+
+        if (metalProps != null)
         {
-            dsc.Insert(0, timesAnnealedLine + Environment.NewLine);
+            var headerLine = IsAnnealable(itemstack) ? AnnealableLine(metalProps)
+                : quenchIteration > temperIteration ? Lang.Get("itemstack-temperable", metalProps.temperMinTemp, metalProps.temperMaxTemp)
+                : Lang.Get("itemstack-quenchable", metalProps.quenchMinTemp, metalProps.quenchMaxTemp);
+            insertAt = dscText.IndexOf(headerLine, StringComparison.Ordinal);
+            if (insertAt >= 0)
+            {
+                dsc.Insert(SkipLineBreaks(dsc, insertAt + headerLine.Length), timesAnnealedLine + Environment.NewLine);
+                return;
+            }
         }
+
+        dsc.Insert(0, timesAnnealedLine + Environment.NewLine);
+    }
+
+    private static int SkipLineBreaks(StringBuilder dsc, int index)
+    {
+        while (index < dsc.Length && (dsc[index] == '\r' || dsc[index] == '\n'))
+        {
+            index++;
+        }
+        return index;
     }
 }

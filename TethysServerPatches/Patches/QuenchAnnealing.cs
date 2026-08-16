@@ -157,13 +157,15 @@ class CollectibleBehaviorQuenchable_GetHeldItemInfo_Annealable
         var itemstack = inSlot.Itemstack;
         if (itemstack == null) return;
 
-        QuenchAnnealingUtil.InsertTimesAnnealedLine(dsc, itemstack);
-
-        if (!QuenchAnnealingUtil.IsAnnealable(itemstack)) return;
-
         var metalProps = QuenchAnnealingUtil.GetMetalProps(__instance);
-        if (metalProps == null) return;
 
-        QuenchAnnealingUtil.InsertAnnealableLine(dsc, metalProps);
+        // Inserted first so InsertTimesAnnealedLine's fallback anchor (Annealable./Temperable./
+        // Quenchable.) can find the Annealable. line already in place.
+        if (QuenchAnnealingUtil.IsAnnealable(itemstack) && metalProps != null)
+        {
+            QuenchAnnealingUtil.InsertAnnealableLine(dsc, metalProps);
+        }
+
+        QuenchAnnealingUtil.InsertTimesAnnealedLine(dsc, itemstack, metalProps);
     }
 }
