@@ -11,6 +11,8 @@ v2.0.9
   - Add option to back up a player's inventory independently before Sleepers wipes it on disconnect (EmberlandsSleepersPatches/SafeDisconnectBackup, default true), and restore it automatically on next login if Sleepers never reclaims it (e.g. the mod is later disabled or fails to load), preventing permanent item loss
 - Better Hoe
   - Add Desire Paths compat: stone path mode now works on soilpath blocks (was fully blocked), and till mode no longer no-ops on soilpath-forest-* tiles (remapped to farmland-dry-low, matching Desire Paths' own forest fertility treatment)
+- Butchering
+  - Rebalance strongbone handle stats to sit at the midpoint between Toolsmith's crude and carved handles, instead of matching crude handles
 
 v2.0.8
 - Unchisel
