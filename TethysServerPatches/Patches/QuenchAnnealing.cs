@@ -157,7 +157,7 @@ class CollectibleBehaviorQuenchable_GetHeldItemInfo_Annealable
         var itemstack = inSlot.Itemstack;
         if (itemstack == null) return;
 
-        QuenchAnnealingUtil.InsertTimesAnnealedLine(dsc, __instance, world, itemstack);
+        QuenchAnnealingUtil.InsertTimesAnnealedLine(dsc, itemstack);
 
         if (!QuenchAnnealingUtil.IsAnnealable(itemstack)) return;
 

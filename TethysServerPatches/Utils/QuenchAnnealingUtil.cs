@@ -52,9 +52,12 @@ static class QuenchAnnealingUtil
         dsc.Insert(insertAt, annealableLine + Environment.NewLine);
     }
 
-    // Inserted right before the shatter-chance line, i.e. directly under "Times tempered"/"Times
-    // quenched" (and their power/duration gain lines), same dedup guard as InsertAnnealableLine.
-    public static void InsertTimesAnnealedLine(StringBuilder dsc, CollectibleBehaviorQuenchable behavior, IWorldAccessor world, ItemStack itemstack)
+    // Anchored immediately before vanilla's "Times tempered" line - the same structural slot
+    // vanilla uses for the tempered/quenched counts, right after Quenchable./Temperable./Clay
+    // covered. Falls back to right after "Clay covered." if the item hasn't been tempered, or
+    // to the very top of the tooltip if neither anchor line is present. Same dedup guard as
+    // InsertAnnealableLine.
+    public static void InsertTimesAnnealedLine(StringBuilder dsc, ItemStack itemstack)
     {
         var annealIteration = itemstack.Attributes.GetInt("annealIteration");
         if (annealIteration <= 0) return;
@@ -63,13 +66,26 @@ static class QuenchAnnealingUtil
         var dscText = dsc.ToString();
         if (dscText.Contains(timesAnnealedLine)) return;
 
-        var shatterChanceLine = Lang.Get("quenchable-shatter-chance", behavior.GetShatterChance(world, itemstack));
-        var insertAt = dscText.IndexOf(shatterChanceLine, StringComparison.Ordinal);
-        if (insertAt < 0)
+        var temperIteration = itemstack.Attributes.GetInt("temperIteration");
+        int insertAt;
+        if (temperIteration > 0
+            && (insertAt = dscText.IndexOf(Lang.Get("quenchable-tempered-amount", temperIteration), StringComparison.Ordinal)) >= 0)
         {
-            dsc.AppendLine(timesAnnealedLine);
-            return;
+            dsc.Insert(insertAt, timesAnnealedLine + Environment.NewLine);
         }
-        dsc.Insert(insertAt, timesAnnealedLine + Environment.NewLine);
+        else if (itemstack.Attributes.GetBool("clayCovered")
+            && (insertAt = dscText.IndexOf(Lang.Get("itemstack-claycovered"), StringComparison.Ordinal)) >= 0)
+        {
+            insertAt += Lang.Get("itemstack-claycovered").Length;
+            while (insertAt < dsc.Length && (dsc[insertAt] == '\r' || dsc[insertAt] == '\n'))
+            {
+                insertAt++;
+            }
+            dsc.Insert(insertAt, timesAnnealedLine + Environment.NewLine);
+        }
+        else
+        {
+            dsc.Insert(0, timesAnnealedLine + Environment.NewLine);
+        }
     }
 }
