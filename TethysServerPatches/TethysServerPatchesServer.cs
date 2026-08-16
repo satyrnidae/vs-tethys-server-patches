@@ -1,6 +1,6 @@
 ﻿using System;
 using TethysServerPatches.Config;
-using TethysServerPatches.Patches;
+using TethysServerPatches.Utils;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;

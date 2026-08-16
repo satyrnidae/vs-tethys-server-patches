@@ -1,7 +1,7 @@
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
+using TethysServerPatches.State;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Server;
 
@@ -21,11 +21,6 @@ namespace TethysServerPatches.Patches;
 // apply them onto the sleeper's WatchedAttributes once it spawns. EntitySleeper.OnEntitySpawn
 // fires synchronously from SpawnBody's World.SpawnEntity call, after sleeperOwnerUid has
 // already been set, so it's a stable place to pick the captured data back up by player UID.
-static class EmberlandsSleepersPlayerModelCompatState
-{
-    public static readonly ConcurrentDictionary<string, (string SkinModel, float? EntitySize)> Pending = new();
-}
-
 [HarmonyPatch]
 [HarmonyPatchCategory("emberlandssleepers")]
 class SleepersModSystem_CaptureAppearance_CaptureSkinModel

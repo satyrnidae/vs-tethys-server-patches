@@ -1,6 +1,7 @@
 using System;
 using System.Reflection;
 using HarmonyLib;
+using TethysServerPatches.Utils;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.GameContent;
@@ -20,15 +21,6 @@ namespace TethysServerPatches.Patches;
 //     verylow/low/medium/compost/high fertility variants). Desire Paths itself treats "forest"
 //     fertility as equivalent to "low" (its own dropsByType drops game:soil-low-none for
 //     soilpath-forest-*), so that substitution is used here.
-static class BetterHoeDesirePathsCompatUtil
-{
-    public static bool IsDesirePathsSoilPath(Block block)
-        => block.Code?.Domain == "desirepaths" && block.Code.Path.StartsWith("soilpath", StringComparison.Ordinal);
-
-    public static T GetConfigValue<T>(object config, string propertyName)
-        => (T)AccessTools.Property(config.GetType(), propertyName).GetValue(config);
-}
-
 [HarmonyPatch]
 [HarmonyPatchCategory("betterhoedesirepathscompat")]
 class ItemBetterHoe_CanTransformIntoStonePath_DesirePathsCompat
