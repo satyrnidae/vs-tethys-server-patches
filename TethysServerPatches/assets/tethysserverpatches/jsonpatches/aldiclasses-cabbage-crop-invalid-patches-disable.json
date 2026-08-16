@@ -1,0 +1,40 @@
+[
+  // aldiclasses' cabbage crop patches are stale against the current game:cabbage.json shape:
+  // cropsEarlyStage's two "move" ops (wrapping the addmerge that actually adds the seed drop)
+  // reference /dropsByType/* which no longer resolves, and both of cropsDropRate's addmerge ops
+  // reference /dropsByType/*-11 and /dropsByType/*-12 offsets that no longer exist. All four
+  // error on every startup; disable them. cropsEarlyStage's middle addmerge patch (index 1,
+  // which adds the seeds-cabbage drop) still works correctly and is left enabled.
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsearlystage/survival-blocktypes-plant-crop-cabbage",
+    "path": "/0/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "aldiclasses" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsearlystage/survival-blocktypes-plant-crop-cabbage",
+    "path": "/2/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "aldiclasses" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsdroprate/survival-blocktypes-plant-crop-cabbage",
+    "path": "/0/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "aldiclasses" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "aldiclasses:patches/cropsdroprate/survival-blocktypes-plant-crop-cabbage",
+    "path": "/1/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "aldiclasses" } ]
+  }
+]

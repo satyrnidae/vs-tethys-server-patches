@@ -1,0 +1,38 @@
+[
+  // wool's tailorsdelight compat patches label the wildcrafttree entries with a "compatibility"
+  // array, but that field isn't read by the patch loader (only "dependsOn" is) so the entries
+  // still fail with "File not found" every startup when wildcrafttree isn't installed.
+  // add the real dependsOn guard alongside the existing (harmless) "compatibility" metadata.
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
+    "path": "/8/dependsOn",
+    "value": [ { "modId": "wool" }, { "modId": "tailorsdelight" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
+    "path": "/9/dependsOn",
+    "value": [ { "modId": "wool" }, { "modId": "tailorsdelight" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
+    "path": "/10/dependsOn",
+    "value": [ { "modId": "wool" }, { "modId": "tailorsdelight" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
+    "path": "/11/dependsOn",
+    "value": [ { "modId": "wool" }, { "modId": "tailorsdelight" }, { "modId": "wildcrafttree" } ],
+    "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
+  }
+]

@@ -1,0 +1,69 @@
+[
+  // lumbersling's recipes_lumbersling.json patches fseasonedfirewood recipes unconditionally,
+  // causing "File not found" errors on every startup when fseasonedfirewood isn't installed.
+  // add the missing dependsOn guard that lumbersling's own sfirewood_lumber_sling.json already uses.
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/0/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/1/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/2/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/3/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/4/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/5/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/6/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  },
+  {
+    "side": "server",
+    "op": "Add",
+    "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
+    "path": "/7/dependsOn",
+    "value": [ { "modId": "lumberslingcontinued" }, { "modId": "fseasonedfirewood" } ],
+    "dependsOn": [ { "modId": "lumberslingcontinued" } ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  // saltandsands' coral blocktypes all use "blockmaterial": "liquid", which isn't a valid
+  // EnumBlockMaterial value (the mod's own waterplant.json gets it right with "Plant") and throws
+  // a parse exception on every variant on startup. Fix to match the "plant" value vanilla uses for
+  // the same JSONAndWater/renderpass:liquid/faceCullMode:liquid combo (e.g. survival's seaweed.json).
+  {
+    "file": "saltandsands:blocktypes/coral/coralbrain.json",
+    "op": "replace",
+    "path": "/blockmaterial",
+    "value": "plant",
+    "dependsOn": [ { "modId": "saltandsands" } ]
+  },
+  {
+    "file": "saltandsands:blocktypes/coral/coraltable.json",
+    "op": "replace",
+    "path": "/blockmaterial",
+    "value": "plant",
+    "dependsOn": [ { "modId": "saltandsands" } ]
+  },
+  {
+    "file": "saltandsands:blocktypes/coral/coralfan.json",
+    "op": "replace",
+    "path": "/blockmaterial",
+    "value": "plant",
+    "dependsOn": [ { "modId": "saltandsands" } ]
+  },
+  {
+    "file": "saltandsands:blocktypes/coral/coraltube.json",
+    "op": "replace",
+    "path": "/blockmaterial",
+    "value": "plant",
+    "dependsOn": [ { "modId": "saltandsands" } ]
+  },
+  {
+    "file": "saltandsands:blocktypes/coral/coralstaghorn.json",
+    "op": "replace",
+    "path": "/blockmaterial",
+    "value": "plant",
+    "dependsOn": [ { "modId": "saltandsands" } ]
+  }
+]

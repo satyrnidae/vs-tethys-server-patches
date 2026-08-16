@@ -1,0 +1,17 @@
+[
+  // re-adds the bismuth rod variant that chandeliercraft/jsonpatches/chandeliercraft-rod-bismuth-index-fix.json
+  // disables, using an append-style addmerge (no numeric array index) so it can't go out of bounds
+  // no matter how many other mods have already extended the states array.
+  {
+    "side": "Server",
+    "file": "game:itemtypes/part/rod.json",
+    "op": "AddMerge",
+    "path": "/variantgroups/0/states",
+    "value": [ "bismuth" ],
+    "dependsOn": [
+      {
+        "modId": "chandeliercraft"
+      }
+    ]
+  }
+]
