@@ -1,10 +1,16 @@
 [
+  // jsonpatcheslib's JsonObjectPath treats each "/"-delimited path segment as an independent
+  // token, so a wildcard match against a compound key like "crop-cabbage-11" has to be one
+  // "@@@<regex>" segment (its own '@'-prefixed-regex syntax - see JsonObjectPath.TryParseWildcard/
+  // fastMatch), not split across multiple segments the way vanilla JSON-patch wildcards work.
+  // These were previously split into "@@@crop", "*(cabbage|baconcrop)", "*7", which resolves to
+  // the literal regex ^crop$ and never matches any dropsByType key - the patches silently no-op.
   {
     "priority": 9999,
     "side": "server",
     "op": "Replace",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "2/value/@@@crop/*(cabbage|baconcrop)/*7/0/quantity",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-7/0/quantity",
     "value": { "avg": 2.5, "var": 0.5 },
     "dependsOn": [
       { "modId": "aldiclasses" },
@@ -16,7 +22,7 @@
     "side": "server",
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "2/value/@@@crop/*(cabbage|baconcrop)/*11/1/dropModbyStat",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-11/1/dropModbyStat",
     "value": "produceDropRate",
     "dependsOn": [
       { "modId": "aldiclasses" },
@@ -28,7 +34,7 @@
     "side": "server",
     "op": "Add",
     "file": "baconbaconbacon:patches/baconbaconbacon/survival/blocktypes/plant/crop/baconcrop",
-    "path": "2/value/@@@crop/*(cabbage|baconcrop)/*12/1/dropModbyStat",
+    "path": "2/value/@@@crop-(cabbage|baconcrop)-12/1/dropModbyStat",
     "value": "produceDropRate",
     "dependsOn": [
       { "modId": "aldiclasses" },
