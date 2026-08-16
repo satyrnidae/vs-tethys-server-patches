@@ -6,6 +6,5 @@ obj/
 .idea/
 Releases/
 /.vs
-*claude*
 /softdeps/
 /softdeps-data/
