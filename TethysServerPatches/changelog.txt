@@ -8,6 +8,7 @@ v2.0.9
   - Fix sleeper NPCs always using the default (Seraph) body shape instead of the logged-out player's actual PlayerModelLib model (e.g. Goat, Skaven Rat, Feline, Opossum)
   - Mirrors the same fix already applied to Dead's corpses
   - Add option to disable mob/animal attacks on sleepers (EmberlandsSleepersPatches/DisableMobAttacks, default true), preventing lore mobs and wildlife from killing an offline player's body and dropping its contents once the spawn grace window ends
+  - Add option to back up a player's inventory independently before Sleepers wipes it on disconnect (EmberlandsSleepersPatches/SafeDisconnectBackup, default true), and restore it automatically on next login if Sleepers never reclaims it (e.g. the mod is later disabled or fails to load), preventing permanent item loss
 - Better Hoe
   - Add Desire Paths compat: stone path mode now works on soilpath blocks (was fully blocked), and till mode no longer no-ops on soilpath-forest-* tiles (remapped to farmland-dry-low, matching Desire Paths' own forest fertility treatment)
 

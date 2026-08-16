@@ -1,5 +1,6 @@
 ﻿using System;
 using TethysServerPatches.Config;
+using TethysServerPatches.Patches;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
@@ -22,7 +23,17 @@ namespace TethysServerPatches
                 $"Failed to locate the {nameof(CharacterSystem)} built-in mod. Are you running with Survival Mod enabled?");
 
             api.Event.PlayerJoin += Event_PlayerJoin;
+            api.Event.PlayerNowPlaying += Event_PlayerNowPlaying;
 
+            if (Configuration.EmberlandsSleepersPatches.Enabled && Configuration.EmberlandsSleepersPatches.SafeDisconnectBackup)
+            {
+                var pendingBackups = EmberlandsSleepersSafeDisconnectUtil.PendingBackupCount(api);
+                if (pendingBackups > 0)
+                {
+                    Logger.Notification(
+                        $"[emberlandssleepers] {pendingBackups} disconnect inventory backup(s) are pending reclaim from a previous session.");
+                }
+            }
         }
 
         public override void Dispose()
@@ -31,6 +42,7 @@ namespace TethysServerPatches
             if (ServerApi != null)
             {
                 ServerApi.Event.PlayerJoin -= Event_PlayerJoin;
+                ServerApi.Event.PlayerNowPlaying -= Event_PlayerNowPlaying;
             }
         }
 
@@ -118,6 +130,28 @@ namespace TethysServerPatches
         {
             Logger.Debug($"Player {player.PlayerName} joined, sending configuration client-side.");
             ServerNetworkChannel.SendPacket(Configuration, player);
+        }
+
+        private void Event_PlayerNowPlaying(IServerPlayer player)
+        {
+            var emberlandsSleepers = Configuration.EmberlandsSleepersPatches;
+            if (!emberlandsSleepers.Enabled || !emberlandsSleepers.SafeDisconnectBackup) return;
+            if (!EmberlandsSleepersSafeDisconnectUtil.HasBackup(ServerApi, player.PlayerUID)) return;
+
+            if (!EmberlandsSleepersSafeDisconnectUtil.TrackedInventoriesEmpty(player))
+            {
+                // Emberland's Sleepers (or its own reclaim logic) already restored the player
+                // normally; the backup is now redundant.
+                EmberlandsSleepersSafeDisconnectUtil.DiscardBackup(ServerApi, player.PlayerUID);
+                return;
+            }
+
+            if (EmberlandsSleepersSafeDisconnectUtil.TryRestoreBackup(ServerApi, player, out var itemCount))
+            {
+                Logger.Warning(
+                    $"[emberlandssleepers] Restored {itemCount} item(s) to {player.PlayerName} from a disconnect backup — " +
+                    "Emberland's Sleepers did not reclaim them automatically (mod missing/disabled or reclaim failed).");
+            }
         }
     }
 }
