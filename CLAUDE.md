@@ -57,6 +57,27 @@ Patches are applied only when the target mod is enabled. Method resolution uses 
 
 JSON patches are organized by target mod under `patches/external/<modname>/` or `patches/<vanilla-domain>/`. These use the standard Vintage Story JSON patch format (`op`, `path`, `value`). Translations go in `lang/en.json`.
 
+## Running a local headless test server
+
+`softdeps/` (gitignored) holds a snapshot of third-party mod zips; `softdeps-data/` (gitignored) is a matching dedicated-server data dir (saves, mod configs, logs) for a modpack that exercises most of this mod's compat patches. Use these for headless startup validation — confirming Harmony categories patch cleanly and JSON asset patches apply without errors — after any change.
+
+**Procedure:**
+
+1. Run `.\build.ps1` first. This produces the current build as an unpacked mod at `Releases/tethysserverpatches/` (and a matching `Releases/tethysserverpatches_<version>.zip` — harmless if both are picked up, they're identical). Skipping this step tests a stale build.
+2. Launch the server with `Releases` added directly as a mod path — no need to copy the build output anywhere:
+   ```bash
+   cd "$VINTAGE_STORY" && dotnet "$VINTAGE_STORY/VintagestoryServer.dll" \
+     --dataPath "D:/satyrnidae/vs-tethys-server-patches/softdeps-data" \
+     --addModPath "D:/satyrnidae/vs-tethys-server-patches/softdeps" "D:/satyrnidae/vs-tethys-server-patches/Releases"
+   ```
+   **Gotchas:**
+   - `cwd` must be `$VINTAGE_STORY` (matches `Properties/launchSettings.json`'s `workingDirectory`) — launching from elsewhere crashes immediately in `ServerProgram..ctor()` with a `NullReferenceException` before any mod code runs.
+   - `--addModPath` takes multiple space-separated values under **one** flag (`CommandLineParser`'s `IEnumerable<string>` option). Repeating the flag (`--addModPath a --addModPath b`) fails argument parsing the same way (same `ServerProgram..ctor()` NRE) — pass both paths after a single `--addModPath`.
+3. Watch `softdeps-data/Logs/server-main.log` for `Entering runphase GameReady` (success) vs `Unhandled exception`/`FATAL` (startup crash). Also check for `[tethysserverpatches] Patching category <name>` lines (confirms Harmony categories activated) and grep for `Error`/`Exception`/`Was not able to traverse path` to catch JSON patch failures — the JSON patch loader logs a one-line summary (`JsonPatch Loader: N patches total, successfully applied M, unmet conditions on K, no errors`) worth checking too.
+4. The server process is a plain `dotnet.exe` holding the built DLL open — find it via `tasklist //FI "IMAGENAME eq dotnet.exe"` (it's the one with by far the largest memory footprint) and `taskkill //PID <pid> //F` before rebuilding, or `build.ps1`'s Package step fails with an "Access to the path ... is denied" error.
+
+This validates startup only (no in-game interaction) — headless testing catches patch/registration errors but not gameplay-level bugs.
+
 ## Vintage Story Environment
 
 - **Game install** (`$VINTAGE_STORY`, equiv. `~/AppData/Roaming/Vintagestory`): DLLs, EXEs, built-in mods, unpacked base assets.
