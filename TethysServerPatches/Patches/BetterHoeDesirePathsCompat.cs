@@ -144,7 +144,7 @@ class ItemBetterHoe_TillSoil_DesirePathsCompat
                 byEntity.World.PlaySoundAt(new AssetLocation("game", "sounds/effect/toolbreak"), byEntity.Pos.X, byEntity.Pos.InternalY, byEntity.Pos.Z);
         }
 
-        if (byEntity.World.BlockAccessor.GetBlockEntity(position) is BlockEntityFastForwardGrowth farmlandEntity)
+        if (byEntity.World.BlockAccessor.GetBlockEntity(position) is BlockEntityFarmland farmlandEntity)
             farmlandEntity.OnCreatedFromSoil(block, existingFertilityData);
 
         var saturation = BetterHoeDesirePathsCompatUtil.GetConfigValue<float>(config, "ConsumeSaturationStandard")

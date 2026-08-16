@@ -145,6 +145,7 @@ public class CureFirewoodTweaks
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
 public class EmberlandsSleepersPatchOptions : PatchFlag
 {
+    public new bool Enabled = true;
     public bool DisableMobAttacks = true;
 }
 
