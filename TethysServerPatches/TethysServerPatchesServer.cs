@@ -82,6 +82,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_ButcheringBoneTools", configInstance.VanillaTweaks.ButcheringBoneTools);
             api.World.Config.SetBool("TethysServerPatches_Annealing", configInstance.VanillaTweaks.Annealing);
             api.World.Config.SetBool("TethysServerPatches_RandomElkGender", configInstance.VanillaTweaks.RandomElkGender);
+            api.World.Config.SetBool("TethysServerPatches_RockWormSpawn", configInstance.VanillaTweaks.RockWormSpawn.Enabled);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);

@@ -38,6 +38,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         Logger = Mod.Logger;
         ModId = Mod.Info.ModID;
         HarmonyInstance = new Harmony(ModId);
+        api.RegisterBlockBehaviorClass("RightClickPickupWormSpawn", typeof(Behaviors.BlockBehaviorRightClickPickupWormSpawn));
         _clothierHeirloomsModInstalled = api.ModLoader.IsModEnabled("clothierheirloomsmod");
         _fgcInstalled = api.ModLoader.IsModEnabled("fromgoldencombs");
         _rpttsInstalled = api.ModLoader.IsModEnabled("rptts");
@@ -98,6 +99,9 @@ public abstract class TethysServerPatchesCore : ModSystem
         Logger.Notification("Patching category quenchannealing");
         HarmonyInstance.PatchCategory("quenchannealing");
 
+        Logger.Notification("Patching category rockwormspawn");
+        HarmonyInstance.PatchCategory("rockwormspawn");
+
         if (_smithingPlusInstalled)
         {
             Logger.Notification("Patching category quenchannealing-smithingplus");
@@ -156,6 +160,7 @@ public abstract class TethysServerPatchesCore : ModSystem
             //HarmonyInstance.UnpatchCategory("survival");
             HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
             HarmonyInstance.UnpatchCategory("quenchannealing");
+            HarmonyInstance.UnpatchCategory("rockwormspawn");
             if (_smithingPlusInstalled)
             {
                 HarmonyInstance.UnpatchCategory("quenchannealing-smithingplus");

@@ -1,0 +1,19 @@
+[
+  // Loose stones/flints are collected via BlockBehaviorRightClickPickup, not OnBlockBroken, so
+  // the worm-spawn hook has to live on the behavior itself. Swap in our subclass, keeping the
+  // vanilla-authored properties (dropsPickupMode, sound) untouched.
+  {
+    "file": "game:blocktypes/stone/loosestones.json",
+    "op": "replace",
+    "path": "/behaviors/1/name",
+    "value": "RightClickPickupWormSpawn",
+    "condition": { "when": "TethysServerPatches_RockWormSpawn", "isValue": true }
+  },
+  {
+    "file": "game:blocktypes/stone/looseflints.json",
+    "op": "replace",
+    "path": "/behaviors/1/name",
+    "value": "RightClickPickupWormSpawn",
+    "condition": { "when": "TethysServerPatches_RockWormSpawn", "isValue": true }
+  }
+]
