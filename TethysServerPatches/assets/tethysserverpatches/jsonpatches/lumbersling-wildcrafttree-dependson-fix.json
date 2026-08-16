@@ -3,6 +3,7 @@
   // unconditionally, causing "File not found" errors on every startup when wildcrafttree
   // isn't installed. add a dependsOn guard, same fix as lumbersling-fseasonedfirewood-dependson-fix.json.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log",
@@ -11,6 +12,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-section",
@@ -19,6 +21,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-debarked",
@@ -27,6 +30,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-narrow",
@@ -35,6 +39,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-wood-woodtyped-log-withresin",
@@ -43,6 +48,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-plant-plaintreesapling",
@@ -51,6 +57,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/wildcraft_trees_and_shrubs/survival-blocktypes-plant-bamboo",

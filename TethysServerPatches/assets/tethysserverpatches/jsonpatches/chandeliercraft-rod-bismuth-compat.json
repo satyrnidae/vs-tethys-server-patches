@@ -3,6 +3,7 @@
   // disables, using an append-style addmerge (no numeric array index) so it can't go out of bounds
   // no matter how many other mods have already extended the states array.
   {
+    "priority": 9999,
     "side": "Server",
     "file": "game:itemtypes/part/rod.json",
     "op": "AddMerge",

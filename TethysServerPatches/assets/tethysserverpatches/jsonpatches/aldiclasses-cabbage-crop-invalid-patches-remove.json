@@ -9,6 +9,7 @@
   // index of the next one. cropsEarlyStage's middle addmerge patch (index 1, which adds the
   // seeds-cabbage drop) still works correctly and is left in place.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Remove",
     "file": "aldiclasses:patches/cropsearlystage/survival-blocktypes-plant-crop-cabbage",
@@ -16,6 +17,7 @@
     "dependsOn": [ { "modId": "aldiclasses" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Remove",
     "file": "aldiclasses:patches/cropsearlystage/survival-blocktypes-plant-crop-cabbage",
@@ -23,6 +25,7 @@
     "dependsOn": [ { "modId": "aldiclasses" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Remove",
     "file": "aldiclasses:patches/cropsdroprate/survival-blocktypes-plant-crop-cabbage",
@@ -30,6 +33,7 @@
     "dependsOn": [ { "modId": "aldiclasses" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Remove",
     "file": "aldiclasses:patches/cropsdroprate/survival-blocktypes-plant-crop-cabbage",

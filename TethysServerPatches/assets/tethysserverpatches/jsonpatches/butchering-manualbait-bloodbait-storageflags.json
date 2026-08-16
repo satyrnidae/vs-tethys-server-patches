@@ -1,5 +1,6 @@
 [
   {
+    "priority": 9999,
     "side": "Server",
     "file": "butchering:itemtypes/resource/fishingbait",
     "op": "add",

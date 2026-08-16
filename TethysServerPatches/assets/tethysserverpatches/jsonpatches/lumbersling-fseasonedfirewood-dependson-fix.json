@@ -3,6 +3,7 @@
   // causing "File not found" errors on every startup when fseasonedfirewood isn't installed.
   // add the missing dependsOn guard that lumbersling's own sfirewood_lumber_sling.json already uses.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -11,6 +12,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -19,6 +21,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -27,6 +30,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -35,6 +39,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -43,6 +48,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -51,6 +57,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",
@@ -59,6 +66,7 @@
     "dependsOn": [ { "modId": "lumberslingcontinued" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "lumbersling:patches/fseasonedfirewood/patches/recipes_lumbersling",

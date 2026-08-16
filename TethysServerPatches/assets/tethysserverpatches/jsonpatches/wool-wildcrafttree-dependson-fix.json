@@ -4,6 +4,7 @@
   // still fail with "File not found" every startup when wildcrafttree isn't installed.
   // add the real dependsOn guard alongside the existing (harmless) "compatibility" metadata.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
@@ -12,6 +13,7 @@
     "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
@@ -20,6 +22,7 @@
     "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "wool:compatibility/tailorsdelight/patches/wool_sails",
@@ -28,6 +31,7 @@
     "dependsOn": [ { "modId": "wool" }, { "modId": "tailorsdelight" } ]
   },
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "wool:compatibility/tailorsdelight/patches/wool_sails",

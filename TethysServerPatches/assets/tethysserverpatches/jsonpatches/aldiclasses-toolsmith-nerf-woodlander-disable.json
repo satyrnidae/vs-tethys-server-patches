@@ -1,6 +1,6 @@
 [
   {
-    "priority": 100,
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "aldiclasses:patches/compatibility/toolsmith/nerf-woodlander-parchment",

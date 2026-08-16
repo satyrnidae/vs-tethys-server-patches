@@ -8,6 +8,7 @@
   // indexed insert here; the correct index-independent replacement lives in
   // patches/chandeliercraft-rod-bismuth-compat.json.
   {
+    "priority": 9999,
     "side": "server",
     "op": "Add",
     "file": "game:patches/survival-recipes-smithing-rod",
