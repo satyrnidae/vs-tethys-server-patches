@@ -1,4 +1,6 @@
 v2.0.9
+- Add new lamellar armor textures and recipes for iron, meteoric iron, and steel
+- Refactor patching logic to use TryPatchCategory and TryUnpatchCategory methods for improved error handling
 - Cure Firewood
   - Aged firewood now converts to charcoal at 100% efficiency in a charcoal pit, instead of the default randomized 50-100% yield
 - Dead
@@ -17,6 +19,12 @@ v2.0.9
   - Fix "Times annealed" tooltip line appearing after bonus/shatter-chance text instead of grouped with the other quench/temper counts
 - Aldi's Classes x BaconBaconBacon compat
   - Fix a broken wildcard path in the bacon crop drop-rate patch that silently failed to apply (crop quantity/drop-mod-by-stat overrides were never taking effect)
+- Butchering
+  - Rebalance strongbone handle stats to sit at the midpoint between Toolsmith's crude and carved handles, instead of matching crude handles
+- Temporal Symphony
+  - Prevent duplicate "headbangbell" animation by disabling stale top-level copy
+- Vanilla Fixes
+  - Fix a client crash (ArgumentOutOfRangeException in TextureAtlasManager.RegenMipMaps) that could occur a few seconds after an abrupt server disconnect, when a deferred mipmap regen task ran against a stale atlas index
 
 v2.0.8
 - Unchisel

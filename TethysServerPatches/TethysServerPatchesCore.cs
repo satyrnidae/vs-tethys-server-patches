@@ -1,10 +1,11 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using Vintagestory.API.Client;
 using Vintagestory.API.Server;
 using Vintagestory.API.Config;
 using Vintagestory.API.Common;
 using TethysServerPatches.Config;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace TethysServerPatches;
@@ -19,17 +20,50 @@ public abstract class TethysServerPatchesCore : ModSystem
     protected Harmony HarmonyInstance { get; private set; }
     protected INetworkChannel NetworkChannel { get; private set; }
 
+    private readonly Dictionary<string, bool?> PatchStats = [];
+
     private bool _clothierHeirloomsModInstalled;
     private bool _fgcInstalled;
     private bool _rpttsInstalled;
     private bool _vsroofingInstalled;
     private bool _immersiveSawingInstalled;
-    private bool _rightClickPickupPatched;
     private bool _immersiveWoodSawingInstalled;
     private bool _smithingPlusInstalled;
     private bool _deadPlayerModelLibInstalled;
     private bool _emberlandsSleepersInstalled;
-    private bool _betterHoeDesirePathsCompatPatched;
+
+    private bool TryPatchCategory(string category)
+    {
+        try
+        {
+            HarmonyInstance.PatchCategory(category);
+            PatchStats[category] = true;
+            return true;
+        }
+        catch (Exception e)
+        {
+            Logger.Error($"Failed to apply patch category '{category}': {e}");
+            PatchStats[category] = false;
+            return false;
+        }
+    }
+
+    private void TryUnpatchCategory(string category)
+    {
+        if (PatchStats.GetValueOrDefault(category) != true)
+        {
+            return;
+        }
+        try
+        {
+            HarmonyInstance.UnpatchCategory(category);
+            PatchStats[category] = false;
+        }
+        catch (Exception e)
+        {
+            Logger.Error($"Failed to unpatch category '{category}': {e}");
+        }
+    }
 
     public override void StartPre(ICoreAPI api)
     {
@@ -52,32 +86,32 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (_clothierHeirloomsModInstalled)
         {
             Logger.Notification("Patching category clothierheirloomsmod");
-            HarmonyInstance.PatchCategory("clothierheirloomsmod");
+            TryPatchCategory("clothierheirloomsmod");
         }
         if (_fgcInstalled)
         {
             Logger.Notification("Patching category fromgoldencombs");
-            HarmonyInstance.PatchCategory("fromgoldencombs");
+            TryPatchCategory("fromgoldencombs");
         }
         if (_rpttsInstalled)
         {
             Logger.Notification("Patching category rptts");
-            HarmonyInstance.PatchCategory("rptts");
+            TryPatchCategory("rptts");
         }
         if (_vsroofingInstalled)
         {
             Logger.Notification("Patching category vsroofing");
-            HarmonyInstance.PatchCategory("vsroofing");
+            TryPatchCategory("vsroofing");
         }
         if (_immersiveSawingInstalled)
         {
             Logger.Notification("Patching category immersivesawingcompat");
-            HarmonyInstance.PatchCategory("immersivesawingcompat");
+            TryPatchCategory("immersivesawingcompat");
         }
         if (_emberlandsSleepersInstalled)
         {
             Logger.Notification("Patching category emberlandssleepers");
-            HarmonyInstance.PatchCategory("emberlandssleepers");
+            TryPatchCategory("emberlandssleepers");
         }
 
         var rightClickPickupConflict = api.ModLoader.IsModEnabled("vsrightclickpickup")
@@ -85,8 +119,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (!rightClickPickupConflict)
         {
             Logger.Notification("Patching category rightclickpickup");
-            HarmonyInstance.PatchCategory("rightclickpickup");
-            _rightClickPickupPatched = true;
+            TryPatchCategory("rightclickpickup");
         }
         else
         {
@@ -94,10 +127,10 @@ public abstract class TethysServerPatchesCore : ModSystem
         }
 
         Logger.Notification("Patching category cookingrecipereentrancyfix");
-        HarmonyInstance.PatchCategory("cookingrecipereentrancyfix");
+        TryPatchCategory("cookingrecipereentrancyfix");
 
         Logger.Notification("Patching category quenchannealing");
-        HarmonyInstance.PatchCategory("quenchannealing");
+        TryPatchCategory("quenchannealing");
 
         Logger.Notification("Patching category rockwormspawn");
         HarmonyInstance.PatchCategory("rockwormspawn");
@@ -105,20 +138,19 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (_smithingPlusInstalled)
         {
             Logger.Notification("Patching category quenchannealing-smithingplus");
-            HarmonyInstance.PatchCategory("quenchannealing-smithingplus");
+            TryPatchCategory("quenchannealing-smithingplus");
         }
 
         if (_deadPlayerModelLibInstalled)
         {
             Logger.Notification("Patching category dead-playermodellib");
-            HarmonyInstance.PatchCategory("dead-playermodellib");
+            TryPatchCategory("dead-playermodellib");
         }
 
         if (api.ModLoader.IsModEnabled("betterhoe") && api.ModLoader.IsModEnabled("desirepaths"))
         {
             Logger.Notification("Patching category betterhoedesirepathscompat");
-            HarmonyInstance.PatchCategory("betterhoedesirepathscompat");
-            _betterHoeDesirePathsCompatPatched = true;
+            TryPatchCategory("betterhoedesirepathscompat");
         }
 
         // vsrightclickpickup changes pickup semantics so the dropped-entity interaction path that
@@ -126,7 +158,7 @@ public abstract class TethysServerPatchesCore : ModSystem
         if (_immersiveWoodSawingInstalled && !rightClickPickupConflict)
         {
             Logger.Notification("Patching category immersivewoodsawing");
-            HarmonyInstance.PatchCategory("immersivewoodsawing");
+            TryPatchCategory("immersivewoodsawing");
         }
         else if (_immersiveWoodSawingInstalled)
         {
@@ -157,54 +189,21 @@ public abstract class TethysServerPatchesCore : ModSystem
     {
         if (HarmonyInstance != null)
         {
-            //HarmonyInstance.UnpatchCategory("survival");
-            HarmonyInstance.UnpatchCategory("cookingrecipereentrancyfix");
-            HarmonyInstance.UnpatchCategory("quenchannealing");
-            HarmonyInstance.UnpatchCategory("rockwormspawn");
-            if (_smithingPlusInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("quenchannealing-smithingplus");
-            }
-            if (_betterHoeDesirePathsCompatPatched)
-            {
-                HarmonyInstance.UnpatchCategory("betterhoedesirepathscompat");
-            }
-            if (_immersiveWoodSawingInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("immersivewoodsawing");
-            }
-            if (_rightClickPickupPatched)
-            {
-                HarmonyInstance.UnpatchCategory("rightclickpickup");
-            }
-            if (_fgcInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("fromgoldencombs");
-            }
-            if (_rpttsInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("rptts");
-            }
-            if (_vsroofingInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("vsroofing");
-            }
-            if (_clothierHeirloomsModInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("clothierheirloomsmod");
-            }
-            if (_immersiveSawingInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("immersivesawingcompat");
-            }
-            if (_deadPlayerModelLibInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("dead-playermodellib");
-            }
-            if (_emberlandsSleepersInstalled)
-            {
-                HarmonyInstance.UnpatchCategory("emberlandssleepers");
-            }
+            //TryUnpatchCategory("survival");
+            TryUnpatchCategory("cookingrecipereentrancyfix");
+            TryUnpatchCategory("quenchannealing");
+            TryUnpatchCategory("rockwormspawn");
+            TryUnpatchCategory("quenchannealing-smithingplus");
+            TryUnpatchCategory("betterhoedesirepathscompat");
+            TryUnpatchCategory("immersivewoodsawing");
+            TryUnpatchCategory("rightclickpickup");
+            TryUnpatchCategory("fromgoldencombs");
+            TryUnpatchCategory("rptts");
+            TryUnpatchCategory("vsroofing");
+            TryUnpatchCategory("clothierheirloomsmod");
+            TryUnpatchCategory("immersivesawingcompat");
+            TryUnpatchCategory("dead-playermodellib");
+            TryUnpatchCategory("emberlandssleepers");
         }
         NetworkChannel = null;
         HarmonyInstance = null;

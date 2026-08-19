@@ -9,6 +9,10 @@ class TethysServerPatchesClient : TethysServerPatchesCore
 {
     public static TethysServerPatchesClient Instance { get; private set; }
 
+    // Patched once for the life of the client process and never unpatched — see
+    // Patches/MipMapRegenBoundsFix.cs for why it must stay active across disconnects.
+    private static bool _mipmapRegenBoundsFixApplied;
+
     public ICoreClientAPI ClientApi => Api as ICoreClientAPI;
     public IClientNetworkChannel ClientNetworkChannel => NetworkChannel as IClientNetworkChannel;
 
@@ -18,6 +22,13 @@ class TethysServerPatchesClient : TethysServerPatchesCore
         base.StartPre(api); // creates HarmonyInstance and applies other categories
         HarmonyInstance.PatchCategory("interactionhelpfix");
         HarmonyInstance.PatchCategory("grindingwheelnullfix");
+
+        if (!_mipmapRegenBoundsFixApplied)
+        {
+            Logger.Notification("Patching category mipmapregenboundsfix");
+            HarmonyInstance.PatchCategory("mipmapregenboundsfix");
+            _mipmapRegenBoundsFixApplied = true;
+        }
     }
 
     public override void StartClientSide(ICoreClientAPI api)
