@@ -3,6 +3,7 @@ v2.0.10
   - Fix a client crash (ArgumentOutOfRangeException in TextureAtlasManager.RegenMipMaps) that could occur a few seconds after an abrupt server disconnect, when a deferred mipmap regen task ran against a stale atlas index
 
 v2.0.9
+- Add new lamellar armor textures and recipes for iron, meteoric iron, and steel
 - Cure Firewood
   - Aged firewood now converts to charcoal at 100% efficiency in a charcoal pit, instead of the default randomized 50-100% yield
 - Dead

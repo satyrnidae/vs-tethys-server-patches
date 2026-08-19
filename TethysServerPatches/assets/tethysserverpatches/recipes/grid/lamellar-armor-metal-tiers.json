@@ -1,0 +1,39 @@
+[
+  {
+    "ingredientPattern": "LLL,_P_",
+    "recipeGroup": 1,
+    "ingredients": {
+      "L": { "type": "item", "code": "game:metallamellae-*", "quantity": 1, "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "P": { "type": "item", "code": "game:leather-normal-plain" }
+    },
+    "width": 3,
+    "height": 2,
+    "name": "lamellar helmet",
+    "output": { "type": "item", "code": "game:armor-head-lamellar-{metal}" }
+  },
+  {
+    "ingredientPattern": "XPX,ZZZ,XXX",
+    "recipeGroup": 1,
+    "ingredients": {
+      "X": { "type": "item", "code": "game:metallamellae-*", "quantity": 1, "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "Z": { "type": "item", "code": "game:metallamellae-*", "quantity": 2, "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "P": { "type": "item", "code": "game:leather-normal-plain", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "name": "lamellar body armor",
+    "output": { "type": "item", "code": "game:armor-body-lamellar-{metal}" }
+  },
+  {
+    "ingredientPattern": "P_P,KKK,K_K",
+    "recipeGroup": 1,
+    "ingredients": {
+      "K": { "type": "item", "code": "game:metallamellae-*", "quantity": 1, "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "P": { "type": "item", "code": "game:leather-normal-plain", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "name": "lamellar pants",
+    "output": { "type": "item", "code": "game:armor-legs-lamellar-{metal}" }
+  }
+]
