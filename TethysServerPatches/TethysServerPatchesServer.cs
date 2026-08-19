@@ -1,6 +1,6 @@
 ﻿using System;
 using TethysServerPatches.Config;
-using TethysServerPatches.Patches;
+using TethysServerPatches.Utils;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
@@ -82,6 +82,7 @@ namespace TethysServerPatches
             api.World.Config.SetBool("TethysServerPatches_ButcheringBoneTools", configInstance.VanillaTweaks.ButcheringBoneTools);
             api.World.Config.SetBool("TethysServerPatches_Annealing", configInstance.VanillaTweaks.Annealing);
             api.World.Config.SetBool("TethysServerPatches_RandomElkGender", configInstance.VanillaTweaks.RandomElkGender);
+            api.World.Config.SetBool("TethysServerPatches_RockWormSpawn", configInstance.VanillaTweaks.RockWormSpawn.Enabled);
             api.World.Config.SetBool("TethysServerPatches_MoreHackles", configInstance.AldiClassesPatches.MoreHackles);
             api.World.Config.SetBool("TethysServerPatches_CarbonPoleBaitFix", configInstance.AldiClassesPatches.CarbonPoleBaitFix);
             api.World.Config.SetBool("TethysServerPatches_CastawayDisablePlateMold", configInstance.CastawayPatches.DisablePlateMold);

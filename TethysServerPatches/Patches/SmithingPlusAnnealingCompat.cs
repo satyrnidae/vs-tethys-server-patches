@@ -1,28 +1,12 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
-using System.Text.RegularExpressions;
 using HarmonyLib;
+using TethysServerPatches.Utils;
 using Vintagestory.API.Common;
-using Vintagestory.API.Config;
 using Vintagestory.GameContent;
 
 namespace TethysServerPatches.Patches;
-
-static class SmithingPlusAnnealingCompatUtil
-{
-    public static readonly Regex TemperatureRangeRegex = new(@"(\s*\(\d+°C\s*-\s*\d+°C\))", RegexOptions.Compiled);
-
-    private static string SetColor(string value, string color) => $"<font color=\"{color}\">{value}</font>";
-
-    private static bool InRange(float temperature, int min, int max) => temperature > min && temperature < max;
-
-    public static void ColorAnnealableRange(StringBuilder dsc, string text, float currentTemp, CollectibleBehaviorQuenchable.MetalPropertyVariant metalProps)
-    {
-        if (!InRange(currentTemp, metalProps.temperMinTemp, metalProps.temperMaxTemp)) return;
-        dsc.Replace(text, TemperatureRangeRegex.Replace(text, m => SetColor(m.Value, "darkcyan")));
-    }
-}
 
 // Smithing Plus recolors the temperature range on the vanilla "Quenchable."/"Temperable." lines to
 // darkcyan whenever the item is currently sitting in that range (held-item tooltip). Give the new

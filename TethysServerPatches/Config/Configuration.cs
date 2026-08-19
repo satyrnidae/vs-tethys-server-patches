@@ -29,6 +29,7 @@ public class VanillaTweaks
     public bool ButcheringBoneTools = true;
     public bool Annealing = true;
     public bool RandomElkGender = true;
+    public PatchFlag RockWormSpawn = new();
 }
 
 [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
