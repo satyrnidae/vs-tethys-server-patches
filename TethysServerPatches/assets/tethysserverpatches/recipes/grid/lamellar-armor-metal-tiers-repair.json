@@ -1,0 +1,47 @@
+[
+  {
+    "ingredientPattern": "B,L",
+    "recipeGroup": 2,
+    "ingredients": {
+      "B": { "type": "item", "code": "game:armor-head-lamellar-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "L": { "type": "item", "code": "game:metallamellae-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "copyAttributesFrom": "B",
+    "averageDurability": false,
+    "name": "lamellar helmet repair",
+    "output": { "type": "item", "code": "game:armor-head-lamellar-{metal}" }
+  },
+  {
+    "ingredientPattern": "B,X",
+    "recipeGroup": 2,
+    "ingredients": {
+      "B": { "type": "item", "code": "game:armor-body-lamellar-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "X": { "type": "item", "code": "game:metallamellae-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "copyAttributesFrom": "B",
+    "averageDurability": false,
+    "name": "lamellar body armor repair",
+    "output": { "type": "item", "code": "game:armor-body-lamellar-{metal}" }
+  },
+  {
+    "ingredientPattern": "B,K",
+    "recipeGroup": 2,
+    "ingredients": {
+      "B": { "type": "item", "code": "game:armor-legs-lamellar-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] },
+      "K": { "type": "item", "code": "game:metallamellae-*", "name": "metal", "allowedVariants": ["iron", "meteoriciron", "steel"] }
+    },
+    "width": 1,
+    "height": 2,
+    "shapeless": true,
+    "copyAttributesFrom": "B",
+    "averageDurability": false,
+    "name": "lamellar pants repair",
+    "output": { "type": "item", "code": "game:armor-legs-lamellar-{metal}" }
+  }
+]

@@ -1,0 +1,36 @@
+[
+  // Iron and steel lamellar already have stats defined in vanilla but were never added
+  // to the allowed variant list. Meteoric iron gets its stats added here too.
+  {
+    "side": "Server",
+    "file": "game:itemtypes/wearable/seraph/armor.json",
+    "op": "AddMerge",
+    "path": "/allowedVariants",
+    "value": [
+      "armor-*-lamellar-*iron",
+      "armor-*-lamellar-steel"
+    ]
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/wearable/seraph/armor.json",
+    "op": "AddMerge",
+    "path": "/durabilityByType",
+    "value": {
+      "armor-head-lamellar-meteoriciron": 850,
+      "armor-body-lamellar-meteoriciron": 850,
+      "armor-legs-lamellar-meteoriciron": 850
+    }
+  },
+  {
+    "side": "Server",
+    "file": "game:itemtypes/wearable/seraph/armor.json",
+    "op": "Add",
+    "path": "/attributes/protectionModifiersByType/armor-*-lamellar-meteoriciron",
+    "value": {
+      "relativeProtection": 0.81,
+      "flatDamageReduction": 0.75,
+      "protectionTier": 3
+    }
+  }
+]
