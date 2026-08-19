@@ -1,0 +1,17 @@
+[
+  // TemporalSymphony ships the exact same "headbangbell" animation addmerge for the bellhead shape
+  // twice: patches/shapes/bellhead.json (stale, predates the shiver/ subfolder reorg) and
+  // patches/shapes/shiver/bellhead.json (current, alongside corrupt/deep/nightmare/stilt/surface/
+  // tainted which only ever existed under shiver/). Both apply, so the shape ends up with two
+  // animations sharing the code "headbangbell", which the engine warns is undefined behavior.
+  // Disable the stale top-level copy so only the shiver/ one applies.
+  {
+    "priority": 9999,
+    "side": "server",
+    "op": "Add",
+    "file": "temporalsymphony:patches/shapes/bellhead",
+    "path": "/0/enabled",
+    "value": false,
+    "dependsOn": [ { "modId": "temporalsymphony" } ]
+  }
+]
