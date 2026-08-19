@@ -1,7 +1,3 @@
-v2.0.10
-- Vanilla Fixes
-  - Fix a client crash (ArgumentOutOfRangeException in TextureAtlasManager.RegenMipMaps) that could occur a few seconds after an abrupt server disconnect, when a deferred mipmap regen task ran against a stale atlas index
-
 v2.0.9
 - Cure Firewood
   - Aged firewood now converts to charcoal at 100% efficiency in a charcoal pit, instead of the default randomized 50-100% yield
@@ -17,6 +13,10 @@ v2.0.9
   - Add Desire Paths compat: stone path mode now works on soilpath blocks (was fully blocked), and till mode no longer no-ops on soilpath-forest-* tiles (remapped to farmland-dry-low, matching Desire Paths' own forest fertility treatment)
 - Butchering
   - Rebalance strongbone handle stats to sit at the midpoint between Toolsmith's crude and carved handles, instead of matching crude handles
+- Temporal Symphony
+  - Prevent duplicate "headbangbell" animation by disabling stale top-level copy
+- Vanilla Fixes
+  - Fix a client crash (ArgumentOutOfRangeException in TextureAtlasManager.RegenMipMaps) that could occur a few seconds after an abrupt server disconnect, when a deferred mipmap regen task ran against a stale atlas index
 
 v2.0.8
 - Unchisel
