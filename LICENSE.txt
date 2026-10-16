@@ -1,21 +1,114 @@
-MIT License
+Creative Commons Legal Code
 
-Copyright (c) 2025 Isabel Maskrey
+CC0 1.0 Universal
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+    HEREUNDER.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Statement of Purpose
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
+
+Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works ("Commons") that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part through the use and efforts of others.
+
+For these and/or other purposes and motivations, and without any
+expectation of additional consideration or compensation, the person
+associating CC0 with a Work (the "Affirmer"), to the extent that he or she
+is an owner of Copyright and Related Rights in the Work, voluntarily
+elects to apply CC0 to the Work and publicly distribute the Work under its
+terms, with knowledge of his or her Copyright and Related Rights in the
+Work and the meaning and intended legal effect of CC0 on those rights.
+
+This document is affected by the notice under paragraph 3 and section 5,
+regarding their respective contributions.
+
+The person associated with a Work ("the Original Author"), and each
+"Owner" (as defined below) is specifically involved in the Creative Commons
+public domain dedication of their respective works. When such work is
+published in a form under CC0, such Original Author intends to dedicate all
+rights held in their respective contribution to the public domain under CC0
+to the extent permissible under applicable law. Such Owner intends for this
+Work for which it is an owner to be published freely under the terms of CC0.
+
+The Creative Commons Public Domain Dedication ("CC0") is established as a
+copyrighted work and dedicated under the CC0 to the public domain to the
+extent possible under applicable law. Whoever depends on the Creative Commons
+Public Domain Dedication relies entirely on the CC0 to grant them permission
+and authority, thereby such dependents may rely on CC0 for purposes of
+further re-use, redistribution, and/or incorporation of this work into CC0
+derivative works.
+
+The person associated with a Work ("the Original Author"), and each "Owner"
+(defined below) is specifically involved in the Creative Commons public
+domain dedication of their respective works. The terms used in this notice
+are intended to be as identical to those used in the software license
+agreements, where there are any differences between them, the terms in the
+software license agreements shall prevail.
+
+The Creative Commons Public Domain Dedication ("CC0") is established as a
+copyrighted work and dedicated under the CC0 to the public domain to the
+extent possible under applicable law. Whoever depends on the Creative Commons
+Public Domain Dedication relies entirely on the CC0 to grant them permission
+and authority, thereby such dependents may rely on CC0 for purposes of
+further re-use, redistribution, and/or incorporation of this work into CC0
+derivative works.
+
+1. Copyright and Related Rights. A "contributor" (as defined below)
+operates and intends to operate as follows: to the extent possible under
+applicable law, the contributor waives all copyright and related or
+neighboring rights to contribution, including any rights held by the
+contributor to be attributed for such work, to the extent recognized in
+applicable law.
+
+2. Public Domain Dedication. To the extent possible under applicable law,
+the contributor, hereby, waives all of the contributor's copyright and
+related rights and associated claims and causes of action, whether now
+known or unknown (including existing as well as future claims and causes of
+action), in the contribution (i) in all territories worldwide, (ii) for the
+maximum duration provided by applicable law or treaty (including future time
+extensions), (iii) in any current or future medium and for any number of
+copies, and (iv) for any purpose whatsoever, including without limitation
+commercial, advertising, or other purposes.
+
+The contributor cannot offer to dedicate contributions that are not subject
+to the copyright laws of the contributor's country of origin. To the extent
+such contribution is not subject to applicable law, this waiver shall be
+void and of no force or effect.
+
+3. No Trademark License. Nothing in this document is intended to, or grants
+of any right to use, the name, logo, or trademarks of the contributor or the
+Creative Commons Corporation, except as required for reasonable and customary
+use in identifying the source of the material. No trademark license is
+granted to use the names "Creative Commons"; "Creative Commons Zero"; or any
+logo of either organization.
+
+4. Burden of Proof. If you do not believe this document applies to your
+original or derivative work, please contact the contributor and Creative
+Commons Corporation at legal@creativecommons.org.
+
+5. Waiver and Copyright Ownership. To the greatest extent permitted under
+applicable law, this document constitutes a grant, now and in the future, of
+the specified waiver from the specific owner who has been identified as such
+in paragraph 1 above (i.e., the contributor). This license is provided by the
+copyright owner(s), not the Creative Commons Corporation.
+
+For questions about this document or legal issues regarding use of your own
+work under CC0, please contact legal@creativecommons.org.
